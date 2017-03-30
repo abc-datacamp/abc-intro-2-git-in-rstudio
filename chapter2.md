@@ -48,9 +48,12 @@ attachments :
 --- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:adbd3f800d
 ## Pulling & pushing
 
+
 --- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:9c1c3faf15
 ## Introduction to GitHub
 
+--- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:f6812b14bb
+## Cloning exists repos
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:5705dfbac5
 ## Working with branches
