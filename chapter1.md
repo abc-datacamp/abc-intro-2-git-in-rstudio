@@ -32,9 +32,6 @@ attachments :
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:6b9f1656bb
 ## File browser
 
---- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:8cc49a2c9b
-## File browser
-
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:f8ed7d61d0
 ## The source pane
 
