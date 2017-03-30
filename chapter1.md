@@ -49,3 +49,6 @@ attachments :
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:c4e0781121
 ## The view pane 
+
+--- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:9b69900042
+## Summary
