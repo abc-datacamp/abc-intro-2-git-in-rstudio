@@ -34,8 +34,8 @@ Check out the instructions in the .Rmd file to answer the multiple choice questi
 *** =sct
 ```{r,eval=FALSE}
 msg1 <- "Try again."
-msg5 <- "Not quite."
-msg2 <- "Great work!"
+msg2 <- "Not quite."
+msg3 <- "Great work!"
 test_mc(3, feedback_msgs = c(msg1, msg2, msg3))
 ```
 *** =attachments
