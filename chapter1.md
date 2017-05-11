@@ -55,7 +55,7 @@ msg1 <- "Great!"
 msg2 <- "Not quite."
 test_mc(1, feedback_msgs = c(msg1, msg2))
 ```
-
+*** =attachments
 ch1_2.Rmd: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/ch1.2.Rmd
 .Rprofile: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git_setup_.Rprofile
 standardize.Rproj: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/standardize.Rproj
