@@ -4,9 +4,9 @@
   if(length(Sys.glob("*.Rmd")) > 0 ){
 	  library(utils)
 	  library(base)
+	  library(rmarkdown)
 	  rmd <- Sys.glob("*.Rmd")
 	  html <- paste(sub('\\.Rmd$', '', rmd), "html", sep=".")
-	  file.edit(rmd)
 	  rmarkdown::render(rmd)
 	  myViewer <- getOption("viewer")
 	  file.copy(html, file.path(tempdir(), html), overwrite=T)
