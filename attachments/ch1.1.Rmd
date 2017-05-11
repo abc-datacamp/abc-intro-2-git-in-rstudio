@@ -1,0 +1,13 @@
+---
+title: "What is RStudio?"
+output:
+  html_document: 
+    theme: space 
+---
+
+
+# What is an IDE?
+An integrated development environment (IDE) is a software suite that consolidates the basic tools developers need to write and test code. Typically, an IDE contains a text editor, a compiler or interpreter, and other language-specific tools that the developer can access through a single graphical user interface. 
+
+# What is RStudio?
+RStudio is an IDE specifically for the R programming language. It works along side the R interpreter, and includes a console for code execution, a file browser, a help window, a package managment system, a dashboard for the work environment, and a text editor for composing code. Built into the IDE are keyboard shortcuts, code completion functionality, syntax-highlighting, as well as support for version control.
