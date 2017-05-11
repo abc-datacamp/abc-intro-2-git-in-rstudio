@@ -7,7 +7,9 @@ attachments :
 --- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:db01ff97de
 ## What is RStudio?
 
-<strong>Q1. What is an IDE?</strong>
+RStudio is an IDE that consolidates basic developer tools into a single, user-friendly interface.
+
+<strong>Q1. What does IDE stand for?</strong>
 
 *** =instructions
 - Intensive Design Environment
