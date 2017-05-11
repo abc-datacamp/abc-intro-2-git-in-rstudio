@@ -27,7 +27,7 @@ test_mc(4, feedback_msgs = c(msg1, msg2, msg3, msg4))
 ```
 *** =attachments
 .Rprofile: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git_setup_.Rprofile
-standardize: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/standardize.Rproj
+standardize.Rproj: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/standardize.Rproj
 
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:f58b92efa6
