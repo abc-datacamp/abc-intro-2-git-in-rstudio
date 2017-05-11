@@ -17,7 +17,7 @@ RStudio is an IDE that consolidates basic developer tools into a single, user-fr
 - Independent Developer Ecosystem
 - Integrated Development Environment
 *** =hint
-Check out the instructions in the .Rmd file to answer the multiple choice question.
+Type 'go()' to view instructions in the viewer pane.
 
 *** =sct
 ```{r,eval=FALSE}
@@ -35,6 +35,30 @@ standardize.Rproj: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-gi
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:998563e0e4
 ## Installing RStudio
+
+In order for you to use the RStudio IDE on your own computer, you will need to install the appropriate items.
+
+Evaluate the following statement.
+
+
+<strong>Q1. RStudio requres the R programming language.</strong>
+
+*** =instructions
+- True
+- False
+*** =hint
+Check out the instructions in the viewer pane to answer the multiple choice question.
+
+*** =sct
+```{r,eval=FALSE}
+msg1 <- "Great!"
+msg2 <- "Not quite."
+test_mc(1, feedback_msgs = c(msg1, msg2))
+```
+
+ch1_2.Rmd: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/ch1.2.Rmd
+.Rprofile: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git_setup_.Rprofile
+standardize.Rproj: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/standardize.Rproj
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:c682fb0451
 ## RStudio's panes
