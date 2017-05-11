@@ -7,6 +7,16 @@ attachments :
 --- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:db01ff97de
 ## What is an IDE?
 
+<strong>Q1. What is an IDR?</strong>
+
+*** =instructions
+- Intensive Design Environment
+- Integrated Document Environment
+- Independent Developer Ecosystem
+- Integrated Development Environment
+*** =hint
+Check out the instructions in the .Rmd file to answer the multiple choice question.
+
 --- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:f58b92efa6
 ## Why RStudio?
 
