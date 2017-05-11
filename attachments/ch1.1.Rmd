@@ -2,7 +2,7 @@
 title: "What is RStudio?"
 output:
   html_document: 
-    theme: space 
+    theme: cerulean 
 ---
 
 

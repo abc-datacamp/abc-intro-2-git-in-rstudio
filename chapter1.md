@@ -5,7 +5,7 @@ attachments :
 
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:db01ff97de
-## What is an IDE?
+## What is RStudio?
 
 <strong>Q1. What is an IDE?</strong>
 
@@ -26,12 +26,9 @@ msg4 <- "Great work!"
 test_mc(4, feedback_msgs = c(msg1, msg2, msg3, msg4))
 ```
 *** =attachments
+ch1_1.Rmd: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/ch1.1.Rmd
 .Rprofile: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git_setup_.Rprofile
 standardize.Rproj: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/standardize.Rproj
-
-
---- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:f58b92efa6
-## Why RStudio?
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:998563e0e4
 ## Installing RStudio
