@@ -1,0 +1,13 @@
+---
+title: "Installing RStudio"
+output:
+  html_document: 
+    theme: cerulean 
+---
+
+# Installing RStudio
+To use RStudio, you need *both* a copy of the R programming langauge and a copy of the RStudio IDE.
+
+To install the R programming language, vist https://cran.r-project.org and click the link that matches your operating system. For Mac users, select 'Download R for Mac', and download the topmost R package (.pkg) file.  Open the file and follow the onscreen instructions.  For Windows, select  'Download R for Windows', then 'base', and finally 'Download R for Windows'.  Open the executable and follow the onscreen instructions.  
+
+Once R is installed, download RStudio by visiting http://rstudio.com/download . Choose the installer for your system, then click the link to download the installer.  Once you have the installer, installation is easy: on a Mac, open the DMG file and drag RStudio to your Applications folder.
