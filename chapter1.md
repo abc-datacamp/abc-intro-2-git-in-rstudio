@@ -7,7 +7,7 @@ attachments :
 --- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:db01ff97de
 ## What is an IDE?
 
-<strong>Q1. What is an IDR?</strong>
+<strong>Q1. What is an IDE?</strong>
 
 *** =instructions
 - Intensive Design Environment
