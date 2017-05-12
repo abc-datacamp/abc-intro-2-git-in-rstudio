@@ -107,17 +107,6 @@ In its most basic form, R can be used as a calculator, and has the following bui
 
 <strong>Using the RStudio console just like you would R, evalute the following:</strong>
 
-<table style="font-family:verdana;">
-  <tr>
-    <td>&minus;368 +
-    &radic;<span style="text-decoration:overline"> &nbsp;
-    7<span style="font-size: 10px;vertical-align:+50%;">24</span> &minus; 
-    4&times;(368&minus;1024)&nbsp;</span></td>
-  </tr>
-  <tr>
-  </tr>
-</table>
-
 
 *** =instructions
 - -316.7067
