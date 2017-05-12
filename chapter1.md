@@ -11,11 +11,6 @@ RStudio is an IDE that consolidates basic developer tools into a single, user-fr
 
 <strong>What does IDE stand for?</strong>
 
-*** =pre_exercise_code
-```{r}
-go()
-```
-
 *** =instructions
 - Intensive Design Environment
 - Integrated Document Environment
@@ -106,6 +101,17 @@ In its most basic form, R can be used as a calculator, and has the following bui
 - Square root: sqrt()
 
 <strong>Using the RStudio console just like you would R, evalute the following:</strong>
+
+<table style="font-family:verdana;">
+  <tr>
+    <td>&minus;368 +
+    &radic;<span style="text-decoration:overline"> &nbsp;
+    7<span style="font-size: 10px;vertical-align:+50%;">24</span> &minus; 
+    4&times;(368&minus;1024)&nbsp;</span></td>
+  </tr>
+  <tr>
+  </tr>
+</table>
 
 
 *** =instructions
