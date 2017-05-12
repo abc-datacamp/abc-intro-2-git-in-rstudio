@@ -65,10 +65,10 @@ standardize.Rproj: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-gi
 
 The RStudio interface consists of four main panes, or windows.  Briefly,
 
-1. Bottom left: console or command window. Here you can type any valid R command after the “>” prompt and R will execute that command. 
-2. Top left: text editor or script window. This is where you can save and edit collections of commands.
-3. Top right: environment / history window.  The environment window contains data and values R has currently stored in its memory. The history window shows all commands which were executed in the console window.
-4. Bottom right: files / plots / packages / help / viewer pane. Here you can open files, view plots (also previous plots), install and load packages, read the help pages, and view markdown and other documents in the viewer tab.
+1. <strong>Bottom left</strong>: console or command window. Here you can type any valid R command after the ```>``` prompt followed by <strong>Enter</strong> and R will execute that command. 
+2. <strong>Top left</strong>: text editor or script window. This is where you can save and edit collections of commands.
+3. <strong>Top right</strong>: environment & history window.  The environment window contains objects (data, values, functions) R has currently stored in its memory. The history window shows all commands which were executed in the console.
+4. <strong>Bottom right</strong>: files, plots, packages, help, & viewer pane. Here you can open files, view plots, install and load packages, read man pages, and view markdown and other documents in the viewer tab.
 
 <center>![panes](https://github.com/abc-datacamp/abc-intro-2-git-in-rstudio/raw/master/attachments/rstudio_panes.png)</center>
 
@@ -91,13 +91,13 @@ Just like in R, the RStudio console can execute any valid R command.
 
 In its most basic form, R can be used as a calculator, and has the following builtin operators:
 
-- Addition: **+**
-- Subtraction: **-**
-- Multiplication: **\***
-- Division: **/**
-- Exponentiation: **^**
-- Modulo: **%%**
-- Square root: sqrt()
+- Addition: ```+```
+- Subtraction: ```-```
+- Multiplication: ```*```
+- Division: ```/```
+- Exponentiation: ```^```
+- Modulo: ```%%```
+- Square root: ```sqrt()```
 
 <strong>Using the RStudio console just like you would R, evalute the following:</strong>
 
@@ -126,6 +126,54 @@ success_msg("Correct!")
 ```
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:a57e38df84
+## Code completion
+
+RStudio supports automatic completion of code using the <strong>Tab</strong> key. For example, if you have an object named *my.data* in your environment, you can type 'my' and then press <strong>Tab</strong> and RStudio will automatically complete the full name of the object if 'my' is unique; otherwise, RStudio will list all of the objects (or functions) starting with 'my' in your current environment.
+
+Code completion also works for function arguments.  
+
+```write.table()``` is a function which writes a data frame to a file and which takes many arguments.
+
+Type ```write.table(``` in the console, then hit <strong>Tab</strong> to bring up a list of options. RStudio will automatically add a closing parenthesis for you, but your cursor needs to be between the two parentheses for tab completion to work.
+
+Which of the following is *not* an argument to the ```write.table()``` function?
+`
+
+*** =instructions
+- ```file```
+- ```quotes```
+- ```sep```
+- ```row.names```
+
+*** =sct
+```{r}
+test_mc(2)
+success_msg("Correct! quote is an argument, but quotes (with an s) isn't!")
+```
+
+--- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:38be6745ca
+## Retrieving previous commands
+
+As you work with R you'll often want to re-execute a command which you previously entered. As with the standard R console, the RStudio console supports the ability to recall previous commands using the arrow keys:
+
+Up — Recall previous command(s)
+Down — Reverse of Up
+If you wish to review a list of your recent commands and then select a command from this list you can use Ctrl+Up to review the list (note that on the Mac you can also use Command-Up):
+`
+
+*** =instructions
+- ```file```
+- ```quotes```
+- ```sep```
+- ```row.names```
+
+*** =sct
+```{r}
+test_mc(2)
+success_msg("Correct! quote is an argument, but quotes (with an s) isn't!")
+```
+
+--- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:0427d4efa1
 ## Command history
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:f3d61cfed1
