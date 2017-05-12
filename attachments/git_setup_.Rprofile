@@ -11,6 +11,7 @@
 		  myViewer <- getOption("viewer")
 		  file.copy(html, file.path(tempdir(), html), overwrite=T)
 		  myViewer(file.path(tempdir(), html), width=800)
+			try(loadhistory(".Rhistory"), silent=T)
 		  cat("\014")
  	 }
   }
