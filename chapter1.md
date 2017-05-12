@@ -85,6 +85,46 @@ test_mc(1)
 success_msg("Amazing!")
 ```
 
+--- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:f7ec10ab53
+## The console pane
+Just like in R, the RStudio console can execute any valid R command.  
+
+In its most basic form, R can be used as a calculator, and has the following builtin operators:
+
+- Addition: **+**
+- Subtraction: **-**
+- Multiplication: **\***
+- Division: **/**
+- Exponentiation: **^**
+- Modulo: **%%**
+- Square root: sqrt()
+
+<strong>Using the RStudio console just like you would R, evalute the following:</strong>
+
+<table style="font-family:verdana;">
+  <tr>
+    <td>&minus;368 +
+    &radic;<span style="text-decoration:overline"> &nbsp;
+    7<span style="font-size: 10px;vertical-align:+40%;">24</span> &minus; 
+    4&times;(368&minus;1024)&nbsp;</span></td>
+  </tr>
+  <tr>
+  </tr>
+</table>
+
+
+*** =instructions
+- -316.7067
+- 18
+- 13841286833
+- 13841287569
+
+*** =sct
+```{r}
+test_mc(3)
+success_msg("Correct!")
+```
+
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:a57e38df84
 ## Command history
 
