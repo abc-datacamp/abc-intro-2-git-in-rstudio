@@ -172,9 +172,12 @@ You can even view a ist of your recent commands by pressing Ctrl+Up on Windows o
 test_mc(2)
 success_msg("Correct! quote is an argument, but quotes (with an s) isn't!")
 ```
+*** =pre_exercise_code
+```{r}
+try(loadhistory(".Rhistory"), silent=T)
+```
 
 *** =attachments
-.Rprofile: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git_setup_.Rprofile
 .Rhistory: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/fake.Rhistory
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:0427d4efa1
