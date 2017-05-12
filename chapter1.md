@@ -27,10 +27,13 @@ msg3 <- "Wrong."
 msg4 <- "Great work!"
 test_mc(4, feedback_msgs = c(msg1, msg2, msg3, msg4))
 ```
-
+*** =pre_exercise_code
+```{r}
+go()
+```
 *** =attachments
 ch1_1.Rmd: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/ch1.1.Rmd
-.Rprofile: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git_setup_.Rprofile
+.Rprofile: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/setup.Rprofile
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:998563e0e4
 ## Installing RStudio
@@ -56,7 +59,7 @@ test_mc(1, feedback_msgs = c(msg1, msg2))
 ```
 *** =attachments
 ch1_2.Rmd: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/ch1.2.Rmd
-.Rprofile: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git_setup_.Rprofile
+.Rprofile: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/setup.Rprofile
 
 --- type:PlainMultipleChoiceExercise lang:r xp:25 skills:1 key:b1895d66c3
 ## RStudio panes
@@ -135,7 +138,7 @@ Code completion also works for function arguments.
 Type ```write.table(``` in the console, then hit <strong>Tab</strong> to bring up a list of options. RStudio will automatically add a closing parenthesis for you, but your cursor needs to be between the two parentheses for tab completion to work.
 
 Which of the following is *not* an argument to the ```write.table()``` function?
-`
+
 
 *** =instructions
 - ```file```
@@ -160,16 +163,19 @@ The RStudio console supports the ability to recall previous commands using the a
 
 You can even view a ist of your recent commands by pressing Ctrl+Up on Windows or Command+Up on a Mac.
 
+What is the third command starting from the top of the recent commands list?
 
 *** =instructions
-- ```file```
-- ```quotes```
-- ```sep```
-- ```row.names```
+- ```plot(sin, -pi, 2*pi)```
+- ```9 * 64```
+- ```my.data <- data.frame(group=c("A", "B"))```
+- ```?attach```
+*** =hint
+Using Ctrl+Up on Windows or Command+Up on Mac, and count down three from the top; or scroll all the way up with the Up key and count down.
 
 *** =sct
 ```{r}
-test_mc(2)
+test_mc(1)
 success_msg("Correct! quote is an argument, but quotes (with an s) isn't!")
 ```
 *** =pre_exercise_code
