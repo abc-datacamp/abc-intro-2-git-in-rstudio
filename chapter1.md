@@ -9,7 +9,7 @@ attachments :
 
 RStudio is an IDE that consolidates basic developer tools into a single, user-friendly interface.
 
-<strong>Q1. What does IDE stand for?</strong>
+<strong>What does IDE stand for?</strong>
 
 *** =instructions
 - Intensive Design Environment
@@ -41,7 +41,7 @@ In order for you to use the RStudio IDE on your own computer, you will need to i
 Evaluate the following statement.
 
 
-<strong>Q1. RStudio requres the R programming language.</strong>
+<strong>RStudio requres the R programming language.</strong>
 
 *** =instructions
 - True
@@ -61,8 +61,30 @@ ch1_2.Rmd: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rst
 standardize.Rproj: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/standardize.Rproj
 
 
---- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:b1895d66c3
-## pane overview / The console pane / tab completion / history 
+--- type:PlainMultipleChoiceExercise lang:r xp:25 skills:1 key:b1895d66c3
+## RStudio panes
+
+The RStudio interface consists of four main panes, or windows.  Briefly,
+
+1. Bottom left: console or command window. Here you can type any valid R command after the “>” prompt and R will execute that command. 
+2. Top left: text editor or script window. This is where you can save and edit collections of commands.
+3. Top right: environment / history window.  The environment window contains data and values R has currently stored in its memory. The history window shows all commands which were executed in the console window.
+4. Bottom right: files / plots / packages / help / viewer pane. Here you can open files, view plots (also previous plots), install and load packages, read the help pages, and view markdown and other documents in the viewer tab.
+
+![panes](https://github.com/abc-datacamp/abc-intro-2-git-in-rstudio/raw/master/attachments/rstudio_panes.png)
+
+
+*** =instructions
+- Got it.
+
+*** =sct
+```{r}
+test_mc(1)
+success_msg("Amazing!")
+```
+
+--- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:f7ec10ab53
+## The console pane
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:a57e38df84
 ## Command history
