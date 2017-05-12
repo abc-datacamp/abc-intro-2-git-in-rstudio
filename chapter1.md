@@ -11,6 +11,11 @@ RStudio is an IDE that consolidates basic developer tools into a single, user-fr
 
 <strong>What does IDE stand for?</strong>
 
+*** =pre_exercise_code
+```{r}
+go()
+```
+
 *** =instructions
 - Intensive Design Environment
 - Integrated Document Environment
@@ -71,8 +76,11 @@ The RStudio interface consists of four main panes, or windows.  Briefly,
 3. Top right: environment / history window.  The environment window contains data and values R has currently stored in its memory. The history window shows all commands which were executed in the console window.
 4. Bottom right: files / plots / packages / help / viewer pane. Here you can open files, view plots (also previous plots), install and load packages, read the help pages, and view markdown and other documents in the viewer tab.
 
-![panes](https://github.com/abc-datacamp/abc-intro-2-git-in-rstudio/raw/master/attachments/rstudio_panes.png)
+<center>![panes](https://github.com/abc-datacamp/abc-intro-2-git-in-rstudio/raw/master/attachments/rstudio_panes.png)</center>
 
+The location of these windows can be changed by clicking "Tools" -> "Global Options" -> "Pane Layout".
+
+Each of these windows will be explored in subsequent sections. 
 
 *** =instructions
 - Got it.
@@ -85,6 +93,43 @@ success_msg("Amazing!")
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:f7ec10ab53
 ## The console pane
+Just like in R, the RStudio console can execute any valid R command.  
+
+In its most basic form, R can be used as a calculator, and has the following builtin operators:
+
+- Addition: **+**
+- Subtraction: **-**
+- Multiplication: **\***
+- Division: **/**
+- Exponentiation: **^**
+- Modulo: **%%**
+- Square root: sqrt()
+
+<strong>Using the RStudio console just like you would R, evalute the following:</strong>
+
+<table style="font-family:verdana;">
+  <tr>
+    <td>&minus;368 +
+    &radic;<span style="text-decoration:overline"> &nbsp;
+    7<span style="font-size: 10px;vertical-align:+50%;">24</span> &minus; 
+    4&times;(368&minus;1024)&nbsp;</span></td>
+  </tr>
+  <tr>
+  </tr>
+</table>
+
+
+*** =instructions
+- -316.7067
+- 18
+- 13841286833
+- 13841287569
+
+*** =sct
+```{r}
+test_mc(3)
+success_msg("Correct!")
+```
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:a57e38df84
 ## Command history
