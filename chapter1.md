@@ -60,15 +60,9 @@ ch1_2.Rmd: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rst
 .Rprofile: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git_setup_.Rprofile
 standardize.Rproj: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/standardize.Rproj
 
---- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:c682fb0451
-## RStudio's panes
-
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:b1895d66c3
-## The console
-
---- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:998476e27b
-## Tab key completion
+## pane overview / The console pane / tab completion / history 
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:a57e38df84
 ## Command history
