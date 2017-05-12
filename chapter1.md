@@ -60,32 +60,6 @@ ch1_2.Rmd: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rst
 .Rprofile: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git_setup_.Rprofile
 standardize.Rproj: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/standardize.Rproj
 
-
---- type:PlainMultipleChoiceExercise lang:r xp:25 skills:1 key:b1895d66c3
-## RStudio panes
-
-The RStudio interface consists of four main panes, or windows.  Briefly,
-
-1. Bottom left: console or command window. Here you can type any valid R command after the “>” prompt and R will execute that command. 
-2. Top left: text editor or script window. This is where you can save and edit collections of commands.
-3. Top right: environment / history window.  The environment window contains data and values R has currently stored in its memory. The history window shows all commands which were executed in the console window.
-4. Bottom right: files / plots / packages / help / viewer pane. Here you can open files, view plots (also previous plots), install and load packages, read the help pages, and view markdown and other documents in the viewer tab.
-
-<center>![panes](https://github.com/abc-datacamp/abc-intro-2-git-in-rstudio/raw/master/attachments/rstudio_panes.png)</center>
-
-The location of these windows can be changed by clicking *Tools* -> *Global Options* -> *Pane Layout*.
-
-Each of these windows will be explored in subsequent sections. 
-
-*** =instructions
-- Got it.
-
-*** =sct
-```{r}
-test_mc(1)
-success_msg("Amazing!")
-```
-
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:a57e38df84
 ## Command history
 
