@@ -29,6 +29,7 @@ test_mc(4, feedback_msgs = c(msg1, msg2, msg3, msg4))
 ```
 *** =pre_exercise_code
 ```{r}
+library(rmarkdown)
 file.edit("untitled.txt")
 rmd <- Sys.glob("*.Rmd")
 html <- paste(sub("\\.Rmd$", "", rmd), "html", sep = ".")
