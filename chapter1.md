@@ -31,7 +31,6 @@ test_mc(4, feedback_msgs = c(msg1, msg2, msg3, msg4))
 *** =attachments
 ch1_1.Rmd: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/ch1.1.Rmd
 .Rprofile: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git_setup_.Rprofile
-standardize.Rproj: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/standardize.Rproj
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:998563e0e4
 ## Installing RStudio
@@ -58,7 +57,6 @@ test_mc(1, feedback_msgs = c(msg1, msg2))
 *** =attachments
 ch1_2.Rmd: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/ch1.2.Rmd
 .Rprofile: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git_setup_.Rprofile
-standardize.Rproj: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/standardize.Rproj
 
 --- type:PlainMultipleChoiceExercise lang:r xp:25 skills:1 key:b1895d66c3
 ## RStudio panes
@@ -154,12 +152,14 @@ success_msg("Correct! quote is an argument, but quotes (with an s) isn't!")
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:38be6745ca
 ## Retrieving previous commands
 
-As you work with R you'll often want to re-execute a command which you previously entered. As with the standard R console, the RStudio console supports the ability to recall previous commands using the arrow keys:
+It's often the case that you want to re-ececute commands that you previously entered. 
+The RStudio console supports the ability to recall previous commands using the arrow keys:
 
-Up — Recall previous command(s)
-Down — Reverse of Up
-If you wish to review a list of your recent commands and then select a command from this list you can use Ctrl+Up to review the list (note that on the Mac you can also use Command-Up):
-`
+- <strong>Up</strong> — Recall previous command(s)
+- <strong>Down</strong> — Reverse of Up
+
+You can even view a ist of your recent commands by pressing Ctrl+Up on Windows or Command+Up on a Mac.
+
 
 *** =instructions
 - ```file```
@@ -172,6 +172,10 @@ If you wish to review a list of your recent commands and then select a command f
 test_mc(2)
 success_msg("Correct! quote is an argument, but quotes (with an s) isn't!")
 ```
+
+*** =attachments
+.Rprofile: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git_setup_.Rprofile
+.Rhistory: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/fake.Rhistory
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:0427d4efa1
 ## Command history
