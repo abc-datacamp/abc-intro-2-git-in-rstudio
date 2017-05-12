@@ -4,12 +4,13 @@
   message("Type go() and hit Enter to get started!\n")
   if(length(Sys.glob("*.Rmd")) > 0 ){
 	  go <<- function() {
+		file.edit("untitled.txt")
 	 	 rmd <- Sys.glob("*.Rmd")
 		  html <- paste(sub('\\.Rmd$', '', rmd), "html", sep=".")
 		  rmarkdown::render(rmd)
 		  myViewer <- getOption("viewer")
 		  file.copy(html, file.path(tempdir(), html), overwrite=T)
-		  myViewer(file.path(tempdir(), html))
+		  myViewer(file.path(tempdir(), html), width=800)
 		  cat("\014")
  	 }
   }
