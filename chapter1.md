@@ -212,12 +212,12 @@ try(loadhistory(".Rhistory"), silent=T)
 Next to the environment tab in the top right window is the history tab, which displays a history of each of the commands run in the console.
 The commands are displayed in order (most recent at the bottom).  
 
-Navigate to the history tab.  The meaning of the icons is as follows:
+Navigate to the history tab.  The meaning of the icons is as follows (keyboard shortcuts are listed in bold):
 
 - ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/history_load.png) : load history from a file
 - ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/history_save.png) : save history to a file
-- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/history_toConsole.png) : send selected command to console (<strong>Ent</strong>)
-- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/history_toSource.png) : insert selected command into document
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/history_toConsole.png) : send selected command to console (<strong>Enter</strong>)
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/history_toSource.png) : insert selected command into document (<strong>Shift+Enter</strong>)
 - ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/history_clearSelected.png) : remove selected history entry
 - ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/history_clearAll.png) : clear all history entries
 
@@ -230,10 +230,11 @@ Using the history tab, re-run the fourth to last command executed in the console
 - ```40320```
 
 *** =sct
-```{r
+```{r}
 test_mc(4)
 success_msg("Correct!")
 ```
+
 *** =pre_exercise_code
 ```{r}
 file.edit("untitled.txt")
