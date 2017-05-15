@@ -236,6 +236,41 @@ try(loadhistory(".Rhistory"), silent=T)
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:f3d61cfed1
 ## Environment browser
 
+The environment tab is in the top right window, which displays the R objects that exist in the global environemnt.
+These are the objects that were created by you in your current session.  
+
+Navigate to the environment tab.  The meaning of the icons is as follows (keyboard shortcuts are listed in bold):
+
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/environment_load.png) : load workspace from a file
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/environment_save.png) : save workspace to a file
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/environment_importDataset.png) : import a dataset (from CSV, e.g.,)
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/environment_clearAll.png) : clear all objects from the workspace
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/environment_selectEnvironment.png) : select environment to view (in addition to user created objects, you can also view package specific objects such as functions)
+
+There is also a search bar if you'd like to search for a particular object.
+
+Note that one can also accomplish importing a dataset via the R console (using the ```read.csv()``` function).
+
+
+Using either the ``read.csv()``` function or the import button, read in the 'addresses.csv' file.  
+
+*** =instructions
+- ```10```
+- ```362880```
+- ```576```
+- ```40320```
+
+*** =sct
+```{r}
+test_mc(4)
+success_msg("Correct!")
+```
+
+
+*** =attachments
+addresses.csv: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/addresses.csv
+
+
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:6b9f1656bb
 ## File browser
 
