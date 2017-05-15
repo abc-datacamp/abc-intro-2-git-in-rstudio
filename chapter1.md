@@ -350,8 +350,74 @@ fakeFile1.csv: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:793b7d3447
 ## Executing code
 
+
+
+
+
+
+
+
+
+
+
+
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:d15c60ae7d
 ## The plots tab
+
+
+*** =pre_exercise_code
+```{r}
+attach(mtcars)
+dotchart(mtcars$mpg,labels=row.names(mtcars),cex=.7,
+  	main="Gas Milage for Car Models", 
+   xlab="Miles Per Gallon")
+
+counts <- table(mtcars$vs, mtcars$gear)
+barplot(counts, main="Car Distribution by Gears and VS",
+  xlab="Number of Gears", col=c("darkblue","red"),
+ 	legend = rownames(counts))
+
+slices <- c(10, 12,4, 16, 8)
+lbls <- c("US", "UK", "Australia", "Germany", "France")
+pie(slices, labels = lbls, main="Pie Chart of Countries")
+
+boxplot(len~supp*dose, data=ToothGrowth, notch=FALSE, 
+  col=(c("gold","darkgreen")),
+  main="Tooth Growth", xlab="Suppliment and Dose")
+
+
+plot(wt, mpg, main="Scatterplot", 
+  	xlab="Car Weight ", ylab="Miles Per Gallon ", pch=19)
+  	
+hist(mtcars$mpg, breaks=12, col="red")
+
+```
+
+
+*** =instructions
+- ```setwd("~/data/addresses")```
+- ```setwd("~/data```
+- ```setwd("~/data/addresses/current")```
+- ```setwd("~/```
+
+*** =sct
+```{r}
+test_mc(3)
+success_msg("Correct!")
+```
+
+
+*** =attachments
+fakeFile1.csv: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/addresses.csv
+
+
+
+
+
+
+
+
+
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:e00f978b7d
 ## Viewing documentation 
