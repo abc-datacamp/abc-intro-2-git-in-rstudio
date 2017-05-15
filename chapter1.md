@@ -209,29 +209,30 @@ try(loadhistory(".Rhistory"), silent=T)
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:0427d4efa1
 ## Command history
 
-Next to the environemnt tab in the top right window is the history tab, which displays a history of each of the commands run in the console.
-The commands are displayed in order (most recent at the bottom) and grouped by block of time.
-The meaning of the icons is as follows:
+Next to the environment tab in the top right window is the history tab, which displays a history of each of the commands run in the console.
+The commands are displayed in order (most recent at the bottom).  
 
-- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/history_load.png) : 
-- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/history_save.png) : 
-- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/history_toConsole.png) : 
-- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/history_toSource.png) : 
-- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/history_clearSelected.png) : 
-- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/history_clearAll.png) : 
+Navigate to the history tab.  The meaning of the icons is as follows:
+
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/history_load.png) : load history from a file
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/history_save.png) : save history to a file
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/history_toConsole.png) : send selected command to console (<strong>Ent</strong>)
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/history_toSource.png) : insert selected command into document
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/history_clearSelected.png) : remove selected history entry
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/history_clearAll.png) : clear all history entries
+
+Using the history tab, re-run the fourth to last command executed in the console. What is the output?
 
 *** =instructions
-- ```plot(sin, -pi, 2*pi)```
-- ```9 * 64```
-- ```my.data <- data.frame(group=c("A", "B"))```
-- ```?attach```
-*** =hint
-Using Ctrl+Up on Windows or Command+Up on Mac, and count down three from the top; or scroll all the way up with the Up key and count down.
+- ```10```
+- ```362880```
+- ```576```
+- ```40320```
 
 *** =sct
-```{r}
-test_mc(1)
-success_msg("Correct! quote is an argument, but quotes (with an s) isn't!")
+```{r
+test_mc(4)
+success_msg("Correct!")
 ```
 *** =pre_exercise_code
 ```{r}
