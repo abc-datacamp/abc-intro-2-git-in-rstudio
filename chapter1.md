@@ -320,20 +320,14 @@ data/addresses/current/addresses.csv: https://raw.githubusercontent.com/abc-data
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:f8ed7d61d0
 ## The source pane
 
---- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:e84d0cdb57
-## Loading data
-
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:793b7d3447
 ## Executing code
-
---- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:54717d0640
-## Writing R scripts in the code editor
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:e00f978b7d
 ## Viewing documentation 
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:c4e0781121
-## The view pane 
+## The viewer tab 
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:9b69900042
 ## Summary
