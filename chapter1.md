@@ -249,10 +249,13 @@ Navigate to the environment tab.  The meaning of the icons is as follows (keyboa
 
 There is also a search bar if you'd like to search for a particular object.
 
-Note that one can also accomplish importing a dataset via the R console (using the ```read.csv()``` function).
+Note that one can also accomplish importing a dataset via the R console (using the ```read.csv()``` function, e.g.).
 
+Using the ``read.csv()``` function, read in the 'addresses.csv' file by typing the following into the console: 
 
-Using either the ``read.csv()``` function or the import button, read in the 'addresses.csv' file.  
+```addresses <- read.csv("addresses.csv")```  
+
+Notice that the addresses object now appears in your envirnment window.
 
 *** =instructions
 - ```10```
