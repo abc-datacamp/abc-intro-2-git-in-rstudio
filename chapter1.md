@@ -11,6 +11,11 @@ RStudio is an IDE that consolidates basic developer tools into a single, user-fr
 
 <strong>What does IDE stand for?</strong>
 
+*** =pre_exercise_code
+```{r}
+file.edit("untitled.txt")
+```
+
 *** =instructions
 - Intensive Design Environment
 - Integrated Document Environment
@@ -40,6 +45,11 @@ Evaluate the following statement.
 
 
 <strong>RStudio requres the R programming language.</strong>
+
+*** =pre_exercise_code
+```{r}
+file.edit("untitled.txt")
+```
 
 *** =instructions
 - True
@@ -72,6 +82,11 @@ The RStudio interface consists of four main panes, or windows.  Briefly,
 The location of these windows can be changed by clicking *Tools* -> *Global Options* -> *Pane Layout*.
 
 Each of these windows will be explored in subsequent sections. 
+
+*** =pre_exercise_code
+```{r}
+file.edit("untitled.txt")
+```
 
 *** =instructions
 - Got it.
@@ -109,6 +124,10 @@ In its most basic form, R can be used as a calculator, and has the following bui
   </tr>
 </table>
 
+*** =pre_exercise_code
+```{r}
+file.edit("untitled.txt")
+```
 
 *** =instructions
 - -316.7067
@@ -135,6 +154,10 @@ Type ```write.table(``` in the console, then hit <strong>Tab</strong> to bring u
 
 Which of the following is *not* an argument to the ```write.table()``` function?
 
+*** =pre_exercise_code
+```{r}
+file.edit("untitled.txt")
+```
 
 *** =instructions
 - ```file```
@@ -176,6 +199,7 @@ success_msg("Correct! quote is an argument, but quotes (with an s) isn't!")
 ```
 *** =pre_exercise_code
 ```{r}
+file.edit("untitled.txt")
 try(loadhistory(".Rhistory"), silent=T)
 ```
 
@@ -187,8 +211,37 @@ try(loadhistory(".Rhistory"), silent=T)
 
 Next to the environemnt tab in the top right window is the history tab, which displays a history of each of the commands run in the console.
 The commands are displayed in order (most recent at the bottom) and grouped by block of time.
+The meaning of the icons is as follows:
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/history_load.png)
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/history_save.png)
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/history_toConsole.png)
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/history_toSource.png)
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/history_clearSelected.png)
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/history_clearAll.png)
 
-History can be exported, loaded, and cleared.
+*** =instructions
+- ```plot(sin, -pi, 2*pi)```
+- ```9 * 64```
+- ```my.data <- data.frame(group=c("A", "B"))```
+- ```?attach```
+*** =hint
+Using Ctrl+Up on Windows or Command+Up on Mac, and count down three from the top; or scroll all the way up with the Up key and count down.
+
+*** =sct
+```{r}
+test_mc(1)
+success_msg("Correct! quote is an argument, but quotes (with an s) isn't!")
+```
+*** =pre_exercise_code
+```{r}
+file.edit("untitled.txt")
+try(loadhistory(".Rhistory"), silent=T)
+```
+
+*** =attachments
+.Rhistory: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/fake.Rhistory
+
+
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:f3d61cfed1
 ## Environment browser
 
