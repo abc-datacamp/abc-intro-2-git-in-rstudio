@@ -319,7 +319,7 @@ data/addresses/current/addresses.csv: https://raw.githubusercontent.com/abc-data
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:f8ed7d61d0
 ## The source pane
-The source pane is located in the top left window when a script or document is open.  If you recall from previous lessons, you can create a new R Script by clicking *File* -> *New File* -> *R Script*.  Go ahead and do so.
+The source pane is located in the top left window when a script or document is open.  If you recall from a previous lesson, you can create a new R Script by clicking *File* -> *New File* -> *R Script*.  Go ahead and do so.
 
 There are a lot of options and functions available for editing code in RStudio.  We will only cover a few.
 
