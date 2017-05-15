@@ -50,7 +50,7 @@ msg2 <- "Not quite."
 test_mc(1, feedback_msgs = c(msg1, msg2))
 ```
 
---- type:RStudioMultipleChoiceExercise lang:r xp:25 skills:1 key:b1895d66c3
+--- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:b1895d66c3
 ## RStudio panes
 
 The RStudio interface consists of four main panes, or windows.  Briefly,

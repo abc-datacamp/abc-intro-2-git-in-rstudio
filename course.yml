@@ -4,7 +4,7 @@ instructors      :
 collaborators    :
  - paz2005@med.cornell.edu
  - frd2007@med.cornell.edu
-description      : This is an automatically generated demo course which will help you on your way to create an awesome DataCamp course.
-university       : DataCamp
-difficulty_level : 2
-time_needed      : 1 hour
+description      : introduction to rstudio ide and version control with git
+university       : weill cornell medicine
+difficulty_level : 1
+time_needed      : 3 hour
