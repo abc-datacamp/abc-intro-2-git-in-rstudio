@@ -192,8 +192,54 @@ try(loadhistory(".Rhistory"), silent=T)
 *** =attachments
 .Rhistory: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/fake.Rhistory
 
+--- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:f3d61cfed1
+## Environment browser
+
+The environment tab is in the top right window, which displays the R objects that exist in the global environemnt.
+These are the objects that were created by you in your current session.  
+
+Navigate to the environment tab.  The meaning of the icons is as follows:
+
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/environment_load.png) : load workspace from a file
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/environment_save.png) : save workspace to a file
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/environment_importDataset.png) : import a dataset (from CSV, e.g.,)
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/environment_clearAll.png) : clear all objects from the workspace
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/environment_selectEnvironment.png) : select environment to view (in addition to user created objects, you can also view package specific objects such as functions)
+
+There is also a search bar if you'd like to search for a particular object.
+
+Note that one can also accomplish importing a dataset via the R console (using the ```read.csv()``` function, e.g.).
+
+Using the ``read.csv()``` function, read in the 'addresses.csv' file by typing the following into the console: 
+
+```addresses <- read.csv("addresses.csv")```  
+
+Notice that the 'addresses' object now appears in your environment window.  If you click the ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/environment_arrow.png) symbol next to the 'addresses' object, you can see the structure of the object:
+
+<center>![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/environment_str.png)</center>
+
+You can also click the view icon ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/environment_view.png).
+
+Go ahead and click the view icon. What is the third address in the data frame?
+
+*** =instructions
+- ```120 Jefferson St.```
+- ```220 hobo Av.```
+- ```7452 Terrace "At the Plaza" road```
+- ```9th, at Terrace plc```
+
+*** =sct
+```{r}
+test_mc(1)
+success_msg("Correct!")
+```
+
+*** =attachments
+addresses.csv: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/addresses.csv
+
+
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:0427d4efa1
-## Command history
+## The history tab
 
 Next to the environment tab in the top right window is the history tab, which displays a history of each of the commands run in the console.
 The commands are displayed in order (most recent at the bottom).  
@@ -232,56 +278,44 @@ try(loadhistory(".Rhistory"), silent=T)
 *** =attachments
 .Rhistory: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/fake.Rhistory
 
+--- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:6b9f1656bb
+## File browser
+Built into the RStudio IDE is a file browser in the bottom right window. This allows you to navigate your filesystem without having to leave RStudio.
 
---- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:f3d61cfed1
-## Environment browser
+Navigate to the file browser tab.  The meaning of the icons is as follows:
 
-The environment tab is in the top right window, which displays the R objects that exist in the global environemnt.
-These are the objects that were created by you in your current session.  
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/files_newFolder.png) : create a new folder in the current directory
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/files_upload.png) : upload a file (note: this option will not exist on local installations of RStudio)
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/files_delete.png) : delete the selected files or folders
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/files_rename.png) : rename the selected file or folder
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/files_more.png) : more options in a dropdown list, including the functions to copy or move a file, as well as set your current working directory.
 
-Navigate to the environment tab.  The meaning of the icons is as follows (keyboard shortcuts are listed in bold):
+*Be advised that deleting a file from within the RStudio IDE also deletes it from your local filesystem, so use with caution!*
 
-- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/environment_load.png) : load workspace from a file
-- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/environment_save.png) : save workspace to a file
-- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/environment_importDataset.png) : import a dataset (from CSV, e.g.,)
-- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/environment_clearAll.png) : clear all objects from the workspace
-- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/environment_selectEnvironment.png) : select environment to view (in addition to user created objects, you can also view package specific objects such as functions)
+Most of the functions are self explantory, so feel free to explore on your own.  Note that in order to delete, rename, copy, or move a file, you must select the file(s) that you want to operate on by clicking the white box next to it, so that a check appears.
 
-There is also a search bar if you'd like to search for a particular object.
+Navigate to the ```data/addresses``` folder (if you deleted it while exploring, simply re-create it!).  Select the *More* icon, and click 'Set as Working Directory'. What command was printed to the console?
 
-Note that one can also accomplish importing a dataset via the R console (using the ```read.csv()``` function, e.g.).
-
-Using the ``read.csv()``` function, read in the 'addresses.csv' file by typing the following into the console: 
-
-```addresses <- read.csv("addresses.csv")```  
-
-Notice that the 'addresses' object now appears in your environment window.  If you click the ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/environment_arrow.png) symbol next to the 'addresses' object, you can see the structure of the object:
-
-<center>![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/environment_str.png)</center>
-
-You can also click the view icon ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/environment_view.png).
-
-Go ahead and click the view icon. What is the third address in the data frame?
 
 *** =instructions
-- ```120 Jefferson St.```
-- ```220 hobo Av.```
-- ```7452 Terrace "At the Plaza" road```
-- ```9th, at Terrace plc```
+- ```setwd("~/data/addresses")```
+- ```setwd("~/data```
+- ```setwd("~/data/addresses/current")```
+- ```setwd("~/```
 
 *** =sct
 ```{r}
-test_mc(1)
+test_mc(3)
 success_msg("Correct!")
 ```
 
 
 *** =attachments
-addresses.csv: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/addresses.csv
+fakeFile1.csv: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/addresses.csv
+fakeFile2.csv: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/addresses.csv
+fakeFile3.csv: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/addresses.csv
+data/addresses/current/addresses.csv: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/addresses.csv
 
-
---- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:6b9f1656bb
-## File browser
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:f8ed7d61d0
 ## The source pane
