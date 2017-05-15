@@ -255,17 +255,23 @@ Using the ``read.csv()``` function, read in the 'addresses.csv' file by typing t
 
 ```addresses <- read.csv("addresses.csv")```  
 
-Notice that the addresses object now appears in your envirnment window.
+Notice that the 'addresses' object now appears in your environment window.  If you click the ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/environment_arrow.png) symbol next to the 'addresses' object, you can see the structure of the object:
+
+<center>![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/environment_str.png)</center>
+
+You can also click the view icon ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/environment_view.png).
+
+Go ahead and click the view icon. What is the third address in the data frame?
 
 *** =instructions
-- ```10```
-- ```362880```
-- ```576```
-- ```40320```
+- ```120 Jefferson St.```
+- ```220 hobo Av.```
+- ```7452 Terrace "At the Plaza" road```
+- ```9th, at Terrace plc```
 
 *** =sct
 ```{r}
-test_mc(4)
+test_mc(1)
 success_msg("Correct!")
 ```
 
