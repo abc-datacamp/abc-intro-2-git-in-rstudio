@@ -321,6 +321,8 @@ data/addresses/current/addresses.csv: https://raw.githubusercontent.com/abc-data
 ## The source pane
 The source pane is located in the top left window when a script or document is open.  If you recall from a previous lesson, you can create a new R Script by clicking *File* -> *New File* -> *R Script*.  Go ahead and do so.
 
+RStudio's source editor includes syntax highlighting, code completion, and find/replace.
+
 There are a lot of options and functions available for editing code in RStudio.  We will only cover a few.
 
 The meaning of the icons is as follows:
@@ -347,6 +349,9 @@ fakeFile1.csv: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:793b7d3447
 ## Executing code
+
+--- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:d15c60ae7d
+## The plots tab
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:e00f978b7d
 ## Viewing documentation 
