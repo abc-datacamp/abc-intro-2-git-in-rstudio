@@ -26,20 +26,7 @@ msg2 <- "Not quite."
 msg3 <- "Wrong."
 msg4 <- "Great work!"
 test_mc(4, feedback_msgs = c(msg1, msg2, msg3, msg4))
-```
-*** =pre_exercise_code
-```{r}
-file.edit("untitled.txt")
-#rmd <- Sys.glob("*.Rmd")
-#html <- paste(sub("\\.Rmd$", "", rmd), "html", sep = ".")
-#rmarkdown::render(rmd)
-html <- "ch1_1.html"
-system("/usr/lib/rstudio-server/bin/pandoc/pandoc +RTS -K512m -RTS ch1_1.Rmd --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output ch1_1.html --smart --email-obfuscation none --self-contained --standalone --section-divs --template /usr/local/lib/R/site-library/rmarkdown/rmd/h/default.html --no-highlight --variable highlightjs=1 --variable 'theme:cerulean' --include-in-header /tmp/RtmpmorhF3/rmarkdown-str41dd6401d5d8.html --mathjax --variable 'mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'")
-myViewer <- getOption("viewer")
-file.copy(html, file.path(tempdir(), html), overwrite = T)
-myViewer(file.path(tempdir(), html), height = 800)
-cat("\f")
-```
+
 *** =attachments
 ch1_1.Rmd: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/ch1.1.Rmd
 .Rprofile: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/setup.Rprofile
@@ -113,10 +100,10 @@ In its most basic form, R can be used as a calculator, and has the following bui
 
 <table style="font-family:verdana;">
   <tr>
-    <td>&minus;368 +
-    &radic;<span style="text-decoration:overline"> &nbsp;
-    7<span style="font-size: 10px;vertical-align:+40%;">24</span> &minus; 
-    4&times;(368&minus;1024)&nbsp;</span></td>
+    <td>−368 +
+    √<span style="text-decoration:overline">  
+    7<span style="font-size: 10px;vertical-align:+40%;">24</span> − 
+    4×(368−1024) </span></td>
   </tr>
   <tr>
   </tr>
@@ -198,6 +185,10 @@ try(loadhistory(".Rhistory"), silent=T)
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:0427d4efa1
 ## Command history
 
+Next to the environemnt tab in the top right window is the history tab, which displays a history of each of the commands run in the console.
+The commands are displayed in order (most recent at the bottom) and grouped by block of time.
+
+History can be exported, loaded, and cleared.
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:f3d61cfed1
 ## Environment browser
 
