@@ -294,7 +294,7 @@ Navigate to the file browser tab.  The meaning of the icons is as follows:
 
 Most of the functions are self explantory, so feel free to explore on your own.  Note that in order to delete, rename, copy, or move a file, you must select the file(s) that you want to operate on by clicking the white box next to it, so that a check appears.
 
-Navigate to the ```data/addresses``` folder (if you deleted it while exploring, simply re-create it!).  Select the *More* icon, and click 'Set as Working Directory'. What command was printed to the console?
+Navigate to the ```data/addresses/current``` folder (if you deleted it while exploring, simply re-create it!).  Select the *More* icon, and click 'Set as Working Directory'. What command was printed to the console?
 
 
 *** =instructions
