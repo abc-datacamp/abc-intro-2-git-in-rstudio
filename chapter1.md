@@ -66,13 +66,20 @@ The location of these windows can be changed by clicking *Tools* -> *Global Opti
 
 Each of these windows will be explored in subsequent sections. 
 
+You may have noticed that, by default, there is no text editor window open.  In order to open one, click *File* -> *New File* -> *R Script*.
+Alteratively, click the 'Add new document' symbol and select *R Script* ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/main_newScript.png).
+
+What title does RStudio give the new blank document?
 
 *** =instructions
-- Got it.
+- Untitled
+- Untitled.txt
+- Untitled1
+- Untitled.txt
 
 *** =sct
 ```{r}
-test_mc(1)
+test_mc(3)
 success_msg("Amazing!")
 ```
 
