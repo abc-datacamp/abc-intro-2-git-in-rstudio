@@ -367,6 +367,7 @@ fakeFile1.csv: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in
 
 *** =pre_exercise_code
 ```{r}
+
 attach(mtcars)
 dotchart(mtcars$mpg,labels=row.names(mtcars),cex=.7,
   	main="Gas Milage for Car Models", 
@@ -390,6 +391,14 @@ plot(wt, mpg, main="Scatterplot",
   	xlab="Car Weight ", ylab="Miles Per Gallon ", pch=19)
   	
 hist(mtcars$mpg, breaks=12, col="red")
+
+movies <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv")
+
+# 2. Pre-load packages, so that users don't have to do this manually.
+library(ggplot2)
+
+# 3. Create a plot in the viewer, that students can check out while reading the exercise
+ggplot(movies, aes(x = runtime, y = rating, col = genre)) + geom_point()
 
 ```
 
