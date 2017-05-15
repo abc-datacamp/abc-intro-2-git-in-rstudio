@@ -7,22 +7,17 @@ attachments :
 --- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:db01ff97de
 ## What is RStudio?
 
-RStudio is an IDE that consolidates basic developer tools into a single, user-friendly interface.
+RStudio is an integrated development environment (IDE) that consolidates basic developer tools into a single, user-friendly interface. 
 
-<strong>What does IDE stand for?</strong>
+The RStudio IDE works alongside the R interpreter, and includes a console for code execution, a file browser, a help window, a package managment system, a dashboard for the work environment, and a text editor for composing code. Built into the IDE are keyboard shortcuts, code completion functionality, syntax-highlighting, as well as support for version control.
 
-*** =pre_exercise_code
-```{r}
-file.edit("untitled.txt")
-```
+Which of the following is *not* a benefit of the RStudio IDE?
 
 *** =instructions
-- Intensive Design Environment
-- Integrated Document Environment
-- Independent Developer Ecosystem
-- Integrated Development Environment
-*** =hint
-Type 'go()' to view instructions in the viewer pane.
+- Integrated user interface
+- Contains a text editor
+- Code completion
+- Helps fix poor coding practies 
 
 *** =sct
 ```{r,eval=FALSE}
@@ -32,30 +27,21 @@ msg3 <- "Wrong."
 msg4 <- "Great work!"
 test_mc(4, feedback_msgs = c(msg1, msg2, msg3, msg4))
 ```
-*** =attachments
-ch1_1.Rmd: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/ch1.1.Rmd
-.Rprofile: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/setup.Rprofile
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:998563e0e4
 ## Installing RStudio
 
-In order for you to use the RStudio IDE on your own computer, you will need to install the appropriate items.
+To use RStudio, you need a copy of the R programming langauge and a copy of the RStudio IDE.
 
-Evaluate the following statement.
+To install the R programming language, vist [cran](https://cran.r-project.org) and click the link that matches your operating system. For Mac users, select 'Download R for Mac', and download the topmost R package (.pkg) file.  Open the file and follow the onscreen instructions.  For Windows, select  'Download R for Windows', then 'base', and finally 'Download R for Windows'.  Open the executable and follow the onscreen instructions.  
 
+Once R is installed, download [RStudio](http://rstudio.com/download). Choose the installer for your system, then click the link to download the installer.  Once you have the installer, installation is easy: on a Mac, open the DMG file and drag RStudio to your Applications folder.
 
-<strong>RStudio requres the R programming language.</strong>
-
-*** =pre_exercise_code
-```{r}
-file.edit("untitled.txt")
-```
+Evaluate the following statement: *RStudio requres the R programming language.*
 
 *** =instructions
 - True
 - False
-*** =hint
-Check out the instructions in the viewer pane to answer the multiple choice question.
 
 *** =sct
 ```{r,eval=FALSE}
@@ -63,11 +49,8 @@ msg1 <- "Great!"
 msg2 <- "Not quite."
 test_mc(1, feedback_msgs = c(msg1, msg2))
 ```
-*** =attachments
-ch1_2.Rmd: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/ch1.2.Rmd
-.Rprofile: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/setup.Rprofile
 
---- type:PlainMultipleChoiceExercise lang:r xp:25 skills:1 key:b1895d66c3
+--- type:RStudioMultipleChoiceExercise lang:r xp:25 skills:1 key:b1895d66c3
 ## RStudio panes
 
 The RStudio interface consists of four main panes, or windows.  Briefly,
@@ -83,10 +66,6 @@ The location of these windows can be changed by clicking *Tools* -> *Global Opti
 
 Each of these windows will be explored in subsequent sections. 
 
-*** =pre_exercise_code
-```{r}
-file.edit("untitled.txt")
-```
 
 *** =instructions
 - Got it.
@@ -220,6 +199,8 @@ Navigate to the history tab.  The meaning of the icons is as follows (keyboard s
 - ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/history_toSource.png) : insert selected command into document (<strong>Shift+Enter</strong>)
 - ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/history_clearSelected.png) : remove selected history entry
 - ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/history_clearAll.png) : clear all history entries
+
+Note that there is also a search bar if you have a particular command in mind.
 
 Using the history tab, re-run the fourth to last command executed in the console. What is the output?
 
