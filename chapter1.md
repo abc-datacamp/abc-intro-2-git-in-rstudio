@@ -474,8 +474,22 @@ success_msg("Correct!")
 ```
 
 
---- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:c4e0781121
-## The viewer tab 
-
---- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:9b69900042
+--- type:RStudioMultipleChoiceExercise lang:r xp:25 skills:1 key:9b69900042
 ## Summary
+
+That completes your introduction to the RStudio IDE!
+
+Hopefully you have seen how the RStudio is a powerful and friendly user-interface, which conveniently combines many of the tools you'll need to successfully and efficiently create R code in one interface.
+
+Lastly, there is a real great RStudio *cheat sheat* from the developers of RStudio.  You can access it [here](https://www.rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf).
+
+In the next chapter, we will learn about version control and how it can be used within the RStudio IDE itself.
+
+*** =instructions
+- ```Let's get to it!```
+
+*** =sct
+```{r}
+test_mc(1)
+success_msg("Correct!")
+```
