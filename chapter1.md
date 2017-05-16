@@ -148,13 +148,13 @@ file.edit("untitled.txt")
 
 *** =instructions
 - ```file```
-- ```quotes```
 - ```sep```
+- ```quotes```
 - ```row.names```
 
 *** =sct
 ```{r}
-test_mc(2)
+test_mc(3)
 success_msg("Correct! quote is an argument, but quotes (with an s) isn't!")
 ```
 
@@ -172,8 +172,8 @@ You can even view a list of your recent commands by pressing Ctrl+Up on Windows 
 What is the third command starting from the top of the recent commands list?
 
 *** =instructions
-- ```plot(sin, -pi, 2*pi)```
 - ```9 * 64```
+- ```plot(sin, -pi, 2*pi)```
 - ```my.data <- data.frame(group=c("A", "B"))```
 - ```?attach```
 *** =hint
@@ -181,7 +181,7 @@ Using Ctrl+Up on Windows or Command+Up on Mac, and count down three from the top
 
 *** =sct
 ```{r}
-test_mc(1)
+test_mc(2)
 success_msg("Correct! quote is an argument, but quotes (with an s) isn't!")
 ```
 *** =pre_exercise_code
@@ -201,11 +201,11 @@ These are the objects that were created by you in your current session.
 
 Navigate to the environment tab.  The meaning of the icons is as follows:
 
-- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/environment_load.png) : load workspace from a file
-- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/environment_save.png) : save workspace to a file
-- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/environment_importDataset.png) : import a dataset (from CSV, e.g.,)
-- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/environment_clearAll.png) : clear all objects from the workspace
-- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/environment_selectEnvironment.png) : select environment to view (in addition to user created objects, you can also view package specific objects such as functions)
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/environment_load.png) load workspace from a file
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/environment_save.png) save workspace to a file
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/environment_importDataset.png) import a dataset (from CSV, e.g.,)
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/environment_clearAll.png) clear all objects from the workspace
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/environment_selectEnvironment.png) select environment to view (in addition to user created objects, you can also view package specific objects such as functions)
 
 There is also a search bar if you'd like to search for a particular object.
 
@@ -247,12 +247,12 @@ The commands are displayed in order (most recent at the bottom).
 
 Navigate to the history tab.  The meaning of the icons is as follows (keyboard shortcuts are listed in bold):
 
-- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/history_load.png) : load history from a file
-- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/history_save.png) : save history to a file
-- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/history_toConsole.png) : send selected command to console (<strong>Enter</strong>)
-- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/history_toSource.png) : insert selected command into document (<strong>Shift+Enter</strong>)
-- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/history_clearSelected.png) : remove selected history entry
-- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/history_clearAll.png) : clear all history entries
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/history_load.png) load history from a file
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/history_save.png) save history to a file
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/history_toConsole.png) send selected command to console (<strong>Enter</strong>)
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/history_toSource.png) insert selected command into document (<strong>Shift+Enter</strong>)
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/history_clearSelected.png) remove selected history entry
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/history_clearAll.png) clear all history entries
 
 Note that there is also a search bar if you have a particular command in mind.
 
@@ -260,13 +260,13 @@ Using the history tab, re-run the fourth to last command executed in the console
 
 *** =instructions
 - ```10```
+- ```40320```
 - ```362880```
 - ```576```
-- ```40320```
 
 *** =sct
 ```{r}
-test_mc(4)
+test_mc(2)
 success_msg("Correct!")
 ```
 
