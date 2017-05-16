@@ -330,7 +330,7 @@ The meaning of the icons is as follows:
 - ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/source_popOut.png) move source code to new, separate window 
 - ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/source_save.png) save document to disk
 - ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/source_findReplace.png) bring up search / replace toolbar
-- - ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/source_codeTools.png) collection of code tools
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/source_codeTools.png) collection of code tools
 - ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/source_run.png) run the current line or selection of lines (Mac: <strong>Command+enter</strong> or Windows:<strong>Control+enter</strong>)
 - ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/source_sourceCode.png) source the complete active text document
 - ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/source_outline.png) show document outline; if you have more than one function in your code, you'll be able to quickly jump around your document
@@ -418,22 +418,27 @@ The Plots tab is in the bottom right window. Navigate to it now.
 
 The plots tab allows you view the plots that you have created.  The meaning of its icons are as follows:
 
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/plot_previous.png) return to the previous plot
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/plot_next.png) go to the next plot
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/plot_zoom.png) open plot in new, larger window
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/plot_export.png) save current plot as image or PDF
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/plot_delete.png) delete the current plot
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/plot_clearAll.png) delete all plots 
 
-Open up the ```plot.R``` file.  Click source.  
+One of the great features of RStudio's Plot tab is its ability to keep a history of all the plots you have created, and to jump back and forth between them by using the *Previous* and *Next* button.
 
-
-
+Open up the ```plot.R``` file.  Click source.  Hit the *Back* button three times.  Remove that by plot by clicking the *Remove current plot* button.  What type of plot is displayed on the screen?
 
 
 *** =instructions
-- ```setwd("~/data/addresses")```
-- ```setwd("~/data```
-- ```setwd("~/data/addresses/current")```
-- ```setwd("~/```
+- ```Boxplot```
+- ```Pie chart```
+- ```Dotchart```
+- ```Scatterplot```
 
 *** =sct
 ```{r}
-test_mc(3)
+test_mc(1)
 success_msg("Correct!")
 ```
 
