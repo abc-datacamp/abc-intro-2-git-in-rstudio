@@ -87,7 +87,7 @@ success_msg("Amazing!")
 ## The console pane
 Just like in R, the RStudio console can execute any valid R command.  
 
-In its most basic form, R can be used as a calculator, and has the following builtin operators:
+In its most basic form, R can be used as a calculator, and has the following built in operators:
 
 - Addition: ```+```
 - Subtraction: ```-```
@@ -448,15 +448,31 @@ plots.R: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstud
 
 
 
-
-
-
-
-
-
-
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:e00f978b7d
 ## Viewing documentation 
+
+Another built in feature of RStudio is the ability to view and search documentation for functions.
+
+Just like in the R console, you can pull up documentation using the ```?``` operator within the console.
+Alternatively, you can find a *Help* tab in the bottom right window.  Nagivate to it now.
+
+Type in `barplot` in the search field.  Hit *Enter*.  Read through the help pages.  
+
+What does the `space` argument control of ```barplot``` function control?  
+
+
+*** =instructions
+- ```The amount of space to consume for the title, in pixels ```
+- ```The amount of space between characters in axis labels```
+- ```The amount of space to use for the right margin of the plot```
+- ```The amount of space left before each bar```
+
+*** =sct
+```{r}
+test_mc(4)
+success_msg("Correct!")
+```
+
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:c4e0781121
 ## The viewer tab 
