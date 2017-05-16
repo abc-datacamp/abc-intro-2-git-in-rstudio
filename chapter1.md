@@ -169,7 +169,7 @@ The RStudio console supports the ability to recall previous commands using the a
 
 You can even view a list of your recent commands by pressing Ctrl+Up on Windows or Command+Up on a Mac.
 
-What is the third command starting from the top of the recent commands list?
+Scroll all the way up to the top of the list.  What is the third command down?
 
 *** =instructions
 - ```9 * 64```
