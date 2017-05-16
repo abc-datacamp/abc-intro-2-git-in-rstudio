@@ -21,9 +21,27 @@ RStudio implements support for two version control systems: Git and Subversion. 
 
 Whenever you want Git to track set of code, you have to create a *repository*.  A repository is simply the place were Git tracks your code over time.
 In RStudio, you can easily add a git repository to an existing project.
+A R project has been created for you.  Find it in the File browser and open it.
+To add a Git repository to that project, click *Tools* -> *Project Options* -> *Git/SVN*.  Set the 'Version Control System' to be 'Git'.  Click <strong>Yes</strong> twice. 
 
+Notice that a new file was created in your project directory called ```.gitignore```.  Open that file.  How many lines of text does it contain?
+
+
+*** =instructions
+- ```3```
+- ```2```
+- ```4```
+- ```5```
+
+*** =sct
+```{r}
+test_mc(4)
+success_msg("Correct! the .gitignore file tells Git which files to ignore, since you generally don't want to track unimportant stuff, like your R history.")
+```
+
+*** =attachments
 .Rprofile: https://s3.amazonaws.com/assets.datacamp.com/production/course_1156/datasets/git_setup_.Rprofile
-
+myProject/myProject.Rproj: https://s3.amazonaws.com/assets.datacamp.com/production/course_1156/datasets/myProject.Rproj
 
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:bf83f3a9b7
