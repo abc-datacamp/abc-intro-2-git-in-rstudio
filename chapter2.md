@@ -9,7 +9,7 @@ attachments :
 --- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:a27237d666
 ## Introduction to Git
 
-<strong>Follow the directions in the console to open the R Markdown file:</strong>
+<strong>Follow the directions in the console to open a file containg instructions.</strong>
 
 ```Type 'go()' and hit Enter to get started!```
 
@@ -41,6 +41,20 @@ lab.css: https://s3.amazonaws.com/assets.datacamp.com/production/course_1156/dat
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:bda045cc6e
 ## Reproducibility and version control
+
+Git is a particulary implementation of a version control system.  A version control system which is a software tool which manages and keeps track of changes to source code over time.  Some of its chief benefits include:
+
+- Ability to revert back to older versions of your code
+- Ability to view the differences between two versions of your code
+- Ability to review the history of your code
+- Ability to determine when a bug was introduced
+- Ability to experiment with new features without worrying
+
+RStudio implements support for two version control systems: Git and Subversion.  We will focus on Git.
+
+Whenever you want Git to track set of code, you have to create a *repository*.  A repository is simply the place were Git tracks your code over time.
+In RStudio, you can easily add a git repository to an existing project.
+
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:bbca442764
 ## Version control in RStudio IDE
