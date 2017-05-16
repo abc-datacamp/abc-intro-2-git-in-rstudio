@@ -6,7 +6,7 @@ attachments :
 
 
 
---- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:bbca442764
+--- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:bbca442764
 ## Version control in RStudio IDE
 
 Git is a particular implementation of a version control system.  A version control system is a software tool which manages and keeps track of changes to source code over time.  Some of its chief benefits include:
@@ -44,39 +44,39 @@ success_msg("Correct! the .gitignore file tells Git which files to ignore, since
 myProject/myProject.Rproj: https://s3.amazonaws.com/assets.datacamp.com/production/course_1156/datasets/myProject.Rproj
 
 
---- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:ad6cfbfcca
+--- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:ad6cfbfcca
 ## The Git tab
 
---- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:b8a90154e0
+--- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:b8a90154e0
 ## Commiting changes
 
 
---- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:cdf20e6403
+--- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:cdf20e6403
 ## Commit history
 
---- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:d8ce20fc5c
+--- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:d8ce20fc5c
 ## Using checkout
 
---- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:e83a93f2a8
+--- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:e83a93f2a8
 ## Undo commited changes: checkout
 
 
---- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:941c11c480
+--- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:941c11c480
 ## Undo changes
 
---- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:9c1c3faf15
+--- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:9c1c3faf15
 ## Introduction to GitHub
 
---- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:f6812b14bb
+--- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:f6812b14bb
 ## Cloning existing repos
 
---- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:adbd3f800d
+--- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:adbd3f800d
 ## Pulling & pushing
 
---- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:5705dfbac5
+--- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:5705dfbac5
 ## Working with branches
 
---- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:211e19754b
+--- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:211e19754b
 ## Summary
 
 
