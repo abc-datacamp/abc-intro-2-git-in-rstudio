@@ -328,29 +328,34 @@ There are a lot of options and functions available for editing code in RStudio. 
 The meaning of the icons is as follows:
 
 - ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/source_popOut.png) move source code to new, separate window 
-- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/source_save.png) save file to disk
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/source_save.png) save document to disk
 - ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/source_findReplace.png) bring up search / replace toolbar
 - - ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/source_codeTools.png) collection of code tools
 - ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/source_run.png) run the current line or selection of lines (Mac: <strong>Command+enter</strong> or Windows:<strong>Control+enter</strong>)
 - ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/source_sourceCode.png) source the complete active text document
-- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/source_outline.png) show document outline
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/source_outline.png) show document outline; if you have more than one function in your code, you'll be able to quickly jump around your document
 
+Follow the instructions below.
+
+Open up the file script.R from the File browser.  Replace *all* the instances of the number 2 with the number 4; and replace *all* the instances of the number 6 with 0 (*hint* -- use the find and replace function!).  Afterward, select *all* three lines of code, and select run (or use the keyboard shortcut).
+
+What is the value of the expression ```(x/y)*1000```?
 
 *** =instructions
-- ```setwd("~/data/addresses")```
-- ```setwd("~/data```
-- ```setwd("~/data/addresses/current")```
-- ```setwd("~/```
+- ```10.36973```
+- ```9.944371```
+- ```10.3504```
+- ```9.936494```
 
 *** =sct
 ```{r}
-test_mc(3)
+test_mc(1)
 success_msg("Correct!")
 ```
 
 
 *** =attachments
-fakeFile1.csv: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/addresses.csv
+script.R: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/sourcePane_script.R
 
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:793b7d3447
