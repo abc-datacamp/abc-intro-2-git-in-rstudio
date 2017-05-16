@@ -284,11 +284,11 @@ Built into the RStudio IDE is a file browser in the bottom right window. This al
 
 Navigate to the file browser tab.  The meaning of the icons is as follows:
 
-- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/files_newFolder.png) : create a new folder in the current directory
-- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/files_upload.png) : upload a file (note: this option will not exist on local installations of RStudio)
-- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/files_delete.png) : delete the selected files or folders
-- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/files_rename.png) : rename the selected file or folder
-- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/files_more.png) : more options in a dropdown list, including the functions to copy or move a file, as well as set your current working directory.
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/files_newFolder.png) create a new folder in the current directory
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/files_upload.png) upload a file (note: this option will not exist on local installations of RStudio)
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/files_delete.png) delete the selected files or folders
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/files_rename.png) rename the selected file or folder
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/files_more.png) more options in a dropdown list, including the functions to copy or move a file, as well as set your current working directory.
 
 *Be advised that deleting a file from within the RStudio IDE also deletes it from your local filesystem, so use with caution!*
 
@@ -321,13 +321,19 @@ data/addresses/current/addresses.csv: https://raw.githubusercontent.com/abc-data
 ## The source pane
 The source pane is located in the top left window when a script or document is open.  If you recall from a previous lesson, you can create a new R Script by clicking *File* -> *New File* -> *R Script*.  Go ahead and do so.
 
-RStudio's source editor includes syntax highlighting, code completion, and find/replace.
+RStudio's source editor supports syntax highlighting, code completion, and find/replace.
 
 There are a lot of options and functions available for editing code in RStudio.  We will only cover a few.
 
 The meaning of the icons is as follows:
 
-
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/source_popOut.png) move source code to new, separate window 
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/source_save.png) save file to disk
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/source_findReplace.png) bring up search / replace toolbar
+- - ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/source_codeTools.png) collection of code tools
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/source_run.png) run the current line or selection of lines (Mac: <strong>Command+enter</strong> or Windows:<strong>Control+enter</strong>)
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/source_sourceCode.png) source the complete active text document
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/source_outline.png) show document outline
 
 
 *** =instructions
