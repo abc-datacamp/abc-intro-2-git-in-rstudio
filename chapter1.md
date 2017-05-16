@@ -419,7 +419,7 @@ The Plots tab is in the bottom right window. Navigate to it now.
 The plots tab allows you view the plots that you have created.  The meaning of its icons are as follows:
 
 
-Open up the ```plot.R` file.  Click source.  
+Open up the ```plot.R``` file.  Click source.  
 
 
 
@@ -439,7 +439,7 @@ success_msg("Correct!")
 
 
 *** =attachments
-plots.R: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/plots.R
+plots.R: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/plot.R
 
 
 
