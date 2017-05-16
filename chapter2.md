@@ -44,15 +44,12 @@ success_msg("Correct! the .gitignore file tells Git which files to ignore, since
 myProject/myProject.Rproj: https://s3.amazonaws.com/assets.datacamp.com/production/course_1156/datasets/myProject.Rproj
 
 
---- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:bf83f3a9b7
-## Initializing Git
+--- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:ad6cfbfcca
+## The Git tab
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:b8a90154e0
 ## Commiting changes
 
-
---- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:ad6cfbfcca
-## Git icons in RStudio
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:cdf20e6403
 ## Commit history
@@ -71,7 +68,7 @@ myProject/myProject.Rproj: https://s3.amazonaws.com/assets.datacamp.com/producti
 ## Introduction to GitHub
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:f6812b14bb
-## Cloning exists repos
+## Cloning existing repos
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:adbd3f800d
 ## Pulling & pushing
