@@ -319,7 +319,7 @@ data/addresses/current/addresses.csv: https://raw.githubusercontent.com/abc-data
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:f8ed7d61d0
 ## The source pane
-The source pane is located in the top left window when a script or document is open.  If you recall from a previous lesson, you can create a new R Script by clicking *File* -> *New File* -> *R Script*.  Go ahead and do so.
+The source pane is located in the top left window when a script or document is open.  If you recall from a previous lesson, you can create a new R Script by clicking *File* -> *New File* -> *R Script*, or you can open up a script from the File browser.  Go ahead and open up the file ```script.R``` from the File browser now.
 
 RStudio's source editor supports syntax highlighting, code completion, and find/replace.
 
@@ -337,7 +337,7 @@ The meaning of the icons is as follows:
 
 Follow the instructions below.
 
-Open up the file script.R from the File browser.  Replace *all* the instances of the number 2 with the number 4; and replace *all* the instances of the number 6 with 0 (*hint* -- use the find and replace function!).  Afterward, select *all* three lines of code, and select run (or use the keyboard shortcut).
+With the ```script.R``` open, replace *all* the instances of the number 2 with the number 4; and replace *all* the instances of the number 6 with 0 (*hint* -- use the find and replace function!).  Afterward, select *all* three lines of code, and select run (or use the keyboard shortcut).
 
 What is the value of the expression ```(x/y)*1000```?
 
