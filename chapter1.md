@@ -364,6 +364,13 @@ fakeFile1.csv: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:d15c60ae7d
 ## The plots tab
 
+test
+
+*** =sample_code
+```{r}
+# Assign 5 to the variable x
+```
+
 
 *** =pre_exercise_code
 ```{r}
