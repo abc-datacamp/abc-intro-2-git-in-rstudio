@@ -474,6 +474,30 @@ test_mc(4)
 success_msg("Correct!")
 ```
 
+--- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:277e502da5
+## RStudio projects
+
+RStudio allows for the creation of *projects*, which is collection of scripts in their own working directory along with their workspace environment and history.
+It's often useful to create multiple RStudio projects for each of the different analyses you are doing.
+
+It is easy to create an RStudio project.  Select *File* -> *New Project* -> *New Directory* -> *Empty Project*.  Name your *Directory Name* as "myAnalysis", and click *Create Project*.
+
+You may have noticed that a new directory was created called 'myAnalysis'.  It is common practice to store your R scripts and other files within this directory.
+When a R project is opened (which can be achieved by *File* -> *Open Project* and navigating to your project file; or by navigating to the project file in the File browser, and clicking on it), your current working directory is set to the project directory, previously edited R scripts are restored to the source pane, and the previous R history is restored to the History tab.
+
+Head into the 'myAnalysis' folder.  What is the extension of the RStudio project file?
+
+*** =instructions
+- ```.project ```
+- ```.Rproj```
+- ```.R```
+- ```.Rproject```
+
+*** =sct
+```{r}
+test_mc(2)
+success_msg("Correct!")
+```
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:25 skills:1 key:9b69900042
 ## Summary
