@@ -359,10 +359,28 @@ script.R: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstu
 
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:793b7d3447
-## Executing code
+## Sourcing code
+
+Once again, open up ```script.R``` file from the File browser.  Click the Source icon.
+
+Where did the values of the variables ```x``` and ```y``` go?
 
 
+*** =instructions
+- The R console
+- The source pane
+- The environment tab
+- The file browser
 
+*** =sct
+```{r}
+test_mc(3)
+success_msg("Correct!")
+```
+
+
+*** =attachments
+script.R: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/sourcePane_script.R
 
 
 
