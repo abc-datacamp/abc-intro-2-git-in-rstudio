@@ -9,7 +9,7 @@ attachments :
 
 RStudio is an integrated development environment (IDE) that consolidates basic developer tools into a single, user-friendly interface. 
 
-The RStudio IDE works alongside the R interpreter, and includes a console for code execution, a file browser, a help window, a package managment system, a dashboard for the work environment, and a text editor for composing code. Built into the IDE are keyboard shortcuts, code completion functionality, syntax-highlighting, as well as support for version control.
+The RStudio IDE works alongside the R interpreter, and includes a console for code execution, a file browser, a help window, a plot viewer, a dashboard for the work environment, and a text editor for composing code. Built into the IDE are keyboard shortcuts, code completion functionality, syntax highlighting, as well as support for version control.
 
 Which of the following is *not* a benefit of the RStudio IDE?
 
@@ -17,27 +17,27 @@ Which of the following is *not* a benefit of the RStudio IDE?
 - Integrated user interface
 - Contains a text editor
 - Code completion
-- Helps fix poor coding practies 
+- Makes bad code good 
 
 *** =sct
 ```{r,eval=FALSE}
 msg1 <- "Try again."
 msg2 <- "Not quite."
 msg3 <- "Wrong."
-msg4 <- "Great work!"
+msg4 <- "Correct!"
 test_mc(4, feedback_msgs = c(msg1, msg2, msg3, msg4))
 ```
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:998563e0e4
 ## Installing RStudio
 
-To use RStudio, you need a copy of the R programming langauge and a copy of the RStudio IDE.
+To use RStudio, you need a copy of the R programming language and a copy of the RStudio IDE.
 
-To install the R programming language, vist [cran](https://cran.r-project.org) and click the link that matches your operating system. For Mac users, select 'Download R for Mac', and download the topmost R package (.pkg) file.  Open the file and follow the onscreen instructions.  For Windows, select  'Download R for Windows', then 'base', and finally 'Download R for Windows'.  Open the executable and follow the onscreen instructions.  
+To install the R programming language, visit [cran](https://cran.r-project.org) and click the link that matches your operating system. For Mac users, select 'Download R for Mac', and download the topmost R package (.pkg) file.  Open the file and follow the onscreen instructions.  For Windows, select  'Download R for Windows', then 'base', and finally 'Download R for Windows'.  Open the executable and follow the onscreen instructions.  
 
 Once R is installed, download [RStudio](http://rstudio.com/download). Choose the installer for your system, then click the link to download the installer.  Once you have the installer, installation is easy: on a Mac, open the DMG file and drag RStudio to your Applications folder.
 
-Evaluate the following statement: *RStudio requres the R programming language.*
+Evaluate the following statement: *RStudio requires the R programming language.*
 
 *** =instructions
 - True
@@ -57,7 +57,7 @@ The RStudio interface consists of four main panes, or windows.  Briefly,
 
 1. <strong>Bottom left</strong>: console or command window. Here you can type any valid R command after the ```>``` prompt followed by <strong>Enter</strong> and R will execute that command. 
 2. <strong>Top left</strong>: text editor or script window. This is where you can save and edit collections of commands.
-3. <strong>Top right</strong>: environment & history window.  The environment window contains objects (data, values, functions) R has currently stored in its memory. The history window shows all commands which were executed in the console.
+3. <strong>Top right</strong>: environment & history window.  The environment window contains objects (data, values, functions) R has currently stored in its memory. The history window shows all commands that were executed in the console.
 4. <strong>Bottom right</strong>: files, plots, packages, help, & viewer pane. Here you can open files, view plots, install and load packages, read man pages, and view markdown and other documents in the viewer tab.
 
 <center>![panes](https://github.com/abc-datacamp/abc-intro-2-git-in-rstudio/raw/master/attachments/rstudio_allPanes.png)</center>
@@ -67,9 +67,10 @@ The location of these windows can be changed by clicking *Tools* -> *Global Opti
 Each of these windows will be explored in subsequent sections. 
 
 You may have noticed that, by default, there is no text editor window open.  In order to open one, click *File* -> *New File* -> *R Script*.
-Alteratively, click the 'Add new document' symbol and select *R Script* <center>![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/main_newScript.png).</center>
+Alternatively, click the 'Add new document' symbol and select *R Script* <center>![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/main_newScript.png).</center>
 
 What title does RStudio give the new blank document?
+
 
 *** =instructions
 - Untitled
@@ -97,7 +98,7 @@ In its most basic form, R can be used as a calculator, and has the following bui
 - Modulo: ```%%```
 - Square root: ```sqrt()```
 
-<strong>Using the RStudio console just like you would R, evalute the following:</strong>
+<strong>Using the RStudio console just like you would R, evaluate the following:</strong>
 
 <table style="font-family:verdana;">
   <tr>
@@ -160,13 +161,13 @@ success_msg("Correct! quote is an argument, but quotes (with an s) isn't!")
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:38be6745ca
 ## Retrieving previous commands
 
-It's often the case that you want to re-ececute commands that you previously entered. 
+It's often the case that you want to re-execute commands that you previously entered. 
 The RStudio console supports the ability to recall previous commands using the arrow keys:
 
 - <strong>Up</strong> — Recall previous command(s)
 - <strong>Down</strong> — Reverse of Up
 
-You can even view a ist of your recent commands by pressing Ctrl+Up on Windows or Command+Up on a Mac.
+You can even view a list of your recent commands by pressing Ctrl+Up on Windows or Command+Up on a Mac.
 
 What is the third command starting from the top of the recent commands list?
 
@@ -195,7 +196,7 @@ try(loadhistory(".Rhistory"), silent=T)
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:f3d61cfed1
 ## Environment browser
 
-The environment tab is in the top right window, which displays the R objects that exist in the global environemnt.
+The environment tab is in the top right window, which displays the R objects that exist in the global environment.
 These are the objects that were created by you in your current session.  
 
 Navigate to the environment tab.  The meaning of the icons is as follows:
@@ -280,7 +281,7 @@ try(loadhistory(".Rhistory"), silent=T)
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:6b9f1656bb
 ## File browser
-Built into the RStudio IDE is a file browser in the bottom right window. This allows you to navigate your filesystem without having to leave RStudio.
+Built into the RStudio IDE is a file browser in the bottom right window. This allows you to navigate your file system without having to leave RStudio.
 
 Navigate to the file browser tab.  The meaning of the icons is as follows:
 
@@ -290,9 +291,9 @@ Navigate to the file browser tab.  The meaning of the icons is as follows:
 - ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/files_rename.png) rename the selected file or folder
 - ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/files_more.png) more options in a dropdown list, including the functions to copy or move a file, as well as set your current working directory.
 
-*Be advised that deleting a file from within the RStudio IDE also deletes it from your local filesystem, so use with caution!*
+*Be advised that deleting a file from within the RStudio IDE also deletes it from your local file system, so use with caution!*
 
-Most of the functions are self explantory, so feel free to explore on your own.  Note that in order to delete, rename, copy, or move a file, you must select the file(s) that you want to operate on by clicking the white box next to it, so that a check appears.
+Most of the functions are self explanatory, so feel free to explore on your own.  Note that in order to delete, rename, copy, or move a file, you must select the file(s) that you want to operate on by clicking the white box next to it, so that a check appears.
 
 Navigate to the ```data/addresses/current``` folder (if you deleted it while exploring, simply re-create it!).  Select the *More* icon, and click 'Set as Working Directory'. What command was printed to the console?
 
@@ -393,7 +394,7 @@ Select all of the data, click the *Code Tools* icon, and click *Reformat Code*. 
 *** =instructions
 - Nothing
 - The code was executed
-- All the lines were indented / tabed over
+- All the lines were indented
 - A tab was inserted before lines 2-4
 
 *** =sct
@@ -416,7 +417,7 @@ convertToPercent.R: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-g
 
 The Plots tab is in the bottom right window. Navigate to it now.
 
-The plots tab allows you view the plots that you have created.  The meaning of its icons are as follows:
+The plots tab allows you view the plots that you have created.  The meaning of its icons is as follows:
 
 - ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/plot_previous.png) return to the previous plot
 - ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/plot_next.png) go to the next plot
@@ -454,7 +455,7 @@ plots.R: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstud
 Another built in feature of RStudio is the ability to view and search documentation for functions.
 
 Just like in the R console, you can pull up documentation using the ```?``` operator within the console.
-Alternatively, you can find a *Help* tab in the bottom right window.  Nagivate to it now.
+Alternatively, you can find a *Help* tab in the bottom right window. Navigate to it now.
 
 Type in `barplot` in the search field.  Hit *Enter*.  Read through the help pages.  
 
@@ -481,7 +482,7 @@ That completes your introduction to the RStudio IDE!
 
 Hopefully you have seen how the RStudio is a powerful and friendly user-interface, which conveniently combines many of the tools you'll need to successfully and efficiently create R code in one interface.
 
-Lastly, there is a real great RStudio *cheat sheat* from the developers of RStudio.  You can access it [here](https://www.rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf).
+Lastly, there is a real great RStudio *cheat sheet* from the developers of RStudio.  You can access it [here](https://www.rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf).
 
 In the next chapter, we will learn about version control and how it can be used within the RStudio IDE itself.
 
