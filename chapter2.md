@@ -55,6 +55,8 @@ RStudio implements support for two version control systems: Git and Subversion. 
 Whenever you want Git to track set of code, you have to create a *repository*.  A repository is simply the place were Git tracks your code over time.
 In RStudio, you can easily add a git repository to an existing project.
 
+.Rprofile: https://s3.amazonaws.com/assets.datacamp.com/production/course_1156/datasets/git_setup_.Rprofile
+
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:bbca442764
 ## Version control in RStudio IDE
