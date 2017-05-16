@@ -386,26 +386,25 @@ script.R: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstu
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:5f2ea1b3c5
 ## Tidying up code
-Open up ```convertToPercent.R``` file from the File browser.  Click the Source icon.
+Open up ```convertToPercent.R``` file from the File browser.  
 
-Where did the values of the variables ```x``` and ```y``` go?
-
+Select all of the data, click the *Code Tools* icon, and click *Reformat Code*. What happened?
 
 *** =instructions
-- The R console
-- The source pane
-- The environment tab
-- The file browser
+- Nothing
+- The code was executed
+- All the lines were indented / tabed over
+- A tab was inserted before lines 2-4
 
 *** =sct
 ```{r}
-test_mc(3)
-success_msg("Correct!")
+test_mc(4)
+success_msg("Correct! RStudio can reformat your code to fit suggested style guidelines and make it easier to read.")
 ```
 
 
 *** =attachments
-script.R: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/sourcePane_script.R
+convertToPercent.R: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/convertToPercent.R
 
 
 
@@ -415,50 +414,15 @@ script.R: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstu
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:d15c60ae7d
 ## The plots tab
 
-test
+The Plots tab is in the bottom right window. Navigate to it now.
 
-*** =sample_code
-```{r}
-# Assign 5 to the variable x
-```
+The plots tab allows you view the plots that you have created.  The meaning of its icons are as follows:
 
 
-*** =pre_exercise_code
-```{r}
-
-attach(mtcars)
-dotchart(mtcars$mpg,labels=row.names(mtcars),cex=.7,
-  	main="Gas Milage for Car Models", 
-   xlab="Miles Per Gallon")
-
-counts <- table(mtcars$vs, mtcars$gear)
-barplot(counts, main="Car Distribution by Gears and VS",
-  xlab="Number of Gears", col=c("darkblue","red"),
- 	legend = rownames(counts))
-
-slices <- c(10, 12,4, 16, 8)
-lbls <- c("US", "UK", "Australia", "Germany", "France")
-pie(slices, labels = lbls, main="Pie Chart of Countries")
-
-boxplot(len~supp*dose, data=ToothGrowth, notch=FALSE, 
-  col=(c("gold","darkgreen")),
-  main="Tooth Growth", xlab="Suppliment and Dose")
+Open up the ```plot.R` file.  Click source.  
 
 
-plot(wt, mpg, main="Scatterplot", 
-  	xlab="Car Weight ", ylab="Miles Per Gallon ", pch=19)
-  	
-hist(mtcars$mpg, breaks=12, col="red")
 
-movies <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv")
-
-# 2. Pre-load packages, so that users don't have to do this manually.
-library(ggplot2)
-
-# 3. Create a plot in the viewer, that students can check out while reading the exercise
-ggplot(movies, aes(x = runtime, y = rating, col = genre)) + geom_point()
-
-```
 
 
 *** =instructions
@@ -475,7 +439,7 @@ success_msg("Correct!")
 
 
 *** =attachments
-fakeFile1.csv: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/addresses.csv
+plots.R: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/plots.R
 
 
 
@@ -494,56 +458,3 @@ fakeFile1.csv: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:9b69900042
 ## Summary
-
----
-title       : Insert the chapter title here
-description : Insert the chapter description here
-attachments :
-  slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
-
---- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:1ef02b44d9
-## A really bad movie
-
-Have a look at the plot that showed up in the viewer to the right. Which type of movie has the worst rating assigned to it?
-
-*** =instructions
-- Adventure
-- Action
-- Animation
-- Comedy
-
-*** =hint
-Have a look at the plot. Which color does the point with the lowest rating have?
-
-*** =pre_exercise_code
-```{r}
-# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
-
-# 1. Preload a dataset. The code below will read the csv that is stored at the URL's location.
-# The movies variable will be available in the user's console.
-movies <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv")
-
-# 2. Pre-load packages, so that users don't have to do this manually.
-library(ggplot2)
-
-# 3. Create a plot in the viewer, that students can check out while reading the exercise
-ggplot(movies, aes(x = runtime, y = rating, col = genre)) + geom_point()
-```
-
-*** =sct
-```{r}
-# The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
-# testwhat R package
-
-msg_bad <- "That is not correct!"
-msg_success <- "Exactly! There seems to be a very bad action movie in the dataset."
-
-# Use test_mc() to grade multiple choice exercises. 
-# Pass the correct option (Action, option 2 in the instructions) to correct.
-# Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
-test_mc(correct = 2, feedback_msgs = c(msg_bad, msg_success, msg_bad, msg_bad)) 
-```
-
-*** =attachments
-my_project/: https://s3.amazonaws.com/assets.datacamp.com/production/course_944/datasets/my_project/
