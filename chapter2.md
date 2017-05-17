@@ -49,15 +49,8 @@ RStudio provides an interface to the most common version control operations, inc
 The act of commiting a file or a change to a file tells Git that you want to save and record those changes to your Git repository.
 
 Go ahead and open up the myProject.Rproj RStudio project.  
-Create a new RScript.  Add the ```convertToPercent``` function that we've seen earlier:
-
-convertToPercent <- function(x) {  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; percent <- round(x * 100, digits = 1)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; result <- paste(percent, "%", sep = "")  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return(result)  
-}
-
-Save your script and call it ```myFunctions.R```.
+There's also a script called ```myFunctions.R``` in the directory.  If you open it, you'll see it contains our convertToPercent function.
+We are going to tell Git to track this file now.
 
 You may have noticed a new Git tab in the upper right window, next to the History tab.  Navigate to that tab now.
 
@@ -76,6 +69,7 @@ success_msg("Correct! the .gitignore file tells Git which files to ignore, since
 
 *** =attachments
 .Rprofile: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git_setup_.Rprofile
+myProject/myFunctions.R: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/convertToPercent.R
 myProject/myProject.Rproj: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/myProject.Rproj
 myProject/.gitignore: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/gitignore
 
