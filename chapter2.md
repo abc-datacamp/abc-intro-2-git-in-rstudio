@@ -44,7 +44,7 @@ success_msg("Correct! the .gitignore file tells Git which files to ignore, since
 myProject/myProject.Rproj: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/myProject.Rproj
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:b8a90154e0
-## Commiting changes
+## Committing changes
 RStudio provides an interface to the most common version control operations, including adding and committing files.
 The act of adding a file tells Git to start tracking the file.  The act of commiting a file or a change to a file tells Git that you want to save and record those changes to your Git repository. These two actions (adding + commiting) typically go hand-in-hand. 
 
