@@ -40,12 +40,8 @@ success_msg("Correct! the .gitignore file tells Git which files to ignore, since
 ```
 
 *** =attachments
-.Rprofile: https://s3.amazonaws.com/assets.datacamp.com/production/course_1156/datasets/git_setup_.Rprofile
-myProject/myProject.Rproj: https://s3.amazonaws.com/assets.datacamp.com/production/course_1156/datasets/myProject.Rproj
-
-
---- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:ad6cfbfcca
-## The Git tab
+.Rprofile: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git_setup_.Rprofile
+myProject/myProject.Rproj: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/myProject.Rproj
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:b8a90154e0
 ## Commiting changes
