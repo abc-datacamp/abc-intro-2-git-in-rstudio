@@ -210,16 +210,32 @@ Click the <strong>Revert</strong> button, and then click  <strong>Yes</strong>. 
 
 Note that where Git revert this differs between a simple system wide undo (Edit -> Undo) is that you can even close RStudio, thereby removing your systems clipboard hisotry for that application from memory, and still be able to revert back to the previously commited file.  This is because Git actually stores and tracks changes to your file on disk. 
 
+You can also discard certain lines of an edited file, in the event that you'd like only certain areas of the script to revert back to the previously commited ones.  Go ahead an append a new function, ```sumOfSquares``` to the end of the ```myFunctions.R``` script:
+
+```
+sumOfSquares <- function(x,y) {
+  x^2 + y^2
+}
+```
+
+Once again delete line 2.  Save the script.  Click <strong>Diff</strong>.  You should see something like this in the pop-up window:
+
+<center>![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git_discardLine.png)</center>
+
+If we wanted to bring back line 2, but retain the new ```sumOfSquares``` function, you can click on line 2, and you'll see a <strong>Discard line</strong> button.  Click it and verify that line 2 is back.
+
+What happens if you click  <strong>Discard chunk</strong>?
+
 *** =instructions
-- ```1 red, 1 green```
-- ```1 red, 2 green```
-- ```2 red, 1 green```
-- ```2 red, 2 green```
+- ```Line 2 is deleted again```
+- ```The convert to percent function is removed```
+- ```The sum of squares function is removed```
+- ```The whole script is deleted```
 
 *** =sct
 ```{r}
 test_mc(3)
-success_msg("Correct! Note that if you wanted this change to be recorded by Git, you'd have to remember to commit it! Saving a file is not the same as commiting.")
+success_msg("Correct!")
 ```
 
 *** =attachments
