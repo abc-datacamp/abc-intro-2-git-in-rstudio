@@ -120,8 +120,8 @@ Git allows you to view changes made to a file that was already previously commit
 
 Open up the ```myProject.Rproj``` RStudio project again.  Open the ```myFunctions.R``` script.  Delete line 3 (the line that appends a percent sign to the output).  Save the script (File -> Save ; or Cmd+S on Mac, or Control+S on a PC).  
 
-Navigate to the Git tab in the upper right window. You'll  notice that our script is now marked with an  ```M```, which stands for 'Modified'.
-Click the <strong>Diff</strong> button. This is going to show us how our current version of our ```myFunctions.R``` script differs from the previously commited version.
+Navigate to the Git tab in the upper right window. You'll notice that our script is now marked with an  ```M```, which stands for 'Modified'.
+Click the <strong>Diff</strong> button. A new window will open.  This is going to show us how our current version of our ```myFunctions.R``` script differs from the previously commited version.
 
 You'll see something like this:
 
@@ -200,8 +200,15 @@ myProject/.git/refs/heads/master : https://raw.githubusercontent.com/abc-datacam
 
 Git allows you to easily undo changes to a file that you have yet to commit, so there's no worry about having lost your original, working piece of code.
 
+Open up the ```myProject.Rproj``` RStudio project and the ```myFunctions.R``` script.  
 
+Delete the second line from the script and <strong>save</strong> the file.  Deleting the second line breaks the function (you can test this for yourself, if you'd like). To revert back to the most recently commited version of the script, you can use the built in revert command.  Click the <strong>Diff</strong> button.  You'll notice on the top of the window that opens that there is a <strong>Revert</strong> button:
 
+<center>![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git_revert.png)</center>
+
+Click the <strong>Revert</strong> button, and then click  <strong>Yes</strong>.  The script is now restored to the previously commited version.
+
+Note that where Git revert this differs between a simple system wide undo (Edit -> Undo) is that you can even close RStudio, thereby removing your systems clipboard hisotry for that application from memory, and still be able to revert back to the previously commited file.  This is because Git actually stores and tracks changes to your file on disk. 
 
 *** =instructions
 - ```1 red, 1 green```
