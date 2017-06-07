@@ -202,13 +202,13 @@ Git allows you to easily undo changes to a file that you have yet to commit, so 
 
 Open up the ```myProject.Rproj``` RStudio project and the ```myFunctions.R``` script.  
 
-Delete the second line from the script and <strong>save</strong> the file.  Deleting the second line breaks the function (you can test this for yourself, if you'd like). To revert back to the most recently commited version of the script, you can use the built in revert command.  Click the <strong>Diff</strong> button.  You'll notice on the top of the window that opens that there is a <strong>Revert</strong> button:
+Delete the second line from the script and <strong>save</strong> the file.  Deleting the second line breaks the function (you can test this for yourself, if you'd like). To revert back to the most recently commited version of the script, you can use the built in revert command.  Click the <strong>Diff</strong> button in the Git tab.  You'll notice on the top of the window that opens that there is a <strong>Revert</strong> button:
 
 <center>![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git_revert.png)</center>
 
 Click the <strong>Revert</strong> button, and then click  <strong>Yes</strong>.  The script is now restored to the previously commited version.
 
-Note that where Git revert this differs between a simple system wide undo (Edit -> Undo) is that you can even close RStudio, thereby removing your systems clipboard hisotry for that application from memory, and still be able to revert back to the previously commited file.  This is because Git actually stores and tracks changes to your file on disk. 
+Note that where Git revert differs between a simple system wide undo (Edit -> Undo) is that you can even close RStudio, thereby removing your system's clipboard history for RStudio from memory, and still be able to revert back to the previously commited file.  This is because Git actually stores and tracks changes to your file on disk. 
 
 You can also discard certain lines of an edited file, in the event that you'd like only certain areas of the script to revert back to the previously commited ones.  Go ahead an append a new function, ```sumOfSquares``` to the end of the ```myFunctions.R``` script:
 
