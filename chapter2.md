@@ -114,6 +114,10 @@ myProject/.git/HEAD: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-
 myProject/.git/description: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/description
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:cdf20e6403
+## Differences between files
+
+
+--- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:e288a58454
 ## Commit history
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:d8ce20fc5c
