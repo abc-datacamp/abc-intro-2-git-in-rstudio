@@ -134,7 +134,7 @@ Head back to the script.  Set the second line to print out two digits:
 
 ```percent <- round(x * 100, digits = 2)```
 
-Click the <strong>Diff</strong> again.  How many lines are red and how many lines are green?
+Save the file, and click the <strong>Diff</strong> again.  How many lines are red and how many lines are green?
 
 *** =instructions
 - ```1 red, 1 green```
@@ -145,7 +145,7 @@ Click the <strong>Diff</strong> again.  How many lines are red and how many line
 *** =sct
 ```{r}
 test_mc(3)
-success_msg("Correct!")
+success_msg("Correct! Note that if you wanted this change to be recorded by Git, you'd have to remember to commit it! Saving a file is not the same as commiting.")
 ```
 
 *** =attachments
@@ -195,19 +195,16 @@ myProject/.git/objects/9a/8f1e69289df78448441225816b295767ce3494 : https://githu
 myProject/.git/refs/heads/master : https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git_diff/refs/heads/master
 
 
-
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:e288a58454
-## Commit history
+## Undo changes: revert
 
---- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:d8ce20fc5c
-## Using checkout
+
+--- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:b4ac698014
+## Commit history
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:e83a93f2a8
 ## Undo commited changes: checkout
 
-
---- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:941c11c480
-## Undo changes
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:9c1c3faf15
 ## Introduction to GitHub
