@@ -115,19 +115,36 @@ myProject/.git/description: https://raw.githubusercontent.com/abc-datacamp/abc-i
 
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:cdf20e6403
-## Viewing differences between files
+## Viewing changes made to a tracked file
+Git allows you to view changes made to a file that was already previously commited, and the RStudio IDE supports this function.
 
-After clicking </strong>Commit</strong>, a message pops up.  What does it say?
+Open up the ```myProject.Rproj``` RStudio project again.  Open the ```myFunctions.R``` script.  Delete line 3 (the line that appends a percent sign to the output).  Save the script (File -> Save ; or Cmd+S on Mac, or Control+S on a PC).  
+
+Navigate to the Git tab in the upper right window. You'll  notice that our script is now marked with an  ```M```, which stands for 'Modified'.
+Click the <strong>Diff</strong> button. This is going to show us how our current version of our ```myFunctions.R``` script differs from the previously commited version.
+
+You'll see something like this:
+
+<center>![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git_diffWindow.png)</center>
+
+Lines highlighted in red indicate the original line which has since changed (in this case, deleted).  If a line were added or modified, you would see a green highlight.
+There are two columns of numbers.  The first column indicates the original line numbers, and the second column indicates the new line numbers.
+You'll notice that previously, the line that appended a percent sign to the output was on line 3 and the ```return``` function was on line 4.  But now that the line that appended a percent sign to the output has been deleted, the ```return``` function is on line 3.
+Head back to the script.  Set the second line to print out two digits:
+
+```percent <- round(x * 100, digits = 2)```
+
+Click the <strong>Diff</strong> again.  How many lines are red and how many lines are green?
 
 *** =instructions
-- ```1 file changed, 6 insertions(+)```
-- ```1 file deleted```
-- ```2 files changed, 6 insertions(+)```
-- ```2 files created in create mode```
+- ```1 red, 1 green```
+- ```1 red, 2 green```
+- ```2 red, 1 green```
+- ```2 red, 2 green```
 
 *** =sct
 ```{r}
-test_mc(1)
+test_mc(3)
 success_msg("Correct!")
 ```
 
