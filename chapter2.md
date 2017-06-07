@@ -24,12 +24,12 @@ In RStudio, you can easily add a git repository to an existing project.
 A R project has been created for you.  Find it in the File browser and open it (myProject.Rproj).
 To add a Git repository to that project, click *Tools* -> *Project Options* -> *Git/SVN*.  Set the 'Version Control System' to be 'Git'.  Click <strong>Yes</strong> twice. 
 
-Notice that a new file was created in your project directory called ```.gitignore```.  Open that file.  How many lines of text does it contain?
+Notice that a new file was created in your project directory called ```.gitignore```.  Open that file.  How many lines of text does it contain (including new or empty lines)?
 
 
 *** =instructions
-- ```3```
 - ```2```
+- ```3```
 - ```4```
 - ```5```
 
@@ -46,9 +46,9 @@ myProject/myProject.Rproj: https://raw.githubusercontent.com/abc-datacamp/abc-in
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:b8a90154e0
 ## Tracking files
 RStudio provides an interface to the most common version control operations, including adding and committing files.
-The act of adding a file tells Git to start tracking the file.  The act of commiting a file or a change to a file tells Git that you want to save and record those changes to your Git repository. These two actions (adding + commiting) typically go hand-in-hand. 
+The act of adding a file tells Git to start tracking the file.  The act of commiting a file or a change to a file tells Git that you want to save and record those changes to your Git repository. These two actions (adding & commiting) typically go hand-in-hand. 
 
-<strong>Note: only changes which are commited are able to be reveretd back to in the future</strong>.  Accordingly, it is often good practice to commit early and to commit often.
+<strong>Note: only changes which are commited are able to be reverted back to in the future</strong>.  Accordingly, it is often good practice to commit early and to commit often.
 
 Go ahead and open up the ```myProject.Rproj``` RStudio project in the ```myProject``` directory.  
 There's also a script called ```myFunctions.R``` in the directory.  If you open it, you'll see that it contains our ```convertToPercent``` function.
@@ -58,21 +58,24 @@ You may have noticed a new Git tab in the upper right window, next to the Histor
 
 <center>![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git_untracked.png)</center>
 
-The question marks ```??```  next to functions script indicate that the file is not currently being tracked by Git.  If you click the box next to the functions file, so that there is a checkbox there, you'll see that the status changes from a question mark to an ```A```, indicating that the file has been added to Git.  Next we are going to commit the file, so that we maintain a history of our script.  Clikc the <strong>Commit</strong> button.  A new window will pop up:
+The question marks ```??```  next to the ```myFunctions.R``` script indicate that the file is not currently being tracked by Git.  If you click the box next to the functions file, so that there is a checkbox there, you'll see that the status changes from a question mark to an ```A```, indicating that the file has been added to Git.  Next we are going to commit the file, so that we maintain a history of our script.  Click the <strong>Commit</strong> button.  A new window will pop up:
 
 <center>![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git_commitWindow.png)</center>
 
+Note that you <strong>must</strong> enter a commit message before clicking <strong>Commit</strong>.  Commit messages should be informative and terse.   Enter a commit message (something like, 'Created convert to percent function') and click </strong>Commit</strong>.   
+
+After clicking </strong>Commit</strong>, a message pops up.  What does it say?
 
 *** =instructions
-- ```3```
-- ```2```
-- ```4```
-- ```5```
+- ```1 file changed, 6 insertions(+)```
+- ```1 file deleted```
+- ```2 files changed, 6 insertions(+)```
+- ```2 files created in create mode```
 
 *** =sct
 ```{r}
-test_mc(3)
-success_msg("Correct! the .gitignore file tells Git which files to ignore, since you generally don't want to track unimportant stuff, like your R history.")
+test_mc(1)
+success_msg("Correct!")
 ```
 
 *** =attachments
