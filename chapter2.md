@@ -313,9 +313,9 @@ You can now view the history of your file by clicking <strong>History</strong> i
 
 
 which is a log of the history of your file and its changes.  
-The top half of the window shows each commit, and you may notice that each commit is linked with a unique identifer (called an ```SHA`` key).  
+The top half of the window shows each commit, and you may notice that each commit is linked with a unique identifer (called an ```SHA``` key).  
 In the bottom half of the window, additional information is displayed for each commit, which includes what changes were made during that commmit.
-There is also a 'View file @' link, which shows you how the current file looked at that particular commit.
+There is also a ```View file @``` link, which shows you how the current file looked at that particular commit.
 Click on the very first commit ('Created convert to percent function').  Click ```View file```.  What does the file contain?
 
 
