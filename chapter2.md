@@ -284,7 +284,7 @@ myProject/.git/refs/heads/master : https://raw.githubusercontent.com/abc-datacam
 ## Commit history
 Git stores the complete history of all of your commits, and this history is viewable via the RStudio IDE.
 
-Open up the ```myProject.Rproj``` RStudio project and the ```myFunctions.R``` script.  This time we are going to add and commit the ```sumOfSquares``` function.
+Open up the RStudio project and the ```myFunctions.R``` script.  This time we are going to add and commit the ```sumOfSquares``` function.
 
 Once again, append the ```sumOfSquares``` function to the end of the ```myFunctions.R``` script:
 
@@ -309,10 +309,7 @@ You can now view the history of your file by clicking <strong>History</strong> i
 
 
 which is a log of the history of your file and its changes.  
-The top half of the window shows each commit, and you may notice that each commit is linked with a unique identifer (called an ```SHA``` key).  
-In the bottom half of the window, additional information is displayed for each commit, which includes what changes were made during that commmit.
-There is also a ```View file @``` link, which shows you how the current file looked at that particular commit.
-Click on the very first commit ('Created convert to percent function').  Click ```View file```.  What does the file contain?
+The history window is divided into two parts. The top half of lists each commit, and you may notice that each commit is linked with a unique identifer (called an ```SHA``` key).  The SHA key is important if you want to roll back to a previous commit. The bottom half of the window displays additional information for each commit, including what changes were made during that commmit. There is also a ```View file @``` link, which shows you how the current file looked at that particular commit. Click on the very first commit ('Created convert to percent function').  Click ```View file```.  What does the file contain?
 
 
 *** =instructions
@@ -376,7 +373,85 @@ myProject/.git/refs/heads/master : https://raw.githubusercontent.com/abc-datacam
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:e83a93f2a8
 ## Undo committed changes: checkout
-Previously, we discussed how you can undo changes that weren't already committed.  However, sometimes you commit a change, and only realize later that you'd prefer to roll back.  Although there is no way to do this via the RStudio user interface, it is easily accomplished using RStudio console.
+Previously, we discussed how you can undo changes that weren't already committed.  However, sometimes you commit a change, and only realize later that you'd prefer to roll back.  Although there is no way to do this via the RStudio user interface, it is easily accomplished using RStudio's console. In general, in order to copy a version of a file from the past back into the present, use following command:
+
+```system("git checkout <SHA> <filename>"```
+
+Once again, open up the RStudio project  along with the ```myFunctions.R``` script.   Change line two to print more than 1 digit, i.e.,
+
+```percent <- round(x * 100, digits = 2)```
+
+Save and commit the file with an informative commit message ('Changed number of output digits from 1 to 2').  Open up the Git history.  You should see two commits:  the most recent commit (where ```digits = 2```), and the first commit (where ```digits = 1```).   Determine the SHA key of the first commit (where ```digits = 1```).  
+
+In the RStudio console, type the following and hit Enter:
+
+```system("git checkout <SHA> myFunctions.R")```
+
+where ```<SHA>``` is the actual SHA number without any angle brackets ```<``` or ```>```.
+
+You'll notice that your script will immediate revert back to the first commit (when ```digits = 1```).  Note that in order to record this change, you'll need to remember to save the file and commit along with an informative commit message ('Reverted back to outputting one 1 instead of 2').
+
+Navigate to the Git tab.  What is the status of the ```myFunctions.R``` file?
+
+
+*** =instructions
+- ```Checkmark in the staged column```
+- ```Status changed to ?```
+- ```Status changed to M```
+- ```Both checkmark in staged column and M status```
+
+*** =sct
+```{r}
+test_mc(4)
+success_msg("Correct!")
+```
+
+*** =attachments
+.Rprofile: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git_setup_.Rprofile
+myProject/myFunctions.R: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/convertToPercent_gitDiff.R
+myProject/myProject.Rproj: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/myProject.Rproj
+myProject/.gitignore: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/gitignore
+
+myProject/.git/info/exclude: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/info/exclude
+
+myProject/.git/branches:  https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/info/branches/
+
+myProject/.git/objects/44/afbfe849dd9cab8d5c512b9f2dd98c8f14b00e : https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/objects/44/afbfe849dd9cab8d5c512b9f2dd98c8f14b00e
+myProject/.git/objects/ba/cc97d791c146a015d83e54d6f93dee7e1e0b36 : https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/objects/ba/cc97d791c146a015d83e54d6f93dee7e1e0b36
+myProject/.git/objects/info/ : https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/objects/info/
+myProject/.git/objects/pack/ : https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/objects/pack/
+
+myProject/.git/refs/heads/ : https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/refs/heads/
+myProject/.git/refs/tags/ : https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/refs/tags/
+
+
+myProject/.git/hooks/applypatch-msg.sample : https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/hooks/applypatch-msg.sample
+myProject/.git/hooks/commit-msg.sample : https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/hooks/commit-msg.sample
+myProject/.git/hooks/post-update.sample : https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/hooks/post-update.sample
+myProject/.git/hooks/pre-applypatch.sample : https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/hooks/pre-applypatch.sample
+myProject/.git/hooks/pre-commit.sample : https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/hooks/pre-commit.sample
+myProject/.git/hooks/pre-push.sample : https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/hooks/pre-push.sample
+myProject/.git/hooks/pre-rebase.sample : https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/hooks/pre-rebase.sample
+myProject/.git/hooks/pre-receive.sample : https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/hooks/pre-receive.sample
+myProject/.git/hooks/prepare-commit-msg.sample : https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/hooks/prepare-commit-msg.sample
+myProject/.git/hooks/update.sample : https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/hooks/update.sample
+
+myProject/.git/config: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/config
+myProject/.git/HEAD: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/HEAD
+myProject/.git/description: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/description
+
+
+
+myProject/.git/COMMIT_EDITMSG : https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git_diff/COMMIT_EDITMSG
+myProject/.git/index : https://github.com/abc-datacamp/abc-intro-2-git-in-rstudio/raw/master/attachments/git_diff/index
+myProject/.git/logs/refs/heads/master : https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git_diff/logs/refs/heads/master
+myProject/.git/logs/HEAD : https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git_diff/logs/HEAD
+
+myProject/.git/objects/05/1a9138baaf49966861223065994987630d528d : https://github.com/abc-datacamp/abc-intro-2-git-in-rstudio/raw/master/attachments/git_diff/objects/05/1a9138baaf49966861223065994987630d528d
+myProject/.git/objects/22/8a11a8c3d8665d8cc80adc9d3785e95853722a : https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git_diff/objects/22/8a11a8c3d8665d8cc80adc9d3785e95853722a
+myProject/.git/objects/9a/8f1e69289df78448441225816b295767ce3494 : https://github.com/abc-datacamp/abc-intro-2-git-in-rstudio/raw/master/attachments/git_diff/objects/9a/8f1e69289df78448441225816b295767ce3494
+myProject/.git/refs/heads/master : https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git_diff/refs/heads/master
+
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:9c1c3faf15
 ## Introduction to GitHub
