@@ -307,16 +307,27 @@ Save the file, then commit it.  Remember, to commit a file, you have to:
 5. Enter an informative commit message (e.g., 'Added new sum of squares function')
 6. Click the <strong>Commit</strong> button.
 
+You can now view the history of your file by clicking <strong>History</strong> in the commit popup window, or by clicking the history icon ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/git_history.png) in the Git tab.  Click the history tab now.  You will see something like this:
+
+<center>![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git_commitHistory.png)</center>
+
+
+which is a log of the history of your file and its changes.  
+The top half of the window shows each commit, and you may notice that each commit is linked with a unique identifer (called an ```SHA`` key).  
+In the bottom half of the window, additional information is displayed for each commit, which includes what changes were made during that commmit.
+There is also a 'View file @' link, which shows you how the current file looked at that particular commit.
+Click on the very first commit ('Created convert to percent function').  Click ```View file```.  What does the file contain?
+
 
 *** =instructions
-- ```Line 2 is deleted again```
-- ```The convert to percent function is removed```
-- ```The sum of squares function is removed```
-- ```The whole script is deleted```
+- ```Just the convertToPercent function```
+- ```The convertToPercent and the sumOfSquares function ```
+- ```Just the sumOfSquares function```
+- ```Neither the sumOfSquares nor the convertToPercent function```
 
 *** =sct
 ```{r}
-test_mc(3)
+test_mc(1)
 success_msg("Correct!")
 ```
 
