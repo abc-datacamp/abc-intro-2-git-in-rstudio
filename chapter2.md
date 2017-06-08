@@ -114,7 +114,7 @@ myProject/.git/description: https://raw.githubusercontent.com/abc-datacamp/abc-i
 ## Viewing changes made to a tracked file
 Git allows you to view changes made to a file that was previously committed, and the RStudio IDE supports this function.
 
-Open up the ```myProject.Rproj``` RStudio project again.  Open the ```myFunctions.R``` script.  Delete line 3 (the line that appends a percent sign to the output).  Save the script (*File* -> *Save*).  
+Open up the RStudio project again.  Open the ```myFunctions.R``` script.  Delete line 3 (the line that appends a percent sign to the output).  Save the script (*File* -> *Save*).  
 
 Navigate to the Git tab in the upper right window. You'll notice that our script is now marked with an  ```M```, which stands for 'Modified'.
 Click the <strong>Diff</strong> button. A new window will open.  This is going to show us how our current version of our ```myFunctions.R``` script differs from the previously committed version.
