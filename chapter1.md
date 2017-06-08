@@ -329,7 +329,7 @@ There are a lot of options and functions available for editing code in RStudio. 
 The meaning of the icons is as follows:
 
 - ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/source_popOut.png) move source code to new, separate window 
-- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/source_save.png) save document to disk
+- ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/source_save.png) save document to disk (Mac: <strong>Command+S</strong> or Windows:<strong>Control+S</strong>)
 - ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/source_findReplace.png) bring up search / replace toolbar
 - ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/source_codeTools.png) collection of code tools
 - ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/source_run.png) run the current line or selection of lines (Mac: <strong>Command+enter</strong> or Windows:<strong>Control+enter</strong>)
