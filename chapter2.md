@@ -46,12 +46,9 @@ myProject/myProject.Rproj: https://raw.githubusercontent.com/abc-datacamp/abc-in
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:b8a90154e0
 ## Tracking files
 RStudio provides an interface to the most common version control operations, including adding and committing files.
-The act of adding a file tells Git to start tracking the file.  The act of committing a file or a change to a file tells Git that you want to save and record those changes to your Git repository. These two actions (adding & committing) typically go hand-in-hand. 
+The act of adding a file tells Git to start tracking the file.  The act of committing a file or a change to a file tells Git that you want to save and record those changes to your Git repository. These two actions (adding & committing) typically go hand-in-hand.  Because only changes which are committed are able to be reverted back to in the future, it is often good practice to commit early and to commit often.
 
-<strong>Note: only changes which are committed are able to be reverted back to in the future</strong>.  Accordingly, it is often good practice to commit early and to commit often.
-
-Go ahead and open up the ```myProject.Rproj``` RStudio project in the ```myProject``` directory.  There's also a script called ```myFunctions.R``` in the directory.  If you open it, you'll see that it contains our ```convertToPercent``` function.
-We are going to tell Git to track this file now, and we are going to commit it to our respository.
+Go ahead and open up the ```myProject.Rproj``` RStudio project in the project directory.  There's also a script called ```myFunctions.R``` in the directory.  If you open it, you'll see that it contains a ```convertToPercent``` function.  We are going to tell Git to track this file now, and we are going to commit it to our respository.
 
 You may have noticed a new Git tab in the upper right window, next to the History tab.  Navigate to that tab now.  You'll see something like this:
 
