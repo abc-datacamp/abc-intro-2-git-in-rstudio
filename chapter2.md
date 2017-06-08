@@ -48,7 +48,7 @@ myProject/myProject.Rproj: https://raw.githubusercontent.com/abc-datacamp/abc-in
 RStudio provides an interface to the most common version control operations, including adding and committing files.
 The act of adding a file tells Git to start tracking the file.  The act of committing a file or a change to a file tells Git that you want to save and record those changes to your Git repository. These two actions (adding & committing) typically go hand-in-hand.  Because only changes which are committed are able to be reverted back to in the future, it is often good practice to commit early and to commit often.
 
-Go ahead and open up the ```myProject.Rproj``` RStudio project in the project directory.  There's also a script called ```myFunctions.R``` in the directory.  If you open it, you'll see that it contains a ```convertToPercent``` function.  We are going to tell Git to track this file now, and we are going to commit it to our respository.
+Go ahead and open up the RStudio project in the project directory.  There's also a script called ```myFunctions.R``` in the directory.  If you open it, you'll see that it contains a *convertToPercent* function.  We are going to tell Git to track this file now, and we are going to commit it to our respository.
 
 You may have noticed a new Git tab in the upper right window, next to the History tab.  Navigate to that tab now.  You'll see something like this:
 
@@ -376,7 +376,7 @@ myProject/.git/refs/heads/master : https://raw.githubusercontent.com/abc-datacam
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:e83a93f2a8
 ## Undo committed changes: checkout
-Previously, we discussed how you can undo changes that weren't already committed.  However, sometimes you commit a change, and only realize later that you'd prefer to roll back.
+Previously, we discussed how you can undo changes that weren't already committed.  However, sometimes you commit a change, and only realize later that you'd prefer to roll back.  Although there is no way to do this via the RStudio user interface, it is easily accomplished using RStudio console.
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:9c1c3faf15
 ## Introduction to GitHub
