@@ -21,7 +21,7 @@ RStudio implements support for two version control systems: Git and Subversion. 
 
 Whenever you want Git to track set of code, you have to create a *repository*.  A repository is simply the place were Git tracks your code over time.
 In RStudio, you can easily add a git repository to an existing project.
-A R project has been created for you.  Find it in the File browser and open it (myProject.Rproj).
+An R project has been created for you.  Find it in the File browser and open it (myProject.Rproj).
 To add a Git repository to that project, click *Tools* -> *Project Options* -> *Git/SVN*.  Set the 'Version Control System' to be 'Git'.  Click <strong>Yes</strong> twice. 
 
 Notice that a new file was created in your project directory called ```.gitignore```.  Open that file.  How many lines of text does it contain (including new or empty lines)?
@@ -46,12 +46,11 @@ myProject/myProject.Rproj: https://raw.githubusercontent.com/abc-datacamp/abc-in
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:b8a90154e0
 ## Tracking files
 RStudio provides an interface to the most common version control operations, including adding and committing files.
-The act of adding a file tells Git to start tracking the file.  The act of commiting a file or a change to a file tells Git that you want to save and record those changes to your Git repository. These two actions (adding & commiting) typically go hand-in-hand. 
+The act of adding a file tells Git to start tracking the file.  The act of committing a file or a change to a file tells Git that you want to save and record those changes to your Git repository. These two actions (adding & committing) typically go hand-in-hand. 
 
-<strong>Note: only changes which are commited are able to be reverted back to in the future</strong>.  Accordingly, it is often good practice to commit early and to commit often.
+<strong>Note: only changes which are committed are able to be reverted back to in the future</strong>.  Accordingly, it is often good practice to commit early and to commit often.
 
-Go ahead and open up the ```myProject.Rproj``` RStudio project in the ```myProject``` directory.  
-There's also a script called ```myFunctions.R``` in the directory.  If you open it, you'll see that it contains our ```convertToPercent``` function.
+Go ahead and open up the ```myProject.Rproj``` RStudio project in the ```myProject``` directory.  There's also a script called ```myFunctions.R``` in the directory.  If you open it, you'll see that it contains our ```convertToPercent``` function.
 We are going to tell Git to track this file now, and we are going to commit it to our respository.
 
 You may have noticed a new Git tab in the upper right window, next to the History tab.  Navigate to that tab now.  You'll see something like this:
@@ -116,12 +115,12 @@ myProject/.git/description: https://raw.githubusercontent.com/abc-datacamp/abc-i
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:cdf20e6403
 ## Viewing changes made to a tracked file
-Git allows you to view changes made to a file that was already previously commited, and the RStudio IDE supports this function.
+Git allows you to view changes made to a file that was already previously committed, and the RStudio IDE supports this function.
 
 Open up the ```myProject.Rproj``` RStudio project again.  Open the ```myFunctions.R``` script.  Delete line 3 (the line that appends a percent sign to the output).  Save the script (File -> Save ; or Cmd+S on Mac, or Control+S on a PC).  
 
 Navigate to the Git tab in the upper right window. You'll notice that our script is now marked with an  ```M```, which stands for 'Modified'.
-Click the <strong>Diff</strong> button. A new window will open.  This is going to show us how our current version of our ```myFunctions.R``` script differs from the previously commited version.
+Click the <strong>Diff</strong> button. A new window will open.  This is going to show us how our current version of our ```myFunctions.R``` script differs from the previously committed version.
 
 You'll see something like this:
 
@@ -145,7 +144,7 @@ Save the file, and click the <strong>Diff</strong> again.  How many lines are re
 *** =sct
 ```{r}
 test_mc(3)
-success_msg("Correct! Note that if you wanted this change to be recorded by Git, you'd have to remember to commit it! Saving a file is not the same as commiting.")
+success_msg("Correct! Note that if you wanted this change to be recorded by Git, you'd have to remember to commit it! Saving a file is not the same as committing.")
 ```
 
 *** =attachments
@@ -202,15 +201,15 @@ Git allows you to easily undo changes to a file that you have yet to commit, so 
 
 Open up the ```myProject.Rproj``` RStudio project and the ```myFunctions.R``` script.  
 
-Delete the second line from the script and <strong>save</strong> the file.  Deleting the second line breaks the function (you can test this for yourself, if you'd like). To revert back to the most recently commited version of the script, you can use the built in revert command.  Click the <strong>Diff</strong> button in the Git tab.  You'll notice on the top of the window that opens that there is a <strong>Revert</strong> button:
+Delete the second line from the script and <strong>save</strong> the file.  Deleting the second line breaks the function (you can test this for yourself, if you'd like). To revert back to the most recently committed version of the script, you can use the built in revert command.  Click the <strong>Diff</strong> button in the Git tab.  You'll notice on the top of the window that opens that there is a <strong>Revert</strong> button:
 
 <center>![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git_revert.png)</center>
 
-Click the <strong>Revert</strong> button, and then click  <strong>Yes</strong>.  The script is now restored to the previously commited version.
+Click the <strong>Revert</strong> button, and then click  <strong>Yes</strong>.  The script is now restored to the previously committed version.
 
-Note that where Git revert differs between a simple system wide undo (Edit -> Undo) is that you can even close RStudio, thereby removing your system's clipboard history for RStudio from memory, and still be able to revert back to the previously commited file.  This is because Git actually stores and tracks changes to your file on disk. 
+Note that where Git revert differs between a simple system wide undo (Edit -> Undo) is that you can even close RStudio, thereby removing your system's clipboard history for RStudio from memory, and still be able to revert back to the previously committed file.  This is because Git actually stores and tracks changes to your file on disk. 
 
-You can also discard certain lines of an edited file, in the event that you'd like only certain areas of the script to revert back to the previously commited ones.  Go ahead an append a new function, ```sumOfSquares``` to the end of the ```myFunctions.R``` script:
+You can also discard certain lines of an edited file, in the event that you'd like only certain areas of the script to revert back to the previously committed ones.  Go ahead an append a new function, ```sumOfSquares``` to the end of the ```myFunctions.R``` script:
 
 ```
 sumOfSquares <- function(x,y) {
@@ -379,8 +378,8 @@ myProject/.git/refs/heads/master : https://raw.githubusercontent.com/abc-datacam
 
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:e83a93f2a8
-## Undo commited changes: checkout
-
+## Undo committed changes: checkout
+Previously, we discussed how you can undo changes that weren't already committed.  However, sometimes you commit a change, and only realize later that you'd prefer to roll back.
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:9c1c3faf15
 ## Introduction to GitHub
