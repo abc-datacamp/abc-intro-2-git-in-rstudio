@@ -538,9 +538,52 @@ success_msg("Correct!")
 ```
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:adbd3f800d
-## Pulling & pushing
-There are two new concepts techniques that you have to get used to in order to use GitHub through RStudio: *pulling* and *pushing*.  When you *pull*, you pull the changes <strong>from</strong> the remote repository hosted on GitHub <strong>to</strong> your local computer; when you *push*, you push whatever changes you made locally <strong>to</strong> the remote repository hosted on GitHub <strong>from</strong> your local computer.  As a rule of thumb, it's always a good practice to pull before you push.
+## Pulling from GitHub
+There are two new concepts techniques that you have to get used to in order to use GitHub through RStudio: *pulling* and *pushing*.  When you *pull*, you pull the changes <strong>from</strong> the remote repository hosted on GitHub <strong>to</strong> your local computer.
 
+Head over to github.com, login, and enter your *hello-word* repository.  Go through the steps of cloning your GitHub repository again within RStudio (as a reminder, within the RStudio IDE, click *File -> New Project -> Version Control -> Git*, paste GitHub web URL, and click <strong>Create Project</strong>).
+
+Now, back at github.com within your  *hello-word* repository, click the <strong>Create new file</strong> button.   
+
+<center>![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/github_createFile.png)</center>
+
+
+Name the file 'hello.R'
+
+<center>![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/github_fileName.png)</center>
+
+
+Then, within the text editor window, type the following: 
+
+```print("hello world")```
+
+Make sure there are no new lines or spaces before or after typing that.
+
+<center>![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/github_editor.png)</center>
+
+
+Finally, enter a commit message and click <strong>Commit new file</strong>.
+
+<center>![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/github_commitWindow.png)</center>
+
+Back in RStudio, navigate to the Git tab.  Click the *Pull* button  ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/git_pull.png).    This is going to query the GitHub repository, and check to see if it differs from your local instance of it.  Since it does differ, because we just added a *hello.R* script via GitHub, it's going to retrieve a copy of that file and download it locally.  
+
+Navigate to the RStudio file browser.  You should the *hello.R* script now.  What's the size of it in bytes?
+
+*** =instructions
+- 3 B 
+- 12 B
+- 20 B
+- 21 B
+*** =sct
+```{r}
+test_mc(4)
+success_msg("Correct!")
+```
+
+--- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:6ed97fb1c5
+## Pushing to GitHub
+*Pushing* is the act of pushing whatever changes you made locally <strong>to</strong> the remote repository hosted on GitHub <strong>from</strong> your local computer.  As a rule of thumb, it's always a good practice to pull before you push.
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:211e19754b
 ## Summary
