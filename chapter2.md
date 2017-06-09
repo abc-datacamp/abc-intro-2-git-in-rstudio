@@ -483,9 +483,12 @@ Now that you are registed with GitHub, you are free to create a GitHub repositor
 3. Optionally, enter a description of your repository. 
 4. Choose between creating a public or private repository.  Private repositories require a paid account, so choose public for now.  Note that public respositories mean that anybody can see your code, so bear this in mind in you're trying to keep code under wraps.
 5. Check the box to create a README when the repository is created, which will allow immediate clone the repository to your computer.
-6. Click <strong>Create repository</strong>.
 
-You'll immediately be taken to your new reposistory upon clicking  <strong>Create repository</strong>.
+Your form should look something like this:
+
+<center>![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/github_createRepo.png)</center>
+
+Now click <strong>Create repository</strong>, and you'll immediately be taken to your new reposistory.
 Open up the ``` README.md``` file in your repository.  What does it contain?
 
 *** =instructions
