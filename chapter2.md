@@ -454,8 +454,10 @@ myProject/.git/refs/heads/master : https://raw.githubusercontent.com/abc-datacam
 
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:9c1c3faf15
-## Introduction to GitHub
+## Creating a GitHub repo
 Now that you understand the basics of Git, it's important to note that the manner in which we discussed Git works *only* locally, that is, in the event that you want to work on one and the same code set on more than one computer, you'll need something more than a local Git respository.  
+
+GitHub is a free, online hosting service for Git repositories. It's chief advantage is that it lets you (and others!) work on projects from anywhere.  Fortunately, RStudio supports direct integration with GitHub.  
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:f6812b14bb
 ## Cloning existing repos
