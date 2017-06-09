@@ -566,7 +566,7 @@ Finally, enter a commit message and click <strong>Commit new file</strong>.
 
 <center>![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/github_commitWindow.png)</center>
 
-Back in RStudio, navigate to the Git tab.  Click the *Pull* button  ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/git_pull.png).    This is going to query the GitHub repository, and check to see if it differs from your local instance of it.  Since it does differ, because we just added a *hello.R* script via GitHub, it's going to retrieve a copy of that file and download it locally.  
+Back in RStudio, navigate to the Git tab.  Click the *Pull* button  ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/git_pull.png).  Enter your GitHub username and password, if asked.  This is going to query the GitHub repository, and check to see if it differs from your local instance of it.  Since it does differ, because we just added a *hello.R* script via GitHub, it's going to retrieve a copy of that file and download it locally.  
 
 Navigate to the RStudio file browser.  You should the *hello.R* script now.  What's the size of it in bytes?
 
@@ -584,6 +584,30 @@ success_msg("Correct!")
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:6ed97fb1c5
 ## Pushing to GitHub
 *Pushing* is the act of pushing whatever changes you made locally <strong>to</strong> the remote repository hosted on GitHub <strong>from</strong> your local computer.  As a rule of thumb, it's always a good practice to pull before you push.
+
+Once again,  go through the steps of cloning your GitHub repository again within RStudio within the RStudio IDE, click *File -> New Project -> Version Control -> Git*, paste GitHub web URL, and click <strong>Create Project</strong>).  Note that in normal situations, you wouldn't have to clone your repository each time you want to use it -- you would simply just open up the RStudio project file that is created once you connect RStudio to GitHub, and it'll already be connected to GitHub.
+
+Navigate to the Files window, and open up the 'hello.R' script.  Edit it such that it looks like this:
+
+```print("hello world", quote=F)```
+
+Now save the file and navigate to the Git tab.  You'll see the file 'hello.R' marked with a modified ```M``` status.  Just like in previous times, we want to add and commit the file.  To do so, click the checkbox next to it to add it ```A```.    Click <strong>Commit</strong>.   Enter an informative commit message (e.g., 'Hello world no longer prints with surrounding quotes') and click <strong>Commit</strong>.  
+
+Now the file has been saved, added, and commited to your *local* directory.  To move them to GitHib, you have to push them.  Click the push icon ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/git_pull.png).  Enter your GitHub username and password, if asked. This change should now be reflected in the 'hello.R' script on github.com.  Navigate there to verify.
+
+
+Click the <strong>Push</strong> button again. Enter your username and password. What message pops up?
+
+*** =instructions
+- 1 file changed, 1 insertion(+), 1 deletion(-)
+- Everything up-to-date
+- <SHA>..<SHA>  master -> master
+- Error
+*** =sct
+```{r}
+test_mc(2)
+success_msg("Correct! Since no additional changes were made, there as nothing to push to GitHub!")
+```
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:211e19754b
 ## Summary
