@@ -457,7 +457,47 @@ myProject/.git/refs/heads/master : https://raw.githubusercontent.com/abc-datacam
 ## Creating a GitHub repo
 Now that you understand the basics of Git, it's important to note that the manner in which we discussed Git works *only* locally, that is, in the event that you want to work on one and the same code set on more than one computer, you'll need something more than a local Git respository.  
 
-GitHub is a free, online hosting service for Git repositories. It's chief advantage is that it lets you (and others!) work on projects from anywhere.  Fortunately, RStudio supports direct integration with GitHub.  
+GitHub is a free, online hosting service for Git repositories. It's chief advantage is that it lets you (and others!) work on projects from anywhere.  Fortunately, RStudio supports direct integration with GitHub. In order to start using GitHub, you first have to register.
+Head over to github.com.  On the main page, you'll see a form to create a new user account.  Do so now.
+
+<center>![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/github_register1.png)</center>
+
+
+After entering a username, email address, and password, you'll be prompted to select a plan.   Select 'Unlimited public repositories for free.' and click <strong>Continue</strong>
+
+<center>![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/github_register2.png)</center>
+
+
+In the next screen, you'll be asked a series of questions:
+
+<center>![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/github_register3.png)</center>
+
+
+Feel free to select <strong>skip this step</strong> at the bottom of the screen. 
+
+
+Now that you are registed with GitHub, you are free to create a GitHub repository.  You must verify the email address you used to register your account before doing so, however.  After you verify, head back to github.com.  To create a repo, following the instructions below:
+
+1. In the upper-right corner of any page, click <strong>+</strong>, and then click <strong>New repository</strong>.
+2. Name your repository.  This name should reflect the underlying code that you'll be storing in it. You can name it "hello-world" for our purpose.
+3. Optionally, enter a description of your repository. 
+4. Choose between creating a public or private repository.  Private repositories require a paid account, so choose public for now.  Note that public respositories mean that anybody can see your code, so bear this in mind in you're trying to keep code under wraps.
+5. Check the box to create a README when the repository is created, which will allow immediate clone the repository to your computer.
+6. Click <strong>Create repository</strong>.
+
+You'll immediately be taken to your new reposistory upon clicking  <strong>Create repository</strong>.
+Open up the ``` README.md``` file in your repository.  What does it contain?
+
+*** =instructions
+- Nothing
+- 'README'
+- 'hello-world'
+- 'enter readme contents here'
+*** =sct
+```{r}
+test_mc(3)
+success_msg("Correct!")
+```
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:f6812b14bb
 ## Cloning existing repos
