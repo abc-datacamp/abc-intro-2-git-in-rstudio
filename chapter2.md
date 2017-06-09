@@ -539,9 +539,8 @@ success_msg("Correct!")
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:adbd3f800d
 ## Pulling & pushing
+There are two new concepts techniques that you have to get used to in order to use GitHub through RStudio: *pulling* and *pushing*.  When you *pull*, you pull the changes <strong>from</strong> the remote repository hosted on GitHub <strong>to</strong> your local computer; when you *push*, you push whatever changes you made locally <strong>to</strong> the remote repository hosted on GitHub <strong>from</strong> your local computer.  As a rule of thumb, it's always a good practice to pull before you push.
 
---- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:5705dfbac5
-## Working with branches
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:211e19754b
 ## Summary
