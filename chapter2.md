@@ -455,7 +455,7 @@ myProject/.git/refs/heads/master : https://raw.githubusercontent.com/abc-datacam
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:9c1c3faf15
 ## Creating a GitHub repo
-Now that you understand the basics of Git, it's important to note that the manner in which we discussed Git works *only* locally, that is, in the event that you want to work on one and the same code set on more than one computer, you'll need something more than a local Git respository.  
+Up until now, we've learned how to use a *local* Git respository in RStudio. However, if you wanted to work on one and the same code set on more than one computer, you'll need something more than a local Git respository.  
 
 GitHub is a free, online hosting service for Git repositories. It's chief advantage is that it lets you (and others!) work on projects from anywhere.  Fortunately, RStudio supports direct integration with GitHub. In order to start using GitHub, you first have to register.
 Head over to github.com.  On the main page, you'll see a form to create a new user account.  Do so now.
@@ -504,6 +504,24 @@ success_msg("Correct!")
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:f6812b14bb
 ## Cloning existing repos
+Now that you've created a repository in GitHub, you have to import it into RStudio.
+
+First, you have to obtain the web URL of your respository from Github.  To do this, header over to github.com now, and login with your username and password.
+After logging in, you should see your repository on the login page.  
+
+<center>![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/github_repoListing.png)</center>
+
+
+If you can't find your repository on the main page after logging in, you can click the icon next to the  <strong>+</strong> sign in the upper-right corner of the page, select *Your Profile -> Repositories*.  Here, you'll see your *hello-word* repository.  Click it now.
+
+You'll notice a green <strong>Clone or download</strong> button.  Click it, and you'll find your web URL.    Copy the complete web URL to your clipboard (you can use the little clipboard icon next to it, if you desire).
+
+<center>![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/github_clone.png)</center>
+
+Now, within the RStudio IDE, click *File -> New Project -> Version Control -> Git* and paste your copied GitHub web URL in the *Repository URL* box.
+
+<center>![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/rstudio_cloneGit.png)</center>
+
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:adbd3f800d
 ## Pulling & pushing
