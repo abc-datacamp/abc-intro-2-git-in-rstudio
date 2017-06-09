@@ -522,6 +522,20 @@ Now, within the RStudio IDE, click *File -> New Project -> Version Control -> Gi
 
 <center>![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/rstudio_cloneGit.png)</center>
 
+Afterward, click <strong>Create Project</strong>.  Your GitHub repository is now connected to RStudio!
+
+Navigate to the Git tab in RStudio.  How many files are listed there?
+
+*** =instructions
+- 1
+- 2
+- 3
+- 4
+*** =sct
+```{r}
+test_mc(2)
+success_msg("Correct!")
+```
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:adbd3f800d
 ## Pulling & pushing
