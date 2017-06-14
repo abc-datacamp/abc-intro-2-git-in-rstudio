@@ -70,7 +70,7 @@ Once you have the installer, installation is easy: on a Mac, open the DMG file a
 
 *** =sct
 ```{r,eval=FALSE}
-msg1 <- "Indeed!"
+msg1 <- "Indeed, R must be installed in order to use RStudio!"
 msg2 <- "Try again."
 test_mc(1, feedback_msgs = c(msg1, msg2))
 ```
@@ -102,12 +102,11 @@ Alternatively, click the 'Add new document' symbol and select *R Script* <center
 
 *** =instructions
 - Untitled
-- Untitled.txt
 - Untitled1
 - Untitled.txt
 
 *** =sct
-```{r}
+```{r, eval=FALSE}
 test_mc(3)
 success_msg("Congrats! You successfully created a blank file!")
 ```
