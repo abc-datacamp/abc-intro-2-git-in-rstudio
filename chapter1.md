@@ -46,11 +46,23 @@ test_mc(4, feedback_msgs = c(msg1, msg2, msg3, msg4))
 
 To use RStudio, you need a copy of the R programming language and a copy of the RStudio IDE.
 
-To install the R programming language, visit [cran](https://cran.r-project.org) and click the link that matches your operating system. For Mac users, select 'Download R for Mac', and download the topmost R package (.pkg) file.  Open the file and follow the onscreen instructions.  For Windows, select  'Download R for Windows', then 'base', and finally 'Download R for Windows'.  Open the executable and follow the onscreen instructions.  
+To install the R programming language, visit [cran](https://cran.r-project.org) and click the link that matches your operating system.
 
-Once R is installed, download [RStudio](http://rstudio.com/download). Choose the installer for your system, then click the link to download the installer.  Once you have the installer, installation is easy: on a Mac, open the DMG file and drag RStudio to your Applications folder.
+* Mac users:
+    * select *Download R for Mac*
+    * download the topmost R package (.pkg) file.
+    * open the file and follow the onscreen instructions.
+* Windows users:
+    * select *Download R for Windows*, then *base*, and finally *Download R for Windows*
+    * Open the executable and follow the onscreen instructions.  
 
-Evaluate the following statement: *RStudio requires the R programming language.*
+Once R is installed, download [RStudio](http://rstudio.com/download).
+Choose the installer for your system, then click the link to download the installer.
+Once you have the installer, installation is easy: on a Mac, open the DMG file and drag RStudio to your Applications folder.
+
+---------------------------------------
+
+**Evaluate the following statement: _RStudio requires the R programming language._**
 
 *** =instructions
 - True
@@ -59,7 +71,7 @@ Evaluate the following statement: *RStudio requires the R programming language.*
 *** =sct
 ```{r,eval=FALSE}
 msg1 <- "Great!"
-msg2 <- "Not quite."
+msg2 <- "Try again."
 test_mc(1, feedback_msgs = c(msg1, msg2))
 ```
 
