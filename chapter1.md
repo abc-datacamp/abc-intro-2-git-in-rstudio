@@ -125,7 +125,9 @@ In its most basic form, R can be used as a calculator, and has the following bui
 - Modulo: ```%%```
 - Square root: ```sqrt()```
 
-<strong>Using the RStudio console just like you would R, evaluate the following:</strong>
+----------------------------------------
+
+<strong>Using the RStudio console just like you would R, solve the following equation:</strong>
 
 <table style="font-family:verdana;">
   <tr>
@@ -152,7 +154,7 @@ file.edit("untitled.txt")
 *** =sct
 ```{r}
 test_mc(3)
-success_msg("Correct!")
+success_msg("Correct! You showed you can use R as a calculator!")
 ```
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:a57e38df84
