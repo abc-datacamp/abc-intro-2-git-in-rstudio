@@ -1,6 +1,6 @@
 ---
-title       : Introduction to RStudio IDE
-description : This chapter introduces you to the RStudio IDE. You'll learn about the data viewer, the environment tab, the history tab, how to set and get your working directory, using the plots pane, navigating the help tab when you get stuck, and more.
+title       : Introduction to RStudio
+description : This chapter introduces you to the integrated development environment provided by RStudio. You'll learn about the data viewer, the environment tab, the history tab, how to set and get your working directory, using the plots pane, navigating the help tab when you get stuck, and more.
 attachments :
 
 
@@ -9,15 +9,28 @@ attachments :
 
 RStudio is an integrated development environment (IDE) that consolidates basic developer tools into a single, user-friendly interface. 
 
-The RStudio IDE works alongside the R interpreter, and includes a console for code execution, a file browser, a help window, a plot viewer, a dashboard for the work environment, and a text editor for composing code. Built into the IDE are keyboard shortcuts, code completion functionality, syntax highlighting, as well as support for version control.
+The RStudio IDE works alongside the R interpreter, and includes:
 
-Which of the following is *not* a benefit of the RStudio IDE?
+* a **console** for code execution
+* a **file browser**
+* a **help** window
+* a **plot viewer**
+* a **dashboard** for the work environment
+* a **text editor** for composing scripts
+
+Built into the IDE are keyboard shortcuts, code completion functionality, syntax highlighting, as well as support for version control using `git`.
+
+In short, RStudio is supposed to make writing and executing R code as effective and easy as possible.
+
+-----------------------------------------------------------------
+
+**Which of the following is *not* a benefit of the RStudio IDE?**
 
 *** =instructions
 - Integrated user interface
 - Contains a text editor
 - Code completion
-- Makes bad code good 
+- Corrects bad code  
 
 *** =sct
 ```{r,eval=FALSE}
