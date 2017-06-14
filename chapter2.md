@@ -1,5 +1,5 @@
 ---
-title       : Version control
+title       : Version control using Git
 description : In this chapter, you'll learn about version control, Git, and how to use Git within RStudio. You'll start with the basics, like how to turn on version control using Git in an existing directory. Then, you'll see how to track changes to files over time, explore your commit history, get rid of unwanted changes, and how to push changes to remote repositories on GitHub.
 attachments :
 
@@ -9,13 +9,20 @@ attachments :
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:bbca442764
 ## Version control in RStudio IDE
 
-Git is a particular implementation of a version control system.  A version control system is a software tool which manages and keeps track of changes to source code over time.  Some of its chief benefits include:
+Git is a particular implementation of a version control system.
+A version control system is a software tool which manages and keeps track of changes to files over time.
+Typical file types are text files, such as source code (but it could also be an essay or a thesis, or images etc).
+Think of it as a sophisticated, digital log book where every change to a file is recorded, so that at any given point in time you can always go back to a certain file version (or even restore entire folders).
 
-- Ability to revert back to older versions of your code
+Some of the chief benefits of version control include:
+
 - Ability to view the differences between two versions of your code
+- Ability to revert back to older versions of your code
 - Ability to review the history of your code
 - Ability to determine when a bug was introduced
-- Ability to experiment with new features without worrying
+- Ability to experiment with new features without worrying about losing functioning code
+
+ADD THE CLASSIC PHD CARTOON HERE
 
 RStudio implements support for two version control systems: Git and Subversion.  We will focus on Git.
 
