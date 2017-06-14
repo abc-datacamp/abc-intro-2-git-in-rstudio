@@ -70,7 +70,7 @@ Once you have the installer, installation is easy: on a Mac, open the DMG file a
 
 *** =sct
 ```{r,eval=FALSE}
-msg1 <- "Great!"
+msg1 <- "Indeed!"
 msg2 <- "Try again."
 test_mc(1, feedback_msgs = c(msg1, msg2))
 ```
@@ -78,7 +78,7 @@ test_mc(1, feedback_msgs = c(msg1, msg2))
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:b1895d66c3
 ## RStudio panes
 
-The RStudio interface consists of four main panes, or windows.  Briefly,
+The RStudio interface consists of four main panes, or windows.
 
 1. <strong>Bottom left</strong>: console or command window. Here you can type any valid R command after the ```>``` prompt followed by <strong>Enter</strong> and R will execute that command. 
 2. <strong>Top left</strong>: text editor or script window. This is where you can save and edit collections of commands.
@@ -91,10 +91,13 @@ The location of these windows can be changed by clicking *Tools* -> *Global Opti
 
 Each of these windows will be explored in subsequent sections. 
 
-You may have noticed that, by default, there is no text editor window open.  In order to open one, click *File* -> *New File* -> *R Script*.
+You may have noticed that, by default, there is no text editor window open.
+In order to open one, click *File* -> *New File* -> *R Script*.
 Alternatively, click the 'Add new document' symbol and select *R Script* <center>![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/main_newScript.png).</center>
 
-What title does RStudio give the new blank document?
+-------------------------------------------------------
+
+**What title does RStudio give the new blank document?**
 
 
 *** =instructions
@@ -106,7 +109,7 @@ What title does RStudio give the new blank document?
 *** =sct
 ```{r}
 test_mc(3)
-success_msg("Amazing!")
+success_msg("Congrats! You successfully created a blank file!")
 ```
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:f7ec10ab53
