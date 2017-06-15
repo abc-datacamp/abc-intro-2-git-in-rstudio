@@ -63,7 +63,7 @@ test_mc(5, feedback_msgs = c(msg1, msg2, msg3, msg4, msg5, msg6))
 RStudio implements support for two version control systems: Git and Subversion; we will focus on teaching you Git.
 
 Whenever you want Git to track your scripts, your very first step will be to **create a _repository_**.
-A repository is the place where Git stores both the files its supposed to keep track of and the actual history of the changes made to those files.
+A repository is the place where Git stores both the *files* its supposed to keep track of and the actual *history* of the changes made to those files.
 Think of it as a specialized type of file folder where Git stores some metadata in addition to the files that you're working on.
 
 > Most git commands will only work within Git repositories!
@@ -80,13 +80,20 @@ To add a Git repository to that project, follow these steps:
 2. Set the 'Version Control System' to be 'Git'.
 3. Click <strong>Yes</strong> twice. 
 
-When a Git repository is initiated, git creates a hidden subdirectory within the folder associated with the R project.
+When a Git repository is initiated, Git creates a hidden subdirectory within the folder associated with the R project.
 Since it is hidden, you do not need to worry about it, but just so you know: all of the metadata for keeping track is stored in there.
 
 What you will see and notice in the browser pane of RStudio is that a new file was created in your project directory that is called `.gitignore`.
-This file lists all the file types that will be ignored by Git, i.e., files that will not be tracked.
-These are typically files that are either very big data files 
-Open that file.
+This simple text file lists all the file types that will be ignored by Git, i.e., **files that will not be tracked**.
+Files to be exluded from the tracking are usually either/or one of the following:
+
+* local configuration files that specify a user's settings on a certain computer, e.g., the font that is being used in the editor
+* temporary files
+* large data files
+* executables
+* files with passwords
+
+You can see which file types and folders are automatically set to be excluded from the Git tracking by simply opening the `.gitignore` file.
 
 ------------------------------
 
