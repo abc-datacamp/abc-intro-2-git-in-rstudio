@@ -62,11 +62,13 @@ test_mc(5, feedback_msgs = c(msg1, msg2, msg3, msg4, msg5, msg6))
 
 RStudio implements support for two version control systems: Git and Subversion; we will focus on teaching you Git.
 
-Whenever you want Git to track your scripts, your very first step will be to create a *repository*.
+Whenever you want Git to track your scripts, your very first step will be to **create a _repository_**.
 A repository is the place where Git stores both the files its supposed to keep track of and the actual history of the changes made to those files.
 Think of it as a specialized type of file folder where Git stores some metadata in addition to the files that you're working on.
 
-In RStudio, you can easily link a Git repository to an existing R project.
+> Most git commands will only work within Git repositories!
+
+In RStudio, you can easily turn an **existing R project** into a Git repository.
 
 -------------------------------
 
@@ -78,24 +80,34 @@ To add a Git repository to that project, follow these steps:
 2. Set the 'Version Control System' to be 'Git'.
 3. Click <strong>Yes</strong> twice. 
 
-Notice that a new file was created in your project directory called `.gitignore`.
+When a Git repository is initiated, git creates a hidden subdirectory within the folder associated with the R project.
+Since it is hidden, you do not need to worry about it, but just so you know: all of the metadata for keeping track is stored in there.
+
+What you will see and notice in the browser pane of RStudio is that a new file was created in your project directory that is called `.gitignore`.
+This file lists all the file types that will be ignored by Git, i.e., files that will not be tracked.
+These are typically files that are either very big data files 
 Open that file.
 
 ------------------------------
 
-**How many lines of text does the .gitignore file contain (including new or empty lines)?**
+**Which files/folders should typically _not_ be noted in a `.gitignore` file for R projects?**
 
 
 *** =instructions
-- ```2```
-- ```3```
-- ```4```
-- ```5```
+- `*.R`
+- `.Rproj.user`
+- `.Rhistory`
+- `.RData`
+- `.Ruserdata`
 
 *** =sct
 ```{r}
-test_mc(4)
-success_msg("Correct! the .gitignore file tells Git which files to ignore, since you generally don't want to track unimportant stuff, like your R history.")
+msg1 <- "Correct! You definitely want your R scripts to be tracked, i.e., they should NOT be excluded via the gitignore file."
+msg2 <- "Rproj.user is a hidden directory  where project-specific temporary files (e.g. auto-saved source documents, window-state, etc.) are stored. Temporary files do not need to be tracked and should definitely be part of .gitignore!"
+msg3 <- "The .Rhistory file contains ALL commands of a past R session - all your important commands should be in a script, so there is no need to track the entire messy history of your trials and errors!"
+msg4 <- ".RData (as well as .RDS) is a typical ending for data sets saved with R. Since your scripts should contain all the information to regenerate every data set, you should not need to keep track of the data itself!"
+msg5 <- ".Ruserdata contains user-specific configurations. For the sake of shared enabling git repo sharing, refrain from tracking user-specific settings. This should definitely go into the .gitignore file."
+test_mc(1, feedback_msgs = c(msg1, msg2, msg3, msg4, msg5))
 ```
 
 *** =attachments
