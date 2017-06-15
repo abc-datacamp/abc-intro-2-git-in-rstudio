@@ -1,6 +1,6 @@
 ---
 title       : Introduction
-description : This is a brief preface 
+description : This is a brief preface, explaining the rationale for using RStudio and git.
 attachments :
 
 
