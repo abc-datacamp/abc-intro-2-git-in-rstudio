@@ -35,14 +35,22 @@ There are many more advantages to using a real version control system such as gi
 ---------------------------------------------
 
 *** =instructions
-- True
-- False
+- Back-up of files.
+- Restoring lost files.
+- Undoing saved edits to a file.
+- Tracking ownership of a file.
+- All of the above.
+- None of the above.
 
 *** =sct
 ```{r,eval=FALSE}
-msg1 <- "Indeed, R must be installed in order to use RStudio!"
-msg2 <- "Try again."
-test_mc(1, feedback_msgs = c(msg1, msg2))
+msg1 <- "Yes, but not just that."
+msg2 <- "Yes, but not just that."
+msg3 <- "Yes, but not just that."
+msg4 <- "Yes, but not just that."
+msg5 <- "Yes! Git et al. are quite versatile!"
+msg6 <- "Come on! Git is useful!"
+test_mc(5, feedback_msgs = c(msg1, msg2, msg3, msg4, msg5, msg6))
 ```
 
 *** =attachments
