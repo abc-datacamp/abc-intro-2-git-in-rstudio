@@ -34,25 +34,16 @@ There are many more advantages to using a real version control system such as gi
 
 ---------------------------------------------
 
-**Which tasks do typical version control systems do?**
-
 *** =instructions
-- Back-up of files.
-- Restoring lost files.
-- Undoing saved edits to a file.
-- Tracking ownership of a file.
-- All of the above.
-- None of the above.
+- ```2```
+- ```3```
+- ```4```
+- ```5```
 
 *** =sct
 ```{r}
-msg1 <- "Yes, but not just that."
-msg2 <- "Yes, but not just that."
-msg3 <- "Yes, but not just that."
-msg4 <- "Yes, but not just that."
-msg5 <- "Yes! Git et al. are quite versatile!"
-msg6 <- "Come on! Git is useful!"
-test_mc(5, feedback_msgs = c(msg1, msg2, msg3, msg4, msg5, mgs6))
+test_mc(4)
+success_msg("Correct! the .gitignore file tells Git which files to ignore, since you generally don't want to track unimportant stuff, like your R history.")
 ```
 
 *** =attachments
