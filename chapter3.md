@@ -45,14 +45,12 @@ There are many more advantages to using a real version control system such as gi
 - None of the above.
 
 *** =sct
-```{r,eval=FALSE}
+```{r}
 msg1 <- "Yes, but not just that."
 msg2 <- "Yes, but not just that."
 msg3 <- "Yes, but not just that."
 msg4 <- "Yes, but not just that."
-msg5 <- "Yes! Git et al. are quite versatile!"
-msg6 <- "Come on! We wouldn't encourage you to learn git if it couldn't do any of that!"
-test_mc(5, feedback_msgs = c(msg1, msg2, msg3, msg4, msg5, mgs6))
+test_mc(4, feedback_msgs = c(msg1, msg2, msg3, msg4))
 ```
 
 *** =attachments
@@ -64,7 +62,7 @@ test_mc(5, feedback_msgs = c(msg1, msg2, msg3, msg4, msg5, mgs6))
 
 RStudio implements support for two version control systems: Git and Subversion; we will focus on teaching you Git.
 
-Whenever you want Git to track your scripts, you have to create a *repository*.
+Whenever you want Git to track your scripts, your very first step will be to create a *repository*.
 A repository is the place where Git stores both the files its supposed to keep track of and the actual history of the changes made to those files.
 Think of it as a specialized type of file folder where Git stores some metadata in addition to the files that you're working on.
 
@@ -74,7 +72,7 @@ In RStudio, you can easily link a Git repository to an existing R project.
 
 An R project has been created for you.
 Find it in the File browser and open it (`myProject.Rproj`).
-To add a Git repository to that project:
+To add a Git repository to that project, follow these steps:
 
 1. click *Tools* -> *Project Options* -> *Git/SVN*
 2. Set the 'Version Control System' to be 'Git'.
