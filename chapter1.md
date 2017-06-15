@@ -1,27 +1,29 @@
 ---
 title       : Introduction
-description : 
+description : This is a brief preface 
 attachments :
 
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:db01ff97de
 ## Introduction
 
+This course will introduce you to the basics of version controling your scripts using a program called `git`.
+
+Our example scripts will be written in `R`, and to make everyone's life as easy as possible, we will
+rely on the vast functionalities of RStudio to both write the code and do the version control.
+
+
 -----------------------------------------------------------------
 
-**Which of the following is *not* a benefit of the RStudio IDE?**
+**Would you like to start the course?**
 
 *** =instructions
-- Integrated user interface
-- Contains a text editor
-- Code completion
-- Corrects bad code  
+- Yes.
+- No.
 
 *** =sct
 ```{r,eval=FALSE}
-msg1 <- "Try again."
-msg2 <- "Not quite."
-msg3 <- "Wrong."
-msg4 <- "Correct!"
-test_mc(4, feedback_msgs = c(msg1, msg2, msg3, msg4))
+msg1 <- "Great! Let's start!"
+msg2 <- "Too bad. But can we stay friends?"
+test_mc(4, feedback_msgs = c(msg1, msg2))
 ```

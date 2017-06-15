@@ -1,5 +1,5 @@
 ---
-title       : Introduction to RStudio
+title       : Using RStudio
 description : This chapter introduces you to the integrated development environment provided by RStudio. You'll learn about the data viewer, the environment tab, the history tab, how to set and get your working directory, using the plots pane, navigating the help tab when you get stuck, and more.
 attachments :
 
