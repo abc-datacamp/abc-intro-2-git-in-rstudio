@@ -101,7 +101,7 @@ You can see which file types and folders are automatically set to be excluded fr
 
 
 *** =instructions
-- `*.R`
+- `.R`
 - `.Rproj.user`
 - `.Rhistory`
 - `.RData`
@@ -122,9 +122,28 @@ test_mc(1, feedback_msgs = c(msg1, msg2, msg3, msg4, msg5))
 myProject/myProject.Rproj: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/myProject.Rproj
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:b8a90154e0
-## Tracking files
-RStudio provides an interface to the most common version control operations, including adding and committing files.
-The act of adding a file tells Git to start tracking the file.  The act of committing a file or a change to a file tells Git that you want to save and record those changes to your Git repository. These two actions (adding & committing) typically go hand-in-hand.  Because only changes which are committed are able to be reverted back to in the future, it is often good practice to commit early and to commit often.
+## Tracking files and saving changes
+
+Once you're created a Git repository, you can go about your business such as writing scripts as usual.
+Git will notice any saved changes to any tracked file, but in order for those changes to become part of the official Git history, you will have to manually communicate to Git that you think you've made changes that are worth keeping a record of (e.g., you've fixed a bug, or added a cool new function, or corrected a typo).
+
+The process of telling Git to **permanently log** certain changes requires two steps:
+
+1. **adding** and
+2. **committing*
+
+Always in this order!
+
+### Adding files
+
+In Git-speak, adding a file means that you are telling Git that you are interested to include the update you just made to a certain file into the Git history.
+If you created a completely new file, adding this file will mean that you're making Git aware of that file, i.e., that is should start keeping track of it. 
+
+However, the act of adding does not affect the Git repository (i.e., the metadata that is stored about your files) in a significant way, it's basically just telling Git that you're done changing the file(s) for now and that you would like to keep a record of that change.
+
+### Committing files
+
+The act of committing a file or a change to a file tells Git that you want to save and record those changes to your Git repository. These two actions (adding & committing) typically go hand-in-hand.  Because only changes which are committed are able to be reverted back to in the future, it is often good practice to commit early and to commit often.
 
 Go ahead and open up the RStudio project in the project directory.  There's also a script called ```myFunctions.R``` in the directory.  If you open it, you'll see that it contains a *convertToPercent* function.  We are going to tell Git to track this file now, and we are going to commit it to our respository.
 
