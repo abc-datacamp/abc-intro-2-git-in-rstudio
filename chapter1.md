@@ -12,6 +12,7 @@ This course will introduce you to the basics of version controling your scripts 
 Our example scripts will be written in `R`, and to make everyone's life as easy as possible, we will
 rely on the vast functionalities of RStudio to both write the code and do the version control.
 
+![](http://s3.amazonaws.com/assets.datacamp.com/production/course_3710/datasets/phd101212s.gif)
 
 -----------------------------------------------------------------
 

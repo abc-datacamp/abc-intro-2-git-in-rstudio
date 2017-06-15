@@ -22,8 +22,6 @@ Some of the chief benefits of version control include:
 - Ability to determine when a bug was introduced
 - Ability to experiment with new features without worrying about losing functioning code
 
-ADD THE CLASSIC PHD CARTOON HERE
-
 RStudio implements support for two version control systems: Git and Subversion.  We will focus on Git.
 
 Whenever you want Git to track set of code, you have to create a *repository*.  A repository is simply the place were Git tracks your code over time.
