@@ -39,6 +39,8 @@ There are many more advantages to using a real version control system such as gi
 - 3
 - 4
 - 5
+- 6
+- 7
 
 *** =sct
 ```{r}
