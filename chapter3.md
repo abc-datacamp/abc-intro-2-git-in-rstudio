@@ -35,20 +35,15 @@ There are many more advantages to using a real version control system such as gi
 ---------------------------------------------
 
 *** =instructions
-- 2
-- 3
-- 4
-- 5
-- 6
-- 7
+- True
+- False
 
 *** =sct
-```{r}
+```{r,eval=FALSE}
 msg1 <- "Indeed, R must be installed in order to use RStudio!"
 msg2 <- "Try again."
 test_mc(1, feedback_msgs = c(msg1, msg2))
 ```
-
 
 *** =attachments
 .Rprofile: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git_setup_.Rprofile
