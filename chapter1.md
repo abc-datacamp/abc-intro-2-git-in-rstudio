@@ -1,11 +1,11 @@
 ---
-title       : Introduction
+title       : Preface
 description : This is a brief preface, explaining the rationale for using RStudio and git.
 attachments :
 
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:db01ff97de
-## Introduction
+## Preface
 
 This course will introduce you to the basics of version controling your scripts using a program called `git`.
 
@@ -25,5 +25,5 @@ rely on the vast functionalities of RStudio to both write the code and do the ve
 ```{r,eval=FALSE}
 msg1 <- "Great! Let's start!"
 msg2 <- "Too bad. But can we stay friends?"
-test_mc(4, feedback_msgs = c(msg1, msg2))
+test_mc(1, feedback_msgs = c(msg1, msg2))
 ```
