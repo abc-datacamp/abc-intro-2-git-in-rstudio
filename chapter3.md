@@ -44,14 +44,11 @@ There are many more advantages to using a real version control system such as gi
 
 *** =sct
 ```{r}
-msg1 <- "Yes, but not just that."
-msg2 <- "Yes, but not just that."
-msg3 <- "Yes, but not just that."
-msg4 <- "Yes, but not just that."
-msg5 <- "Yes! Git et al. are quite versatile!"
-msg6 <- "Come on! Git is useful!"
-test_mc(5, feedback_msgs = c(msg1, msg2, msg3, msg4, msg5, mgs6))
+msg1 <- "Indeed, R must be installed in order to use RStudio!"
+msg2 <- "Try again."
+test_mc(1, feedback_msgs = c(msg1, msg2))
 ```
+
 
 *** =attachments
 .Rprofile: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git_setup_.Rprofile
