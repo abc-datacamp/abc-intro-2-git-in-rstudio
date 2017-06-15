@@ -124,7 +124,7 @@ myProject/myProject.Rproj: https://raw.githubusercontent.com/abc-datacamp/abc-in
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:b8a90154e0
 ## Tracking files and saving changes
 
-Once you're created a Git repository, you can go about your business such as writing scripts as usual.
+Once you've created a Git repository, you can go about your business such as writing scripts as usual.
 Git will notice any saved changes to any tracked file, but in order for those changes to become part of the official Git history, you will have to manually communicate to Git that you think you've made changes that are worth keeping a record of (e.g., you've fixed a bug, or added a cool new function, or corrected a typo).
 
 The process of telling Git to **permanently log** certain changes requires two steps:
@@ -136,7 +136,7 @@ Always in this order!
 
 ### Adding files
 
-In Git-speak, adding a file means that you are telling Git that you are interested to include the update you just made into the Git history.
+In Git-speak, adding a file means that you are telling Git that you are **interested to include** the update you just made into the Git history.
 If you created a completely new file, adding this file will mean that you're making Git aware of that file, i.e., that is should start keeping track of it. 
 
 However, the act of adding does not affect the Git repository (i.e., the metadata that is stored about your files) in a significant way, it's basically just telling Git that you're done changing the file(s) for now and that you would like to keep a record of that change.
@@ -151,17 +151,31 @@ This tells Git that you do want to **record those changes** in your Git reposito
 --------------------------------
 
 Go ahead and open up the RStudio project in the project directory.
-There's also a script called ```myFunctions.R``` in the directory.  If you open it, you'll see that it contains a *convertToPercent* function.  We are going to tell Git to track this file now, and we are going to commit it to our respository.
+There's a script called ```myFunctions.R``` in the directory.
+If you open it, you'll see that it contains a *convertToPercent* function.
+Since we just initiated our Git repository, we need to tell Git that it should be tracking this script.
 
-You may have noticed a new Git tab in the upper right window, next to the History tab.  Navigate to that tab now.  You'll see something like this:
+In order to do this, we will make use of a couple of new buttons that were added to RStudio after we had created the Git repository.
+There is an entire new **Git tab** in the upper right window, next to the History tab.
+Navigate to that tab now.
+You should see something like this:
 
 <center>![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git_untracked.png)</center>
 
-The question marks ```??```  next to the ```myFunctions.R``` script indicate that the file is not currently being tracked by Git.  If you click the box next to the functions file, so that there is a checkbox there, you'll see that the status changes from a question mark to an ```A```, indicating that the file has been added to Git.  Next we are going to commit the file, so that we maintain a history of our script.  Click the <strong>Commit</strong> button.  A new window will pop up:
+The question marks `??`  next to the `myFunctions.R` script indicate that the file is not currently being tracked by Git.
+
+You can **add** the file by clicking on the box next to `myFunctions.R`, so that there is a checkbox there. 
+The status should have changed from a question mark to an `A`, indicating that the file has been added to Git.
+Remember, adding is nothing more than casually telling Git that you're ready to submit a change.
+
+To **commit** the file, so that we maintain a history of our script, you will have to click the <strong>Commit</strong> button.
+A new window will pop up:
 
 <center>![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git_commitWindow.png)</center>
 
-Note that you <strong>must</strong> enter a commit message before clicking <strong>Commit</strong>.  Commit messages should be informative and terse.   Enter a commit message (something like, 'Created convert to percent function') and click </strong>Commit</strong>.   
+Note that you <strong>must</strong> enter a commit message before clicking <strong>Commit</strong>.
+Commit messages should be informative and terse so that your future self or a collaborator will get some sort of idea why you thought that change was necessary.
+Enter a commit message (something like, 'Created convert to percent function') and click </strong>Commit</strong>.   
 
 After clicking </strong>Commit</strong>, a message pops up.  What does it say?
 
