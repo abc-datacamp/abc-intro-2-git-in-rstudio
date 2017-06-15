@@ -48,7 +48,7 @@ msg1 <- "Yes, but not just that."
 msg2 <- "Yes, but not just that."
 msg3 <- "Yes, but not just that."
 msg4 <- "Yes, but not just that."
-msg5 <- "Yes! Git et al. are quite versatile!"
+msg5 <- "Yes! Git et al. are quite versatile! [Note: the incorrect spelling following al. is enforced by DataCamp]"
 msg6 <- "Come on! We wouldn't make you learn git if it couldn't do any of that!"
 test_mc(5, feedback_msgs = c(msg1, msg2, msg3, msg4, msg5, msg6))
 ```
