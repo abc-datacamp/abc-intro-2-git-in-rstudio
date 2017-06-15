@@ -136,16 +136,22 @@ Always in this order!
 
 ### Adding files
 
-In Git-speak, adding a file means that you are telling Git that you are interested to include the update you just made to a certain file into the Git history.
+In Git-speak, adding a file means that you are telling Git that you are interested to include the update you just made into the Git history.
 If you created a completely new file, adding this file will mean that you're making Git aware of that file, i.e., that is should start keeping track of it. 
 
 However, the act of adding does not affect the Git repository (i.e., the metadata that is stored about your files) in a significant way, it's basically just telling Git that you're done changing the file(s) for now and that you would like to keep a record of that change.
 
 ### Committing files
 
-The act of committing a file or a change to a file tells Git that you want to save and record those changes to your Git repository. These two actions (adding & committing) typically go hand-in-hand.  Because only changes which are committed are able to be reverted back to in the future, it is often good practice to commit early and to commit often.
+Once you've added one ore more changes to one or more files, you will have to actually _commit_ them.
+This tells Git that you do want to **record those changes** in your Git repository.
 
-Go ahead and open up the RStudio project in the project directory.  There's also a script called ```myFunctions.R``` in the directory.  If you open it, you'll see that it contains a *convertToPercent* function.  We are going to tell Git to track this file now, and we are going to commit it to our respository.
+>The two actions (adding & committing) typically go hand-in-hand. Because only changes which are committed are part of the official record and can be used for future roll-backs, it is usually good practice to add and commit early and often.
+
+--------------------------------
+
+Go ahead and open up the RStudio project in the project directory.
+There's also a script called ```myFunctions.R``` in the directory.  If you open it, you'll see that it contains a *convertToPercent* function.  We are going to tell Git to track this file now, and we are going to commit it to our respository.
 
 You may have noticed a new Git tab in the upper right window, next to the History tab.  Navigate to that tab now.  You'll see something like this:
 
