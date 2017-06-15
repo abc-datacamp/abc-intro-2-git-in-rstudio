@@ -7,7 +7,7 @@ attachments :
 --- type:RStudioMultipleChoiceExercise lang:r xp:50 skills:1 key:db01ff97de
 ## What is RStudio?
 
-RStudio is an integrated development environment (IDE) that consolidates basic developer tools into a single, user-friendly interface. 
+RStudio is an integrated development environment (IDE) that consolidates basic developer tools for R into a single, user-friendly interface. 
 
 The RStudio IDE works alongside the R interpreter, and includes:
 
