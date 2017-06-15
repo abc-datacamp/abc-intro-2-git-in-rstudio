@@ -35,10 +35,10 @@ There are many more advantages to using a real version control system such as gi
 ---------------------------------------------
 
 *** =instructions
-- ```2```
-- ```3```
-- ```4```
-- ```5```
+- 2
+- 3
+- 4
+- 5
 
 *** =sct
 ```{r}
