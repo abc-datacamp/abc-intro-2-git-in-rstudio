@@ -36,7 +36,6 @@ There are many more advantages to using a real version control system such as gi
 
 **Which tasks do typical version control systems do?**
 
-
 *** =instructions
 - Back-up of files.
 - Restoring lost files.
