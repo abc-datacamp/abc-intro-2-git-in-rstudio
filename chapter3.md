@@ -12,7 +12,7 @@ attachments :
 Git is a particular implementation of a version control system.
 A version control system is a software tool which manages and keeps track of changes to files over time.
 Typical file types are text files, such as source code (but it could also be an essay or a thesis, or images etc).
-Think of it as a sophisticated, digital log book where every change to a file is recorded, so that at any given point in time you can always go back to a certain file version (or even restore entire folders).
+For a start, you can think of it as a sophisticated, **digital log book** where every change to a file is recorded, so that at any given point in time you can always go back to a certain file version (or even restore entire folders).
 
 Some of the chief benefits of version control include:
 
@@ -22,14 +22,30 @@ Some of the chief benefits of version control include:
 - Ability to determine when a bug was introduced
 - Ability to experiment with new features without worrying about losing functioning code
 
-RStudio implements support for two version control systems: Git and Subversion.  We will focus on Git.
+RStudio implements support for two version control systems: Git and Subversion; we will focus on teaching you Git.
 
-Whenever you want Git to track set of code, you have to create a *repository*.  A repository is simply the place were Git tracks your code over time.
-In RStudio, you can easily add a git repository to an existing project.
-An R project has been created for you.  Find it in the File browser and open it (myProject.Rproj).
-To add a Git repository to that project, click *Tools* -> *Project Options* -> *Git/SVN*.  Set the 'Version Control System' to be 'Git'.  Click <strong>Yes</strong> twice. 
+Whenever you want Git to track your scripts, you have to create a *repository*.
+A repository is the place where Git stores both the files its supposed to keep track of and the actual history of the changes made to those files.
+Think of it as a specialized type of file folder where Git stores some metadata in addition to the files that you're working on.
 
-Notice that a new file was created in your project directory called ```.gitignore```.  Open that file.  How many lines of text does it contain (including new or empty lines)?
+In RStudio, you can easily link a Git repository to an existing R project.
+
+-------------------------------
+
+An R project has been created for you.
+Find it in the File browser and open it (`myProject.Rproj`).
+To add a Git repository to that project:
+
+1. click *Tools* -> *Project Options* -> *Git/SVN*
+2. Set the 'Version Control System' to be 'Git'.
+3. Click <strong>Yes</strong> twice. 
+
+Notice that a new file was created in your project directory called `.gitignore`.
+Open that file.
+
+------------------------------
+
+**How many lines of text does the .gitignore file contain (including new or empty lines)?**
 
 
 *** =instructions
