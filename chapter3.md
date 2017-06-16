@@ -400,7 +400,7 @@ We will show you how to do this using the script we just committed to our Git re
 3. Delete line 3 (the line that appends a percent sign to the output).
 4. Save the script (`File` -> `Save`).
 5. Navigate to the Git tab in the upper right window. You should see that our script is now marked with an `M`, which stands for 'Modified'.
-6. Click the `Diff` button. A new window will open which is going to show us how our current version of `myFunctions.R` differs from the previously committed original version.
+6. Click the `Diff` button. A new window will open which is going to show us how our current version of `myFunctions.R` differs from the previously committed original version. (Yes, this is exactly the same window that you see everytime you do a commit)
 
 You'll see something like this:
 
@@ -416,8 +416,9 @@ Now that the line that appended a percent sign to the output has been deleted, t
 
 ----------------------------------
 
-Head back to the script.
-Set the second line to print out two digits:
+Exit the Diff window by simply closing it and head back to the script.
+
+Change the second line of the code so that `round` prints out two digits:
 
 ```
 percent <- round(x * 100, digits = 2)
@@ -435,7 +436,7 @@ percent <- round(x * 100, digits = 2)
 *** =sct
 ```{r}
 test_mc(3)
-success_msg("Correct! Note that if you wanted this change to be recorded by Git, you'd have to remember to commit it! Saving a file is not the same as staging & committing!")
+success_msg("Correct! Note that if you wanted this change to be recorded by Git, you'd have to remember to commit it! Saving a file is NOT the same as staging & committing!")
 ```
 
 *** =attachments
