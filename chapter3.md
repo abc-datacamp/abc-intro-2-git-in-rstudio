@@ -665,8 +665,11 @@ There is also a `View file @` link, which shows you how the current file looked 
 
 *** =sct
 ```{r}
-test_mc(1)
-success_msg("Correct!")
+msg1 <- "Good job! The first commit contained just the convertToPercent function!"
+msg2 <- "No, the very first commit of the script did not have two functions."
+msg3 <- "No, the very first commit of the script did not contain the sumOfSquares function."
+msg4 <- "No. If this was the correct answer, we would have initially committed an empty file to the Git repo. While this is technically possible, it is not what we did."
+test_mc(2, feedback_msgs = c(msg1, msg2, msg3, msg4))
 ```
 
 *** =attachments
