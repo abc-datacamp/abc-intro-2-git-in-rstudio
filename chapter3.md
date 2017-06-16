@@ -735,7 +735,8 @@ In general, in order to copy a version of a file from the past back into the pre
 ------------------------------------
 
 Once again, open up the RStudio project along with the ```myFunctions.R``` script.
-Change second line so that `round` prints more than 1 digit, i.e.,
+Change the second line so that `round` prints more than 1 digit, i.e.,
+
 ```
 percent <- round(x * 100, digits = 2)
 ```
@@ -838,6 +839,7 @@ myProject/.git/refs/heads/master : https://raw.githubusercontent.com/abc-datacam
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:9c1c3faf15
 ## Creating a GitHub repo
+
 Up until now, we've learned how to use a *local* Git respository in RStudio. However, if you wanted to work on one and the same code set on more than one computer, you'll need something more than a local Git respository.  
 
 GitHub is a free, online hosting service for Git repositories. It's chief advantage is that it lets you (and others!) work on projects from anywhere.  Fortunately, RStudio supports direct integration with GitHub. In order to start using GitHub, you first have to register.
