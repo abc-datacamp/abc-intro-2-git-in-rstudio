@@ -720,38 +720,73 @@ myProject/.git/refs/heads/master : https://raw.githubusercontent.com/abc-datacam
 
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:e83a93f2a8
-## Undo committed changes: checkout
-Previously, we discussed how you can undo changes that weren't already committed.  However, sometimes you commit a change, and only realize later that you'd prefer to roll back.  Although there is no way to do this via the RStudio user interface, it is easily accomplished using RStudio's console. In general, in order to copy a version of a file from the past back into the present, use following command:
+## Going back in the commit history: checkout
+Previously, we discussed how you can undo changes that weren't already committed.
+However, sometimes you commit a change, and only realize later that you'd prefer to roll back.
+Although there is no way to do this via the RStudio user interface, it is easily accomplished using RStudio's **console**.
+In general, in order to copy a version of a file from the past back into the present, you should use the `checkout` command:
 
 ```system("git checkout <SHA> <filename>"```
 
-Once again, open up the RStudio project  along with the ```myFunctions.R``` script.   Change line two to print more than 1 digit, i.e.,
+* **SHA** is the unique identifier of a specific commit
+* **filename** refers to the specific file that you would like to retrieve from the snapshot with the unique identifier indicated in the `<SHA> slot.
 
-```percent <- round(x * 100, digits = 2)```
 
-Save and commit the file with an informative commit message ('Changed number of output digits from 1 to 2').  Open up the Git history.  You should see two commits:  the most recent commit (where ```digits = 2```), and the first commit (where ```digits = 1```).   Determine the SHA key of the first commit (where ```digits = 1```).  
+------------------------------------
 
-In the RStudio console, type the following and hit Enter:
+Once again, open up the RStudio project along with the ```myFunctions.R``` script.
+Change second line so that `round` prints more than 1 digit, i.e.,
+```
+percent <- round(x * 100, digits = 2)
+```
 
-```system("git checkout <SHA> myFunctions.R")```
+1. Save the file.
+2. Commit the file with an informative commit message ('Changed number of output digits from 1 to 2').
+3. Open up the Git history (remember to not confuse it with R's console history). You should see two commits: 
+    * the *most recent* commit (where `digits = 2`), and 
+    * the *first* commit (where `digits = 1`).
+4. Determine the SHA key of the first commit (where ```digits = 1```). Write it down!  
 
-where ```<SHA>``` is the actual SHA number without any angle brackets ```<``` or ```>```.
+In the RStudio **console**, type the following and hit `return`:
 
-You'll notice that your script will immediate revert back to the first commit (when ```digits = 1```).  Note that in order to record this change, you'll need to remember to save the file and commit along with an informative commit message ('Reverted back to outputting one 1 instead of 2').
+```
+system("git checkout 1234567 myFunctions.R")
+```
 
-Navigate to the Git tab.  What is the status of the ```myFunctions.R``` file?
+where `1234567` should, of course, be the actual **SHA identifier of the first commit** that you just saw in the history.
 
+Once you've executed the command, your script will immediately revert back to the state of its first commit (with `digits = 1`).
+
+**Feel free to skip right to the question** at the bottom of the page!
+
+--------------------------
+
+Without going into too many details of the Git mindset (which can be quite mind-boggling), we want to point out that there is a conceptual **difference** between **checking out a single file** (as we've done here) and **checking out an entire working directory** (`git checkout <SHA>`, no file specified).
+Checking out an old file will change the current file back to the previous state, as you just witnessed.
+In practice, you just modified your file, so just like with any other change, you will have to re-commit the file if you want to replace your new file (where 2 digits were returned) with its previous version that you just loaded back up (where 1 digit is returned).
+
+Conversely, if you checked out the entire working directory without specifying a file, Git will pull up the entire directory at the point in time that you directed it to, but it will leave the current state of your project untouched, no matter what you do!
+For the sake of keeping this course on track, we will not go into any more details here, but if you really want to unleash the full power of Git, feel free to try out what happens when you check out an entire working directory.
+The [Atlassian tutorial](https://www.atlassian.com/git/tutorials/undoing-changes#viewing-an-old-revision) may be of further help. Good luck!
+
+---------------------
+
+Ok, so you retrieved an old version of `myFunctions.R`.
+
+**Navigate to the Git tab.**
+**What is the status of the ```myFunctions.R``` file and what should you do next if you wanted to keep the old version (where `digits = 1`)?**
 
 *** =instructions
-- ```Checkmark in the staged column```
-- ```Status changed to ?```
-- ```Status changed to M```
-- ```Both checkmark in staged column and M status```
+- Status changed to `D`, don't need to do anything.
+- Status changed to `?`, will have to stage and commit the file.
+- Status changed to `M`, will have to stage and commit the file.
 
 *** =sct
 ```{r}
-test_mc(4)
-success_msg("Correct!")
+msg1 <- "If the status was 'D', that would indicate you deleted the file!"
+msg2 <- "The question mark should only mark files that aren't part of the Git repository yet (i.e., before their very first commit). This should not be the case for the script file since we did at least two commits in this session."
+msg3 <- "Exactly! 'M' indicates that the script was modified since its last commit, so if you are satisfied with the current state (which in this case just happens to be the state it was in two commits ago), you just do business as usual: stage & commit."
+test_mc(3, feedback_msgs = c(msg1, msg2, msg3))
 ```
 
 *** =attachments
