@@ -489,19 +489,42 @@ myProject/.git/refs/heads/master : https://raw.githubusercontent.com/abc-datacam
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:e288a58454
 ## Undo changes: revert
 
-Git allows you to easily undo changes to a file that you have yet to commit, so there's no worry about having lost your original, working piece of code.
+Let's imagine you've worked on a piece of text or code for a while, but in the end you realize that none of your changes were useful.
+If you had committed your original starting version to Git, you will not have to worry about endlessly pressing Ctrl+Z to undo the changes.
 
-Open up the RStudio project and our functions script.  
+We will first show you how to ignore all **changes that you have not yet committed**, i.e., the workflow would have been like this:
 
-Delete the second line from the script and <strong>save</strong> the file.  Deleting the second line breaks the function (you can test this for yourself, if you'd like). To revert back to the most recently committed version of the script, you can use the built in revert command.  Click the <strong>Diff</strong> button in the Git tab.  You'll notice on the top of the window that opens that there is a <strong>Revert</strong> button:
+1. You committed a file to a Git repo.
+2. You modified the file.
+3. You saved those changes.
+4. You realized you do not like any of these changes.
+
+So, here's what you do:
+
+* Open up the RStudio project (`myProject` --> `myProject.Rproj`) and the `myFunctions.R` script.
+* Delete the second line from the script and *save* the file. 
+    - Deleting the second line breaks the function (you can test this for yourself, if you'd like).
+* To revert back to the most recently committed version of the script, use the `revert` command.
+    - Click the `Diff` button in the Git tab.
+    - The now familiar window with the three panes should open.
+    - On the top of the window, look for the `Revert` button:
 
 <center>![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git_revert.png)</center>
 
-Click the <strong>Revert</strong> button, and then click  <strong>Yes</strong>.  The script is now restored to the previously committed version.
+* Click the `Revert` button, and confirm that you want to roll back to the version that you committed last.
+ 
+The script is now restored to the previously committed version.
 
-Note that where Git revert differs between a simple system wide undo (*Edit* -> *Undo*) is that you can even close RStudio, thereby removing your system's clipboard history for RStudio from memory, and still be able to revert back to the previously committed file.  This is because Git actually stores and tracks changes to your file on disk. 
+--------------------
 
-You can also discard certain lines of an edited file, in the event that you'd like only certain areas of the script to revert back to the previously committed ones.  Go ahead an append a new function, ```sumOfSquares``` to the end of the ```myFunctions.R``` script:
+The difference of the Git revert to a simple system-wide undo (*Edit* -> *Undo*) is that you can even close RStudio, thereby removing your system's clipboard history for RStudio from memory, and still be able to revert back to the previously committed file.
+This is because Git actually stores and tracks changes to your file on disk (basically forever!) 
+
+-------------------
+
+In the event that you'd like only certain parts of the script to revert back to the previously committed ones, you can also discard certain lines of an edited file.
+
+Go ahead an append a new function, `sumOfSquares` to the end of the `myFunctions.R` script:
 
 ```
 sumOfSquares <- function(x,y) {
@@ -509,24 +532,31 @@ sumOfSquares <- function(x,y) {
 }
 ```
 
-Once again delete line 2.  Save the script.  Click <strong>Diff</strong>.  You should see something like this in the pop-up window:
+1. Now, delete line 2 of `myFunctions.R` again.
+2. Save the script.
+3. Click `Diff`. 
+4. You should see something like this in the pop-up window:
 
 <center>![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git_discardLine.png)</center>
 
-If we wanted to bring back line 2, but retain the new ```sumOfSquares``` function, you can click on line 2, and you'll see a <strong>Discard line</strong> button.  Click it and verify that line 2 is back.
+If we wanted to bring back line 2, but retain the new `sumOfSquares` function:
 
-What happens if you click <strong>Discard chunk</strong>?
+1. Click on line 2
+2. Note the `Discard line` button.
+3. Click `Discard line` and verify that line 2 is back in the original script.
+
+**What happens if you click** `Discard chunk`**?**
 
 *** =instructions
-- ```Line 2 is deleted again```
-- ```The convert to percent function is removed```
-- ```The sum of squares function is removed```
-- ```The whole script is deleted```
+- Line 2 is deleted again
+- The entire `convertToPercent` function is removed
+- The `sumOfSquares` function is removed
+- The whole script is deleted
 
 *** =sct
 ```{r}
 test_mc(3)
-success_msg("Correct!")
+success_msg("Correct! Chunk refers to an entire set of changes.")
 ```
 
 *** =attachments
