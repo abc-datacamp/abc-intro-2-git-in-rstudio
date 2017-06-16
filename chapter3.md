@@ -241,21 +241,21 @@ myProject/.git/description: https://raw.githubusercontent.com/abc-datacamp/abc-i
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:fc4fac8eaa
 ## Tracking files and saving changes II
 
+Congrats, you've mastered the theory of adding/staging & committing!
+Now, let's actually _do_ it!
 
-You can **add** the file by clicking on the box next to `myFunctions.R`, so that there is a checkbox there. 
-The status should have changed from a question mark to an `A`, indicating that the file has been added to Git.
-Remember, adding is nothing more than casually telling Git that you're ready to submit a change.
-
-To **commit** the file, so that we maintain a history of our script, you will have to click the <strong>Commit</strong> button.
+1. Add/stage the file by checking the box next to `myFunctions.R`. The status should now change to `A`, indicating that the file has been added, i.e. you've announced your intention to submit this file to the Git tracking.
+2. To finally **commit** the file, click the <strong>Commit</strong> button in the Git panel.
 A new window will pop up:
 
 <center>![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git_commitWindow.png)</center>
 
-Note that you <strong>must</strong> enter a commit message before clicking <strong>Commit</strong>.
+3. Note that you <strong>must</strong> enter a commit message before clicking <strong>Commit</strong>.
 Commit messages should be informative and terse so that your future self or a collaborator will get some sort of idea why you thought that change was necessary.
-Enter a commit message (something like, 'Created convert to percent function') and click </strong>Commit</strong>.   
+Enter a commit message (something like, 'Created a function to convert to percent') and click </strong>Commit</strong>.   
 
-After clicking </strong>Commit</strong>, a message pops up.  What does it say?
+After clicking </strong>Commit</strong>, a message pops up.
+What does it say?
 
 *** =instructions
 - ```1 file changed, 6 insertions(+)```
@@ -266,7 +266,7 @@ After clicking </strong>Commit</strong>, a message pops up.  What does it say?
 *** =sct
 ```{r}
 test_mc(1)
-success_msg("Correct!")
+success_msg("Correct! Congrats on your first stage & commit with Git! The script myFunctions.R is now going to be tracked by Git.")
 ```
 
 *** =attachments
