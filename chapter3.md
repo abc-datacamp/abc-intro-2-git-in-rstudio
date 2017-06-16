@@ -487,7 +487,7 @@ myProject/.git/refs/heads/master : https://raw.githubusercontent.com/abc-datacam
 
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:e288a58454
-## Undo changes: revert
+## Undo changes: discard and revert
 
 Let's imagine you've worked on a piece of text or code for a while, but in the end you realize that none of your changes were useful.
 If you had committed your original starting version to Git, you will not have to worry about endlessly pressing Ctrl+Z to undo the changes.
@@ -497,7 +497,7 @@ We will first show you how to ignore all **changes that you have not yet committ
 1. You committed a file to a Git repo.
 2. You modified the file.
 3. You saved those changes.
-4. You realized you do not like any of these changes.
+4. You realized you did not like any of these changes.
 
 So, here's what you do:
 
@@ -607,13 +607,13 @@ myProject/.git/refs/heads/master : https://raw.githubusercontent.com/abc-datacam
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:b4ac698014
 ## Commit history
+
 Git stores the complete history of all of your commits, which is conviently viewable via the RStudio IDE.
 
-Open up the RStudio project and the ```myFunctions.R``` script.
-We are going to be serious about the `sumOfSquares` function this time as we are actually going to add and **commit** it to the Git repository.
-This will ensure that there's always going to be record of that function within `myFunctions.R`.
+To make our Git history a bit richer, we are going to be serious about the `sumOfSquares` function this time and actually going to add and **commit** it to the Git repository.
 
-So, go ahead and append the `sumOfSquares` function to the end of the `myFunctions.R` script:
+* Open up the RStudio project and the ```myFunctions.R``` script.
+* Append the `sumOfSquares` function to the end of the `myFunctions.R` script:
 
 ```
 sumOfSquares <- function(x,y) {
@@ -621,34 +621,47 @@ sumOfSquares <- function(x,y) {
 }
 ```
 
-Save the file, then commit it.  Remember, to commit a file, you have to:
+Save the file, then commit it.
+Remember, to commit a file, you have to:
 
-1. Save the file
+1. **Save** the file
 2. Navigate to the Git tab in the upper right hand corner of RStudio
-3. Click the box next to the file that you want to commit
+3. Check the box for **staging** next to the file that you want to commit
 4. Click the `Commit` button
-5. Enter an informative commit message (e.g., 'Added new sum of squares function')
+5. Enter an informative **commit message** (e.g., 'Added new sum of squares function')
 6. Click the `Commit` button.
 
-You can now view the history of your file by clicking `History` in the commit popup window, or by clicking the history icon ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/git_history.png) in the Git tab.
+You can now view the history of your file by either clicking `History` in the commit popup window, or by clicking the history icon  ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/git_history.png) in the Git tab.
 
-Select the history tab now.
-You will see something like this:
+Select the history tab now (make sure you click on the symbol **within the Git pane**, not R's History pane (which is the temporary log book of all the commands you've executed in the R console - the corresponding file, `.Rhistory` is, in fact, excluded from the Git repo because it's part of the `.gitignore` file).
+If you selected Git's history, you will see something like this:
 
 <center>![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git_commitHistory.png)</center>
 
 
-which is a log of the history of your file and its changes.
+This is the record of the history of your file and its changes.
 
-The history window is divided into two parts.
-The top half of lists each commit, and you may notice that each commit is linked with a unique identifer (called an ```SHA``` key).  The SHA key is important if you want to roll back to a previous commit. The bottom half of the window displays additional information for each commit, including what changes were made during that commmit. There is also a ```View file @``` link, which shows you how the current file looked at that particular commit. Click on the very first commit ('Created convert to percent function').  Click ```View file```.  What does the file contain?
+The history window is divided into two parts:
+
+The **top** half of lists each commit of that Git repository (in our case, that's only two so far: the initial commit of the original `myFunctions.R` file and the addition of the `sumOfSquares` function just now. 
+As mentioned previously, every commit has certain metadata attached to it, such as a unique identifer (called an `SHA` key).
+The SHA key is important if you want to roll back to a previous commit, you can think of it as its permanent address. 
+
+The **bottom** half of the window displays additional information for each commit, including what changes were made during that commmit.
+There is also a `View file @` link, which shows you how the current file looked at that particular commit.
+
+--------------------------------
+
+**Click on the very first commit ('Created convert to percent function').**
+**Click** `View file`.  
+**What does the file contain?**
 
 
 *** =instructions
-- ```Just the convertToPercent function```
-- ```The convertToPercent and the sumOfSquares function ```
-- ```Just the sumOfSquares function```
-- ```Neither the sumOfSquares nor the convertToPercent function```
+- Just the `convertToPercent` function.
+- The `convertToPercent` and the `sumOfSquares` function.
+- Just the `sumOfSquares` function.
+- Neither the `sumOfSquares` nor the `convertToPercent` function.
 
 *** =sct
 ```{r}
