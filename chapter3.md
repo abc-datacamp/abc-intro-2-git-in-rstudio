@@ -142,7 +142,7 @@ Always in this order!
 *Before you start messing around with the content of your report, you want to make sure that you can always revert back to the version you currently have, including the corrected typos.*
 
 In Git-speak, adding a file means that you are telling Git that you are **interested to include the update** you just made into the Git history.
-(The same holds true for if you created a completely new file -- while Git will notice that there's a new file in the folder, it will not start keeping track of the changes until you add and commit it).
+(The same holds true if you created a completely new file -- while Git will notice that there's a new file in the folder, it will not start keeping track of the changes until you add and commit it).
 
 The act of adding does not affect the Git repository (i.e., the metadata that is stored about your files), it's basically just telling Git that you're done changing the file(s) for now and that you would like to keep a record of that change.
 
@@ -154,6 +154,9 @@ Once you've added one ore more changes to one or more files, you will have to ac
 This tells Git that you do want to **record those changes** in your Git repository.
 
 >The two actions (adding & committing) typically go hand-in-hand. Because only changes which are committed are part of the official record and can be used for future roll-backs, it is usually good practice to **add and commit early and _often_**.
+
+_"A commit takes a snapshot of your code at a specified point in time. Using a Git commit is like using anchors and other protection when climbing. If you’re crossing a dangerous rock face you want to make sure you’ve used protection to catch you if you fall. Commits play a similar role: if you make a mistake, you can’t fall past the previous commit. Coding without commits is like free-climbing: you can travel much faster in the short-term, but in the long-term the chances of catastrophic failure are high! Like rock climbing protection, you want to be judicious in your use of commits. Committing too frequently will slow your progress; use more commits when you’re in uncertain or dangerous territory. Commits are also helpful to others, because they show your journey, not just the destination."_
+[Hadley Wickham](http://r-pkgs.had.co.nz/git.html)
 
 --------------------------------
 
