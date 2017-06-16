@@ -607,11 +607,13 @@ myProject/.git/refs/heads/master : https://raw.githubusercontent.com/abc-datacam
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:b4ac698014
 ## Commit history
-Git stores the complete history of all of your commits, and this history is viewable via the RStudio IDE.
+Git stores the complete history of all of your commits, which is conviently viewable via the RStudio IDE.
 
-Open up the RStudio project and the ```myFunctions.R``` script.  This time we are going to add and commit the ```sumOfSquares``` function.
+Open up the RStudio project and the ```myFunctions.R``` script.
+We are going to be serious about the `sumOfSquares` function this time as we are actually going to add and **commit** it to the Git repository.
+This will ensure that there's always going to be record of that function within `myFunctions.R`.
 
-Once again, append the ```sumOfSquares``` function to the end of the ```myFunctions.R``` script:
+So, go ahead and append the `sumOfSquares` function to the end of the `myFunctions.R` script:
 
 ```
 sumOfSquares <- function(x,y) {
@@ -624,17 +626,22 @@ Save the file, then commit it.  Remember, to commit a file, you have to:
 1. Save the file
 2. Navigate to the Git tab in the upper right hand corner of RStudio
 3. Click the box next to the file that you want to commit
-4. Click the <strong>Commit</strong> button
+4. Click the `Commit` button
 5. Enter an informative commit message (e.g., 'Added new sum of squares function')
-6. Click the <strong>Commit</strong> button.
+6. Click the `Commit` button.
 
-You can now view the history of your file by clicking <strong>History</strong> in the commit popup window, or by clicking the history icon ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/git_history.png) in the Git tab.  Click the history tab now.  You will see something like this:
+You can now view the history of your file by clicking `History` in the commit popup window, or by clicking the history icon ![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/icons/git_history.png) in the Git tab.
+
+Select the history tab now.
+You will see something like this:
 
 <center>![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git_commitHistory.png)</center>
 
 
-which is a log of the history of your file and its changes.  
-The history window is divided into two parts. The top half of lists each commit, and you may notice that each commit is linked with a unique identifer (called an ```SHA``` key).  The SHA key is important if you want to roll back to a previous commit. The bottom half of the window displays additional information for each commit, including what changes were made during that commmit. There is also a ```View file @``` link, which shows you how the current file looked at that particular commit. Click on the very first commit ('Created convert to percent function').  Click ```View file```.  What does the file contain?
+which is a log of the history of your file and its changes.
+
+The history window is divided into two parts.
+The top half of lists each commit, and you may notice that each commit is linked with a unique identifer (called an ```SHA``` key).  The SHA key is important if you want to roll back to a previous commit. The bottom half of the window displays additional information for each commit, including what changes were made during that commmit. There is also a ```View file @``` link, which shows you how the current file looked at that particular commit. Click on the very first commit ('Created convert to percent function').  Click ```View file```.  What does the file contain?
 
 
 *** =instructions
