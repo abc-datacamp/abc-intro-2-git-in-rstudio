@@ -247,18 +247,18 @@ myProject/.git/description: https://raw.githubusercontent.com/abc-datacamp/abc-i
 Congrats, you've mastered the theory of adding/staging & committing!
 Now, let's actually _do_ it!
 
-1. Add/stage the file by checking the box next to `myFunctions.R`. The status should now change to `A`, indicating that the file has been added, i.e. you've announced your intention to submit this file to the Git tracking.
-2. To finally **commit** the file, click the <strong>Commit</strong> button in the Git panel.
+1. Add/stage the file by checking the box next to `myFunctions.R`.The status should now change to `A`, indicating that the file has been added, i.e. you've announced your intention to submit this file to the Git tracking.
+2. To finally **commit** the file, click the `Commit` button in the Git panel.
 A new window will pop up:
 
 <center>![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git_commitWindow.png)</center>
 
-3. Note that you <strong>must</strong> enter a commit message before clicking <strong>Commit</strong>.
+Note that you <strong>must</strong> enter a commit message before clicking `Commit`.
 Commit messages should be informative and terse so that your future self or a collaborator will get some sort of idea why you thought that change was necessary.
-Enter a commit message (something like, 'Created a function to convert to percent') and click </strong>Commit</strong>.   
+So, go ahead and enter a commit message (something like, 'Created a function to convert to percent') and click `Commit`.   
 
 -------------------------------------
-**After clicking </strong>Commit</strong>, a message pops up.**
+**After clicking** `Commit`, **a message pops up.**
 **What does it say?**
 
 *** =instructions
@@ -322,9 +322,9 @@ For every commit, there will be a record of:
 * a **parent** (i.e., the previous commit)
 * the **commit message** that was supplied by the user, intended to be a human-readable hint as to what was done to the files
 
-Commits can be done for single files or simultaneously for multiple files -- you will always have to manually select the files for staging & committing.
+Commits can be done for single files or simultaneously for multiple files -- you will always have to manually select the files for staging & committing though.
 
-> Git will never create a record of change for any file (even if it's being tracked) without you telling it to do it!
+> Git will never create a record of change for any file (even if it's being tracked) unless you tell it to do so!
 
 -------------
 
@@ -335,7 +335,7 @@ Commits can be done for single files or simultaneously for multiple files -- you
 Say, you have a folder `ImportantStuff` with three different files, `One.R`, `Two.txt`, `Three.csv`.
 You have created a Git repository for `ImportantStuff`. Then, you staged and committed `One.R`.
 
-**Which statement is correct?**
+**Which of the following statements is correct?**
 
 *** =instructions
 - Any changes to `One.R` will from now on be part of the Git history.
@@ -346,7 +346,7 @@ You have created a Git repository for `ImportantStuff`. Then, you staged and com
 *** =sct
 ```{r}
 msg1 <- "Not quite right. While Git will tell you via the `M` symbol that One.R may have been modified, it will not keep a record of this until you stage and commit those modifications."
-msg2 <- "No. You only committed One.R. If you wanted the other scripts to version controlled, too, you can select both of them and add/stage & commit them."
+msg2 <- "No. You only committed One.R. If you wanted the other scripts to be version controlled, too, you could select both of them and add/stage & commit them."
 msg3 <- "Absolutely -- since you committed the original version of One.R to the Git repository, there will now be an immutable record of that file. How great is that?!"
 msg4 <- "There is no technical reason to not commit the other two scripts to Git, too."
 test_mc(3, feedback_msgs = c(msg1, msg2, msg3, msg4))
@@ -390,25 +390,41 @@ myProject/.git/description: https://raw.githubusercontent.com/abc-datacamp/abc-i
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:cdf20e6403
 ## Viewing changes made to a tracked file
-Git allows you to view changes made to a file that was previously committed, and RStudio supports this function.
 
-Open up the RStudio project again.  Open the ```myFunctions.R``` script.  Delete line 3 (the line that appends a percent sign to the output).  Save the script (*File* -> *Save*).  
+If you wanted to just **view the changes** you made to a file, you can also rely on the Git infrastructure (given that the file you modified was committed to a Git repository at one point). 
 
-Navigate to the Git tab in the upper right window. You'll notice that our script is now marked with an  ```M```, which stands for 'Modified'.
-Click the <strong>Diff</strong> button. A new window will open.  This is going to show us how our current version of our ```myFunctions.R``` script differs from the previously committed version.
+We will show you how to do this using the script we just committed to our Git repo.
+
+1. Open up the RStudio project again (`myProject` --> `myProject.Rproj`).
+2. Open the ```myFunctions.R``` script. 
+3. Delete line 3 (the line that appends a percent sign to the output).
+4. Save the script (`File` -> `Save`).
+5. Navigate to the Git tab in the upper right window. You should see that our script is now marked with an `M`, which stands for 'Modified'.
+6. Click the `Diff` button. A new window will open which is going to show us how our current version of `myFunctions.R` differs from the previously committed original version.
 
 You'll see something like this:
 
 <center>![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git_diffWindow.png)</center>
 
-Lines highlighted in red indicate the original line which has since changed (in this case, deleted).  If a line were added or modified, you would see a green highlight.
-There are two columns of numbers.  The first column indicates the original line numbers, and the second column indicates the new line numbers.
-You'll notice that previously, the line that appended a percent sign to the output was on line 3 and the ```return``` function was on line 4.  But now that the line that appended a percent sign to the output has been deleted, the ```return``` function is on line 3.
-Head back to the script.  Set the second line to print out two digits:
+Lines highlighted in red indicate the original line which has since changed (in this case, deleted).
+If a line were added or modified, you would see a green highlight.
 
-```percent <- round(x * 100, digits = 2)```
+There are two columns of numbers. 
+The first column indicates the original line numbers, and the second column indicates the new line numbers.
+You'll notice that previously, the line that appended a percent sign to the output was on line 3 and the `return` function was on line 4.
+Now that the line that appended a percent sign to the output has been deleted, the `return` function is on line 3.
 
-Save the file, and click the <strong>Diff</strong> again.  How many lines are red and how many lines are green?
+----------------------------------
+
+Head back to the script.
+Set the second line to print out two digits:
+
+```
+percent <- round(x * 100, digits = 2)
+```
+
+**Save the file, and click the `Diff` button again.**
+**How many lines are red and how many lines are green?**
 
 *** =instructions
 - ```1 red, 1 green```
@@ -419,7 +435,7 @@ Save the file, and click the <strong>Diff</strong> again.  How many lines are re
 *** =sct
 ```{r}
 test_mc(3)
-success_msg("Correct! Note that if you wanted this change to be recorded by Git, you'd have to remember to commit it! Saving a file is not the same as committing.")
+success_msg("Correct! Note that if you wanted this change to be recorded by Git, you'd have to remember to commit it! Saving a file is not the same as staging & committing!")
 ```
 
 *** =attachments
