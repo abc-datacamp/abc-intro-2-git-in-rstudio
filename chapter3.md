@@ -606,7 +606,7 @@ myProject/.git/objects/9a/8f1e69289df78448441225816b295767ce3494 : https://githu
 myProject/.git/refs/heads/master : https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git_diff/refs/heads/master
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:b4ac698014
-## Commit history
+## Viewing the commit history
 
 Git stores the complete history of all of your commits, which is conviently viewable via the RStudio IDE.
 
@@ -838,36 +838,43 @@ myProject/.git/refs/heads/master : https://raw.githubusercontent.com/abc-datacam
 
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:9c1c3faf15
-## Creating a GitHub repo
+## Going places: creating a GitHub repo
 
-Up until now, we've learned how to use a *local* Git respository in RStudio. However, if you wanted to work on one and the same code set on more than one computer, you'll need something more than a local Git respository.  
+Up until now, we've used a *local* Git respository, i.e., all the files (your script(s) as well as the Git metadata) were stored on a local machine, but they weren't really accessible to others, including yourself working on a different computer.
 
-GitHub is a free, online hosting service for Git repositories. It's chief advantage is that it lets you (and others!) work on projects from anywhere.  Fortunately, RStudio supports direct integration with GitHub. In order to start using GitHub, you first have to register.
-Head over to github.com.  On the main page, you'll see a form to create a new user account.  Do so now.
+If you wanted to work on one and the same files on more than one computer, you'll have to start using the Dropbox-equivalent for Git repositories, called GitHub.
+
+GitHub is a free, online hosting service for Git repositories (just like Dropbox is an online hosting service for any sorts of files. Of course, you can keep your scripts in the Dropbox as well as in GitHub, but that's really not necessary!).
+GitHub's chief advantage is that it lets you (and others) work on projects from anywhere while leveraging the power of Git, i.e., keeping track of changes and authors.
+
+Fortunately, RStudio supports direct integration with GitHub.
+
+In order to start using GitHub, you first have to register.
+
+* Head over to [github.com](https://github.com/).
+* On the main page, you'll see a form to create a new user account. Do so now.
 
 <center>![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/github_register1.png)</center>
 
-
-After entering a username, email address, and password, you'll be prompted to select a plan.   Select 'Unlimited public repositories for free.' and click <strong>Continue</strong>
+* After entering a username, email address, and password, you'll be prompted to select a plan. Select 'Unlimited public repositories for free.' and click **Continue**.
 
 <center>![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/github_register2.png)</center>
-
 
 In the next screen, you'll be asked a series of questions:
 
 <center>![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/github_register3.png)</center>
 
 
-Feel free to select <strong>skip this step</strong> at the bottom of the screen. 
+* Feel free to select **skip this step** at the bottom of the screen. 
+* Verify the email address you used to register your account.
 
-
-Now that you are registed with GitHub, you are free to create a GitHub repository.  You must verify the email address you used to register your account before doing so, however.  After you verify, head back to github.com.  To create a repo, following the instructions below:
+Now that you are registed with GitHub, you can create a GitHub repository (= a Git repository in the cloud):
 
 1. In the upper-right corner of any page, click <strong>+</strong>, and then click <strong>New repository</strong>.
-2. Name your repository.  This name should reflect the underlying code that you'll be storing in it. You can name it "hello-world" for our purpose.
-3. Optionally, enter a description of your repository. 
-4. Choose between creating a public or private repository.  Private repositories require a paid account, so choose public for now.  Note that public respositories mean that anybody can see your code, so bear this in mind in you're trying to keep code under wraps.
-5. Check the box to create a README when the repository is created, which will allow immediate clone the repository to your computer.
+2. Name your repository. This name should make some sense, just like all your folder names should. Breaking with that rule, you can name it "hello-world" for our purpose.
+3. Optionally, enter a description of your repository, e.g. 'My very first GitHub repo'. 
+4. Choose between creating a public or private repository. Private repositories require a paid account, so choose public for now.  Note that public respositories mean that **anybody can see your files**, so bear this in mind if you're trying to keep code under wraps.
+5. Check the box to create a `README` when the repository is created, so that the repo isn't empty and you can immediately clone the repository (= copy the `README` and the (hidden) Git metadata) to your computer later on.
 
 Your form should look something like this:
 
@@ -880,11 +887,11 @@ Open up the ``` README.md``` file in your repository.  What does it contain?
 - Nothing
 - 'README'
 - 'hello-world'
-- 'enter readme contents here'
+- 'enter content here'
 *** =sct
 ```{r}
 test_mc(3)
-success_msg("Correct!")
+success_msg("Correct! The name of the repo is the default content of the README file.")
 ```
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:f6812b14bb
