@@ -30,9 +30,11 @@ Some of the chief benefits of version control include:
 - Ability to **experiment with new features** without worrying about losing functioning code.
 - Ability to **track the ownership** of files and changes applied to them.
 
-There are many more advantages to using a real version control system such as git, e.g., the ability to describe why specific changes were necessary and the ability to even classify and tag different types of changes.
+There are many more advantages to using a real version control system such as Git, e.g., the ability to describe why specific changes were necessary and the ability to even classify and tag different types of changes.
 
 ---------------------------------------------
+
+**Which tasks can Git help you with?**
 
 *** =instructions
 - Back-up of files.
@@ -49,7 +51,7 @@ msg2 <- "Yes, but not just that."
 msg3 <- "Yes, but not just that."
 msg4 <- "Yes, but not just that."
 msg5 <- "Yes! Git et al. are quite versatile! [Note: the incorrect spelling following al. is enforced by DataCamp]"
-msg6 <- "Come on! We wouldn't make you learn git if it couldn't do any of that!"
+msg6 <- "Come on! We wouldn't make you learn Git if it couldn't do any of the listed tasks!"
 test_mc(5, feedback_msgs = c(msg1, msg2, msg3, msg4, msg5, msg6))
 ```
 
@@ -60,10 +62,8 @@ test_mc(5, feedback_msgs = c(msg1, msg2, msg3, msg4, msg5, msg6))
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:72082e6996
 ## Creating a Git repository in RStudio
 
-RStudio implements support for two version control systems: Git and Subversion; we will focus on teaching you Git.
-
 Whenever you want Git to track your scripts, your very first step will be to **create a _repository_**.
-A repository is the place where Git stores both the *files* its supposed to keep track of and the actual *history* of the changes made to those files.
+A repository is the place where Git stores both the *files* it's supposed to keep track of and the actual *history* of the changes made to those files.
 Think of it as a specialized type of file folder where Git stores some metadata in addition to the files that you're working on.
 
 > Most git commands will only work within Git repositories!
@@ -85,11 +85,12 @@ Since it is hidden, you do not need to worry about it, but just so you know: all
 
 What you will see and notice in the browser pane of RStudio is that a new file was created in your project directory that is called `.gitignore`.
 This simple text file lists all the file types that will be ignored by Git, i.e., **files that will not be tracked**.
-Files to be exluded from the tracking are usually either/or one of the following:
+Files to be exluded from the tracking typically include:
 
-* local configuration files that specify a user's settings on a certain computer, e.g., the font that is being used in the editor
+* local configuration files that specify a user's settings on a certain computer
 * temporary files
 * large data files
+* binary files
 * executables
 * files with passwords
 
@@ -109,7 +110,7 @@ You can see which file types and folders are automatically set to be excluded fr
 
 *** =sct
 ```{r}
-msg1 <- "Correct! You definitely want your R scripts to be tracked, i.e., they should NOT be excluded via the gitignore file."
+msg1 <- "Correct! You definitely want your R scripts to be part of the version control, i.e., they should NOT be excluded from the Git tracking via the .gitignore file."
 msg2 <- "Rproj.user is a hidden directory  where project-specific temporary files (e.g. auto-saved source documents, window-state, etc.) are stored. Temporary files do not need to be tracked and should definitely be part of .gitignore!"
 msg3 <- "The .Rhistory file contains ALL commands of a past R session - all your important commands should be in a script, so there is no need to track the entire messy history of your trials and errors!"
 msg4 <- ".RData (as well as .RDS) is a typical ending for data sets saved with R. Since your scripts should contain all the information to regenerate every data set, you should not need to keep track of the data itself!"
@@ -125,42 +126,61 @@ myProject/myProject.Rproj: https://raw.githubusercontent.com/abc-datacamp/abc-in
 ## Tracking files and saving changes
 
 Once you've created a Git repository, you can go about your business such as writing scripts as usual.
-Git will notice any saved changes to any tracked file, but in order for those changes to become part of the official Git history, you will have to manually communicate to Git that you think you've made changes that are worth keeping a record of (e.g., you've fixed a bug, or added a cool new function, or corrected a typo).
+Git will quietly notice any saved changes to any tracked file, but in order for those changes to become part of the official Git history, you will have to manually communicate to Git that you think you've made changes that are worth keeping a record of (e.g., you've fixed a bug, or added a cool new function, or corrected a typo).
 
 The process of telling Git to **permanently log** certain changes requires two steps:
 
 1. **adding** and
-2. **committing*
+2. **committing**
 
 Always in this order!
 
 ### Adding files
 
-In Git-speak, adding a file means that you are telling Git that you are **interested to include** the update you just made into the Git history.
-If you created a completely new file, adding this file will mean that you're making Git aware of that file, i.e., that is should start keeping track of it. 
+*Say, you just fixed a couple of typos in your report in the Git repo.*
+*You saved those changes and are ready to move on to the next task (e.g., adding a new paragraph).*
+*Before you start messing around with the content of your report, you want to make sure that you can always revert back to the version you currently have, including the corrected typos.*
 
-However, the act of adding does not affect the Git repository (i.e., the metadata that is stored about your files) in a significant way, it's basically just telling Git that you're done changing the file(s) for now and that you would like to keep a record of that change.
+In Git-speak, adding a file means that you are telling Git that you are **interested to include the update** you just made into the Git history.
+(The same holds true for if you created a completely new file -- while Git will notice that there's a new file in the folder, it will not start keeping track of the changes until you add and commit it).
+
+The act of adding does not affect the Git repository (i.e., the metadata that is stored about your files), it's basically just telling Git that you're done changing the file(s) for now and that you would like to keep a record of that change.
+
+RStudio has found a slightly more intuitive term for `git add` -- here, adding is refered to as _staging_.
 
 ### Committing files
 
 Once you've added one ore more changes to one or more files, you will have to actually _commit_ them.
 This tells Git that you do want to **record those changes** in your Git repository.
 
->The two actions (adding & committing) typically go hand-in-hand. Because only changes which are committed are part of the official record and can be used for future roll-backs, it is usually good practice to add and commit early and often.
+>The two actions (adding & committing) typically go hand-in-hand. Because only changes which are committed are part of the official record and can be used for future roll-backs, it is usually good practice to **add and commit early and _often_**.
 
 --------------------------------
 
-Go ahead and open up the RStudio project in the project directory.
-There's a script called ```myFunctions.R``` in the directory.
-If you open it, you'll see that it contains a *convertToPercent* function.
-Since we just initiated our Git repository, we need to tell Git that it should be tracking this script.
+1. Open the the `myProject` directory.
+2. Open the RStudio project (`myProject.Rproj`), you should see three files: `.gitignore`, `myFunctions.R`, `myProject.Rproj`.
+
+Remember that we just initiated the Git repo for that R project, i.e., we set up the Git infrastructure to keep track of files within `myProject`.
+We also told it to ignore the `.Rproj` file (remember how?).
+
+The first file that we actually want to become part of the Git logging is the script `myFunctions.R`.
+Let's tell Git that it should be tracking this script!
 
 In order to do this, we will make use of a couple of new buttons that were added to RStudio after we had created the Git repository.
-There is an entire new **Git tab** in the upper right window, next to the History tab.
-Navigate to that tab now.
+There is an entire new **Git tab in the upper right window**, next to the History tab.
+Click on that tab now.
 You should see something like this:
 
 <center>![load](https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git_untracked.png)</center>
+
+Note that there are three columns for each file:
+
+* **Stage**: Is a file being tracked by Git?
+* **Status**
+    * `??` - Git does not know about that file
+    * `M` - The file has been modified
+    * `D` - The file has been deleted
+* **Path**
 
 The question marks `??`  next to the `myFunctions.R` script indicate that the file is not currently being tracked by Git.
 
@@ -229,7 +249,7 @@ myProject/.git/description: https://raw.githubusercontent.com/abc-datacamp/abc-i
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:cdf20e6403
 ## Viewing changes made to a tracked file
-Git allows you to view changes made to a file that was previously committed, and the RStudio IDE supports this function.
+Git allows you to view changes made to a file that was previously committed, and RStudio supports this function.
 
 Open up the RStudio project again.  Open the ```myFunctions.R``` script.  Delete line 3 (the line that appends a percent sign to the output).  Save the script (*File* -> *Save*).  
 
