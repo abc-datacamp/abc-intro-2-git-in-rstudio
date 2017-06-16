@@ -644,7 +644,7 @@ This is the record of the history of your file and its changes.
 The history window is divided into two parts:
 
 The **top** half of lists each commit of that Git repository (in our case, that's only two so far: the initial commit of the original `myFunctions.R` file and the addition of the `sumOfSquares` function just now. 
-As mentioned previously, every commit has certain metadata attached to it, such as a unique identifer (called an `SHA` key).
+As mentioned previously, every commit has certain metadata attached to it, such as the commit message and a unique identifer (called an `SHA` key).
 The SHA key is important if you want to roll back to a previous commit, you can think of it as its permanent address. 
 
 The **bottom** half of the window displays additional information for each commit, including what changes were made during that commmit.
