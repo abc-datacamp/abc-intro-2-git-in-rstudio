@@ -1,10 +1,10 @@
-title            : abc intro 2 git in rstudio
+title            : ABC Intro 2 Git in Rstudio
 instructors      :
  - las2017@med.cornell.edu
 collaborators    :
  - paz2005@med.cornell.edu
  - friederike.muehlpfordt@gmail.com
-description      : introduction to rstudio ide and version control with git
-university       : weill cornell medicine
+description      : Introduction to RStudio IDE and version control with Git
+university       : Weill Cornell Medicine
 difficulty_level : 1
 time_needed      : 3 hours
