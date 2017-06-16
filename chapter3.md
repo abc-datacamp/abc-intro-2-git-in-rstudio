@@ -199,7 +199,7 @@ As expected, the `myFunctions.R` script is not yet being tracked by Git (as indi
 
 *** =sct
 ```{r}
-msg1 <- "In principle, this is a valid workflow. However, we would like the original version of the script to be part of the Git history, so modifying it before staging it is not recommended."
+msg1 <- "In principle, this is a valid workflow. However, we would like the original version of the script to be part of the Git history, so modifying it before Git actually even knows about it is not recommended."
 msg2 <- "Exactly! First, you submit the original version of the script to Git, and then you're free to play around with it. The original will always be there!"
 msg3 <- "No, not possible. Git does not even know about the script at this point as indicated by the question marks, so running the Git function diff on it won't even work. Plus, the command that goes hand in hand with commit is add (or stage, in RStudio)."
 test_mc(2, feedback_msgs = c(msg1, msg2, msg3))
@@ -257,8 +257,9 @@ A new window will pop up:
 Commit messages should be informative and terse so that your future self or a collaborator will get some sort of idea why you thought that change was necessary.
 Enter a commit message (something like, 'Created a function to convert to percent') and click </strong>Commit</strong>.   
 
-After clicking </strong>Commit</strong>, a message pops up.
-What does it say?
+-------------------------------------
+**After clicking </strong>Commit</strong>, a message pops up.**
+**What does it say?**
 
 *** =instructions
 - ```1 file changed, 6 insertions(+)```
@@ -307,6 +308,85 @@ myProject/.git/config: https://raw.githubusercontent.com/abc-datacamp/abc-intro-
 myProject/.git/HEAD: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/HEAD
 myProject/.git/description: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/description
 
+--- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:f0e27486c3
+## Tracking files and saving changes III
+
+### Some more background about Git's `commit`
+
+Every time you commit something^, Git creates a snapshot of the commited file(s) in their current state.
+For every commit, there will be a record of:
+
+* the **person** that added/staged & committed the file(s)
+* a **unique identifier**, so that the particular version of your file(s) can always be retrieved
+* a specific file that knows about the **modifications** of the file(s)
+* a **parent** (i.e., the previous commit)
+* the **commit message** that was supplied by the user, intended to be a human-readable hint as to what was done to the files
+
+Commits can be done for single files or simultaneously for multiple files -- you will always have to manually select the files for staging & committing.
+
+> Git will never create a record of change for any file (even if it's being tracked) without you telling it to do it!
+
+-------------
+
+^ where "something" could be one or more new files, changes to one or more files, or deletes of entire files
+
+--------------
+
+Say, you have a folder `ImportantStuff` with three different files, `One.R`, `Two.txt`, `Three.csv`.
+You have created a Git repository for `ImportantStuff`. Then, you staged and committed `One.R`.
+
+**Which statement is correct?**
+
+*** =instructions
+- Any changes to `One.R` will from now on be part of the Git history.
+- All scripts in `ImportantStuff` will now be tracked by Git.
+- The original version of `One.R` will always be retrievable.
+- `Two.txt` and `Three.csv` cannot become part of the Git history.
+
+*** =sct
+```{r}
+msg1 <- "Not quite right. While Git will tell you via the `M` symbol that One.R may have been modified, it will not keep a record of this until you stage and commit those modifications."
+msg2 <- "No. You only committed One.R. If you wanted the other scripts to version controlled, too, you can select both of them and add/stage & commit them."
+msg3 <- "Absolutely -- since you committed the original version of One.R to the Git repository, there will now be an immutable record of that file. How great is that?!"
+msg4 <- "There is no technical reason to not commit the other two scripts to Git, too."
+test_mc(3, feedback_msgs = c(msg1, msg2, msg3, msg4))
+```
+
+
+*** =attachments
+.Rprofile: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git_setup_.Rprofile
+myProject/myFunctions.R: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/convertToPercent.R
+myProject/myProject.Rproj: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/myProject.Rproj
+myProject/.gitignore: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/gitignore
+
+myProject/.git/info/exclude: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/info/exclude
+
+myProject/.git/branches:  https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/info/branches/
+
+myProject/.git/objects/44/afbfe849dd9cab8d5c512b9f2dd98c8f14b00e : https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/objects/44/afbfe849dd9cab8d5c512b9f2dd98c8f14b00e
+myProject/.git/objects/ba/cc97d791c146a015d83e54d6f93dee7e1e0b36 : https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/objects/ba/cc97d791c146a015d83e54d6f93dee7e1e0b36
+myProject/.git/objects/info/ : https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/objects/info/
+myProject/.git/objects/pack/ : https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/objects/pack/
+
+myProject/.git/refs/heads/ : https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/refs/heads/
+myProject/.git/refs/tags/ : https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/refs/tags/
+
+
+myProject/.git/hooks/applypatch-msg.sample : https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/hooks/applypatch-msg.sample
+myProject/.git/hooks/commit-msg.sample : https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/hooks/commit-msg.sample
+myProject/.git/hooks/post-update.sample : https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/hooks/post-update.sample
+myProject/.git/hooks/pre-applypatch.sample : https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/hooks/pre-applypatch.sample
+myProject/.git/hooks/pre-commit.sample : https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/hooks/pre-commit.sample
+myProject/.git/hooks/pre-push.sample : https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/hooks/pre-push.sample
+myProject/.git/hooks/pre-rebase.sample : https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/hooks/pre-rebase.sample
+myProject/.git/hooks/pre-receive.sample : https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/hooks/pre-receive.sample
+myProject/.git/hooks/prepare-commit-msg.sample : https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/hooks/prepare-commit-msg.sample
+myProject/.git/hooks/update.sample : https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/hooks/update.sample
+
+myProject/.git/index: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/index
+myProject/.git/config: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/config
+myProject/.git/HEAD: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/HEAD
+myProject/.git/description: https://raw.githubusercontent.com/abc-datacamp/abc-intro-2-git-in-rstudio/master/attachments/git/description
 
 --- type:RStudioMultipleChoiceExercise lang:r xp:100 skills:1 key:cdf20e6403
 ## Viewing changes made to a tracked file
